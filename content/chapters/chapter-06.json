@@ -94,44 +94,44 @@
     },
     {
       "id": "c6-s10",
-      "title": "Atamalar va masalani yechish tartibi",
+      "title": "Davlat siyosati masalasini qanday tahlil qilamiz?",
       "sourceTopics": [
-        "Key Concepts",
+        "6-3",
         "Chapter in a Nutshell",
-        "6-3"
+        "Analysis procedure"
       ]
     },
     {
-      "id": "c6-s11",
-      "title": "QuickQuiz: sakkiz savolning izohi",
+      "id": "c6-terms",
+      "title": "Asosiy atamalar",
+      "sourceTopics": [
+        "Key Concepts"
+      ]
+    },
+    {
+      "id": "c6-quick",
+      "title": "Tezkor savollar: javob va sabab",
       "sourceTopics": [
         "QuickQuiz 1-8"
       ]
     },
     {
-      "id": "c6-s12",
-      "title": "Takrorlash uchun yetti savol",
+      "id": "c6-review",
+      "title": "Takrorlash savollari",
       "sourceTopics": [
         "Questions for Review 1-7"
       ]
     },
     {
-      "id": "c6-s13",
-      "title": "Amaliy mashqlar 1–5: narxlar va soliq to‘lovchisi",
+      "id": "c6-apps",
+      "title": "Masalalar va qo‘llash",
       "sourceTopics": [
-        "Problems and Applications 1-5"
+        "Problems and Applications 1-10"
       ]
     },
     {
-      "id": "c6-s14",
-      "title": "Amaliy mashqlar 6–10: elastiklik va aniq hisoblar",
-      "sourceTopics": [
-        "Problems and Applications 6-10"
-      ]
-    },
-    {
-      "id": "c6-s15",
-      "title": "Og‘zaki javob rejasi va keng tarqalgan xatolar",
+      "id": "c6-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
         "6-3 Conclusion",
         "Oral exam synthesis"
@@ -170,7 +170,7 @@
     "Questions for Review 1-7",
     "Problems and Applications 1-10"
   ],
-  "wordCount": 6274,
+  "wordCount": 7768,
   "diagramCount": 22,
   "interactiveTypes": [
     "controls"
