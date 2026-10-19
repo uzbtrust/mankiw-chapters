@@ -7,3 +7,4 @@ reference/book
 reference/source-text
 *.log
 outputs
+*.pdf

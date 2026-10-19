@@ -1,8 +1,8 @@
 # TUGATISH.md — bitta bobni tugatib, GitHub’ga yuborish
 
 > **Bu fayl faqat mavjud 1–10-boblar uchun:** ular allaqachon yozilgan, vazifa — ularni yangi yagona dizayn va
-> tuzilishga (`RULE.md`) keltirish. Kitob kerak emas: mazmun saytda bor. Yangi boblar (11+) qo‘shish — alohida
-> tizim, `RULE.md` §2 (u yerda kitob kerak).
+> tuzilishga (`RULE.md`) keltirish. Kitob PDF aniqlik uchun ishlatiladi (to‘liq atamalar, QuickQuiz variantlari).
+> Yangi boblar (11+) qo‘shish — alohida tizim, `RULE.md` §2.
 
 **Odam uchun (bir marta o‘qing):**
 
@@ -12,7 +12,8 @@ cd mankiw-chapters
 claude
 ```
 
-Claude Code ichida modelni **Opus 5.5** ga qo‘ying va yozing: **`TUGATISH.md ni o‘qi va bajar`**.
+Loyiha egasi Telegram’da yuborgan **kitob PDF faylini shu `mankiw-chapters` papkasining o‘ziga** (README.md yoniga)
+qo‘ying. Keyin Claude Code ichida modelni **Opus 5.5** ga qo‘ying va yozing: **`TUGATISH.md ni o‘qi va bajar`**.
 Claude o‘zi kerakli dasturlarni o‘rnatadi, navbatdagi bobni o‘zi aniqlaydi (masalan 1–3 tayyor bo‘lsa — 4-bob), uni tugatadi va oxirida sizga bitta kod beradi — o‘sha kodni loyiha
 egasiga (Telegram’da) yuborasiz, u telefonidan kiritadi, Claude ishni GitHub’ga yuboradi. Tamom.
 
@@ -32,7 +33,7 @@ GitHub’ga push qilasan. Bob tayyor deb hisoblanadi, qachonki: `npm run check -
    foydalanuvchi "TUGATISH.md ni davom ettir" deydi — `git log` va `npm run check -- N` dan qayerdaligingni top.
 4. **Deploy qilma** (Vercel loyiha egasida). Faqat GitHub’ga push.
 5. **Yetishmayotgan dastur bo‘lsa — so‘ramasdan o‘zing o‘rnat** (§0). Foydalanuvchidan faqat quyidagilarni so‘raysan:
-   GitHub kodi kiritilganini tasdiqlash (§6), hamda
+   kitob PDF topilmasa — uni papkaga qo‘yish (§3), GitHub kodi kiritilganini tasdiqlash (§6), hamda
    o‘rnatish parol yoki tugma bosishni talab qilsa.
 6. Foydalanuvchi bilan **o‘zbek tilida**, qisqa gaplashing.
 
@@ -86,7 +87,7 @@ export PATH="$HOME/.local/bin:$PATH"
 ```bash
 npm install
 ```
-Faqat kitob PDF bo‘lsa (§3, ixtiyoriy) va `pdftotext` (poppler) bo‘lmasa: `python3 -m pip install --user pypdf`
+Kitob PDF’dan matn ajratish uchun (§3) `pdftotext` (poppler) bo‘lmasa: `python3 -m pip install --user pypdf`
 (Windows: `py -3 -m pip install --user pypdf`). Skript o‘zi qaysi biri borligini aniqlaydi.
 
 ---
@@ -119,29 +120,34 @@ git config user.email >/dev/null || git config user.email "yordamchi@users.norep
 Ishni boshlashdan oldin foydalanuvchiga bir qatorda ayt: *"N-bobni boshlayapman (1…N−1 tayyor)."*
 Quyida `N` — bob raqami (masalan 4), `NN` — ikki xonali (04).
 
-## 3. Manba — mavjud bob (kitob shart emas)
+## 3. Kitob PDF va bob matni
 
-Asosiy manba — bobning hozirgi `chapter-NN.html` va `chapter-NN.json`. Kitob PDF **so‘ralmaydi**.
+Kitob PDF **har doim loyiha ildizida** turadi (`./*.pdf`, README.md yonida). U git’ga kirmaydi (`.gitignore`) —
+hech qachon `git add` qilma.
 
-* **Bor mazmunni qayta joylaysan va soddalashtirasan** — yangi fakt, raqam, statistika qo‘shilmaydi.
-* **QuickQuiz** `To‘g‘ri javob: c) …` matni — hozirgi javobdagi to‘g‘ri variant mazmunidan (masalan,
-  "Javob: b — PPF ustida" → `To‘g‘ri javob: b) nuqta PPF ustida bo‘ladi.`). Noto‘g‘ri variantlarni o‘ylab topma.
-* **Atamalar (`cN-terms`)** — bobda ta’riflangan barcha asosiy atamalar: mavjud atamalar ro‘yxati, `<strong>` bilan
-  ajratilgan tushunchalar, JSON `topicCoverage`. Inglizcha nomi matnda qavsda bor yoki umumiy qabul qilingan atama.
-* **Kicker raqamlari** (`N-1a`) — mavjud kicker, JSON `sections[].sourceTopics` / `topicCoverage` dan.
-  Aniqlab bo‘lmasa, eng yaqin bo‘lim raqamini (`N-2`) yoz.
-
-**Ixtiyoriy — aniqroq natija uchun:** `reference/book/` da kitob PDF bo‘lsa (egasi Telegram’da yuborgan bo‘lishi mumkin),
-undan bob matnini ajratib (Key Concepts to‘liq ro‘yxati, QuickQuiz variantlari, bo‘lim raqamlari) foydalan:
+1. Top: `ls *.pdf`. Yo‘q bo‘lsa — foydalanuvchiga ayt: *"Kitob PDF faylini (egasi Telegram’da yuborgan) shu loyiha
+   papkasiga qo‘ying va «tayyor» deb yozing"* (`AskUserQuestion`: "Tayyor" / "PDF yo‘q, kitobsiz davom et").
+   "Kitobsiz" tanlansa — pastdagi **zaxira qoidalar** bilan ishlash.
+2. Bob matnini ajrat. PDF 209 sahifali "Chapters 1-10" fayli bo‘lsa (`pdfinfo` yoki skript chiqishi), sahifalar:
 
 | Bob | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `--pages` | 1-16 | 17-44 | 45-60 | 61-86 | 87-110 | 111-132 | 133-152 | 153-168 | 169-188 | 189-209 |
 
 ```bash
-node scripts/py.cjs scripts/extract_chapter.py reference/book/<fayl>.pdf --chapter N --pages A-B
+node scripts/py.cjs scripts/extract_chapter.py ./<fayl>.pdf --chapter N --pages A-B
 ```
-→ `reference/source-text/chapter-NN.txt`. PDF yo‘q bo‘lsa — bu qadamni o‘tkazib yubor, foydalanuvchidan so‘rama.
+   Boshqa fayl (butun kitob) bo‘lsa: avval `--find "Chapter N"` va `--find "Chapter N+1"` bilan sahifalarni top.
+   Natija: `reference/source-text/chapter-NN.txt`.
+3. Matnni **to‘liq** o‘qi (bo‘lib-bo‘lib). Undan ol: **Key Concepts** to‘liq ro‘yxati, **QuickQuiz variantlari** matni,
+   bo‘lim raqamlari (`N-1a` …). Bob HTML’idagi raqamlar va savol shartlari kitob bilan mosligini ham tekshir.
+
+Asosiy mazmun — bobning hozirgi `chapter-NN.html` / `.json`: uni qayta joylaysan va soddalashtirasan; yangi fakt,
+raqam, statistika qo‘shilmaydi (kitobda bo‘lib, bobda tushib qolgan muhim narsa bo‘lsa — qo‘shish mumkin).
+
+**Zaxira qoidalar (kitob yo‘q bo‘lsa):** QuickQuiz `To‘g‘ri javob: c) …` matni hozirgi javobdagi to‘g‘ri variant
+mazmunidan ("Javob: b — PPF ustida" → `To‘g‘ri javob: b) nuqta PPF ustida bo‘ladi.`), noto‘g‘ri variantlarni o‘ylab
+topma; atamalar — bobda ta’riflangan asosiy tushunchalar; kicker raqami — mavjud kicker / JSON `topicCoverage` dan.
 
 ## 4. Bobni RULE.md andozasiga keltirish
 
@@ -158,7 +164,7 @@ npm run check -- N        # barcha buzilgan qoidalar ro‘yxati — shu ro‘yxa
    (`7-1a · To‘lashga tayyorlik`), birinchi bo‘lim `Kirish · …`. Aralash bo‘limlardagi atamalar ro‘yxati, og‘zaki reja,
    tuzoqlar — `cN-terms` / `cN-oral` ga ko‘chadi. Har `<details class="answer">` o‘z bo‘limida.
    JSON `sections` — HTML bilan bir xil tartib, `title` = h2 matni.
-2. **`cN-terms`:** bobning asosiy atamalari (§3; kitob bo‘lsa — Key Concepts to‘liq) `<div class="key-concepts"><dl>` ichida:
+2. **`cN-terms`:** kitobning **to‘liq** Key Concepts ro‘yxati (§3) `<div class="key-concepts"><dl>` ichida:
    `<dt>O‘zbekcha atama <span class="en">english term</span></dt><dd>bir gapli sodda ta’rif</dd>`.
 3. **`cN-oral`:** `ul.recap` (5–8 asosiy fikr) + `<h3>Og‘zaki javob rejasi</h3><ol class="step-list">` +
    `<div class="warning"><strong>Imtihon tuzoqlari.</strong><ul>…</ul></div>`.

@@ -16,8 +16,8 @@ o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buz
 * O‘quvchi **og‘zaki universitet imtihoniga** tayyorlanadi, ko‘pincha **telefonda** o‘qiydi.
 * Shuning uchun: kitobga sodiqlik + sodda o‘zbekcha + qisqa paragraflar + aniq formulalar + yechilgan mashqlar.
 * Sayt: <https://mankiw-chapters.vercel.app> · Kod: <https://github.com/uzbtrust/mankiw-chapters>.
-* Mavjud 1–10-boblarni andozaga keltirish va push qilish tartibi: **`TUGATISH.md`** (kitob kerak emas).
-  Yangi bob qo‘shish (§2) uchun kitob kerak — PDF loyiha egasidan olinadi.
+* Mavjud 1–10-boblarni andozaga keltirish va push qilish tartibi: **`TUGATISH.md`**.
+* Kitob PDF loyiha egasidan (Telegram) olinadi va **loyiha ildiziga** (`./*.pdf`) qo‘yiladi; git’ga kirmaydi.
 
 ## 1. Papkalar va qaysi faylga tegish mumkin
 
@@ -27,7 +27,7 @@ o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buz
 | `content/chapters/chapter-NN.json` | Bob metama’lumoti | **yaratiladi** |
 | `content/course.json` | Qismlar (I QISM …) va qaysi bob qaysi qismda | **yangilanadi** |
 | `reference/source-text/chapter-NN.txt` | Kitobdan ajratilgan matn (git’ga kirmaydi) | yaratiladi |
-| `reference/book/*.pdf` | Kitob (git’ga kirmaydi) | o‘qiladi |
+| `./*.pdf` (loyiha ildizi) | Kitob PDF (git’ga kirmaydi) | o‘qiladi |
 | `src/` | Dizayn: CSS, JS, HTML qismlari | **tegilmaydi** (§9) |
 | `scripts/build.py` | Yig‘ish + qoidalarni tekshirish | tegilmaydi |
 | `dist/`, `outputs/`, `build/` | Avtomatik natija | **hech qachon qo‘lda tahrirlanmaydi** |
@@ -39,8 +39,8 @@ qidiruv matni, "05 / 12" kabi joylar o‘zi yangilanadi.
 
 1. **Kitobdan ajratish.**
    ```bash
-   node scripts/py.cjs scripts/extract_chapter.py KITOB.pdf --find "Chapter 11"     # bob boshlanish sahifasi
-   node scripts/py.cjs scripts/extract_chapter.py KITOB.pdf --chapter 11 --pages 231-252 --offset -2
+   node scripts/py.cjs scripts/extract_chapter.py ./KITOB.pdf --find "Chapter 11"     # bob boshlanish sahifasi
+   node scripts/py.cjs scripts/extract_chapter.py ./KITOB.pdf --chapter 11 --pages 231-252 --offset -2
    ```
    Natija: `reference/source-text/chapter-11.txt` (har sahifa `=== KITOB SAHIFASI …; PDF SAHIFASI … ===` bilan).
    Butun matnni bo‘lib-bo‘lib, **qisqartirmasdan** o‘qing.
@@ -302,8 +302,8 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 
 ## 12. Chiqarish (Vercel va GitHub)
 
-* GitHub: <https://github.com/uzbtrust/mankiw-chapters> (ochiq). `reference/book` va `reference/source-text`
-  git’ga kirmaydi (mualliflik huquqi) — kitob PDF’ni loyiha egasidan oling.
+* GitHub: <https://github.com/uzbtrust/mankiw-chapters> (ochiq). kitob PDF (`./*.pdf`) va `reference/source-text`
+  git’ga kirmaydi (mualliflik huquqi) — PDF’ni loyiha egasidan (Telegram) olib, loyiha ildiziga qo‘ying.
 * Yordamchilar (do‘stlar) faqat o‘z bobini push qiladi — tartib `TUGATISH.md` da (bir martalik GitHub device login).
 * Vercel loyihasi: `mankiw-chapters` (`.vercel/project.json`, faqat egasining kompyuterida).
   Egasi: `git pull` → `npm run build` → `npm run deploy` → <https://mankiw-chapters.vercel.app>.
@@ -313,7 +313,7 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 ## 13. Yangi AI uchun tayyor topshiriq matni
 
 > Bu loyihadagi `RULE.md` ni to‘liq o‘qi va unga qat’iy amal qil. Namuna: `content/chapters/chapter-03.html`,
-> `chapter-05.html` (`c5-s3`). Kitob: `reference/book/<fayl>.pdf`. Vazifa: 11–20-boblarni qo‘sh — har bob uchun
+> `chapter-05.html` (`c5-s3`). Kitob: loyiha ildizidagi `./<fayl>.pdf`. Vazifa: 11–20-boblarni qo‘sh — har bob uchun
 > `scripts/extract_chapter.py` bilan matnni ajrat, inventar tuz, `chapter-NN.html` va `.json` ni §3–§8 bo‘yicha yoz,
 > `content/course.json` ni yangila, `npm run build` xatosiz o‘tguncha tuzat, §11 ro‘yxatidan o‘t.
 > `src/`, `scripts/`, `dist/` ga tegma.
