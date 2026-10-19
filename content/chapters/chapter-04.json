@@ -59,46 +59,47 @@
       "title": "Signal, samaradorlik va adolat",
       "sourceTopics": [
         "4-5",
-        "Price Gouging expert feature",
+        "In the News: Price Increases after Disasters",
+        "Ask the Experts: Price Gouging",
         "2020 IGM panel"
       ]
     },
     {
-      "id": "c4-s6",
-      "title": "Asosiy tushunchalar",
+      "id": "c4-terms",
+      "title": "Asosiy atamalar",
       "sourceTopics": [
         "Key Concepts",
         "Chapter in a Nutshell"
       ]
     },
     {
-      "id": "c4-s7",
-      "title": "Javob rejasi va xatolar",
-      "sourceTopics": [
-        "oral outline",
-        "common traps"
-      ]
-    },
-    {
-      "id": "c4-s8",
-      "title": "QuickQuiz — izohli javoblar",
+      "id": "c4-quick",
+      "title": "Tezkor savollar: javob va sabab",
       "sourceTopics": [
         "QuickQuiz 1-13"
       ]
     },
     {
-      "id": "c4-s9",
-      "title": "Takrorlash savollari va javoblar",
+      "id": "c4-review",
+      "title": "Takrorlash savollari",
       "sourceTopics": [
         "Review Questions 1-9"
       ]
     },
     {
-      "id": "c4-s10",
-      "title": "11 ta masalani to‘liq ishlaymiz",
+      "id": "c4-apps",
+      "title": "Masalalar va qo‘llash",
       "sourceTopics": [
         "Problems and Applications 1-11",
         "Requested diagrams for applications 1, 3, 4, 6, 8, 9, 10 and 11"
+      ]
+    },
+    {
+      "id": "c4-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
+      "sourceTopics": [
+        "oral outline",
+        "common traps"
       ]
     }
   ],
@@ -135,25 +136,29 @@
     "Cigarette and marijuana relation",
     "Every requested application diagram"
   ],
-  "wordCount": 6648,
+  "wordCount": 0,
   "diagramCount": 30,
   "interactiveTypes": [
     "market"
   ],
-  "warnings": [],
+  "warnings": [
+    "Chekishga oid foizlar, ofatdan keyingi narxlar va IGM paneli ulushlari kitobdagi tarixiy ma’lumotlar; bugungi ko‘rsatkichlar emas."
+  ],
   "qualityChecks": [
-    "All 9 review questions, 11 applications and 13 QuickQuiz questions checked against the source; all 23 lettered application subparts are covered.",
-    "QuickQuiz 5 now asks about hamburger price increasing pizza demand; QuickQuiz 6 now asks about income increasing and inferior pasta demand.",
-    "Printed QuickQuiz key checked: c,b,a,b,a,d,a,c,d,b,a,c,d.",
-    "Application 4(c) uses the lower TV price to explain increased streaming demand and decreased cinema demand; it no longer attributes the latter to a higher streaming price.",
-    "Application 7 separates movements along hot-dog demand from ketchup and input demand shifts; orange juice result is conditional on substitution.",
-    "Application 10(b) evaluates a rise in flour price versus a rise in milk price, matching the source wording.",
-    "All six pizza schedule points plotted on both curves; exact common point Q=81, P=6.",
-    "All five old and expanded basketball demand points plotted; fixed supply Q=8000 intersects at P=8 and P=12 respectively.",
-    "Orange demand and supply both increase: quantity rises; diagrams show price increasing, unchanged and decreasing.",
-    "Cigarette figures preserve source points (20,5), (10,5) and (12,10); historical 10%,4%,12% statements distinguish estimates from illustrative figure points.",
-    "HTML stack is balanced and local fragment parsing finds exactly 10 direct sibling sections; malformed bold tag and missing opening paragraph repaired.",
-    "All 30 SVGs parse as XML and have title/description; IDs are unique and begin c4-.",
-    "No Cyrillic, Armenian or Georgian characters remain; source statistics remain labeled historical."
+    "All 20 source Key Concepts have Uzbek definitions and English terms.",
+    "All 13 QuickQuiz answers include the printed correct option text and a reason; key c,b,a,b,a,d,a,c,d,b,a,c,d.",
+    "All 9 review questions, 11 applications and 23 lettered application subparts are covered.",
+    "Source text extracted and read in full from PDF pages 96–121, corresponding to printed pages 61–86.",
+    "All 30 original figure.diagram blocks and the market interactive div are preserved byte for byte.",
+    "Original data-kind and data-q question identifier pairs are preserved.",
+    "Final order is five lesson sections, terms, quick, review, applications and oral exam.",
+    "All demand and supply schedule values match the source; Catherine/Nicholas and Ben/Jerry quantities are added horizontally.",
+    "Pizza equilibrium is P=6 dollars and Q=81; all six original schedule points remain plotted.",
+    "Basketball supply is 8000 tickets; old equilibrium P=8 and new equilibrium P=12; all five original demand points remain plotted.",
+    "Orange demand and supply both rise: quantity rises while the price direction is ambiguous; three original diagrams remain.",
+    "Cigarette figures preserve (20,5), (10,5) and (12,10); historical 10%,4%,12% estimates remain separate from figure points.",
+    "Applications 4, 7 and 10 distinguish own-price movements, related-good demand shifts and input-cost supply shifts.",
+    "All formulas use LaTeX; display formulas have a title and symbol legend. Tables have labeled units and thead/tbody.",
+    "No new statistical claims were added; historical source values are labeled."
   ]
 }
