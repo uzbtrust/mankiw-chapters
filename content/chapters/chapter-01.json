@@ -3,21 +3,112 @@
   "title": "Iqtisodiyotning o‘nta tamoyili",
   "englishTitle": "Ten Principles of Economics",
   "lead": "Iqtisodiyot tanqis resurslar bilan cheksiz istaklar orasidagi tanlovlarni o‘rganadi. O‘nta tamoyil shaxsiy qarorlardan bozorlar va butun iqtisodiyotgacha bo‘lgan sabab-oqibatlarni sodda misollar bilan tushuntiradi.",
-  "sourcePages": [1, 16],
+  "sourcePages": [
+    1,
+    16
+  ],
   "sections": [
-    {"id":"c1-s1","title":"Iqtisodiyot nima uchun muhim?","sourceTopics":["Kirish: tanqislik va iqtisodiyot ta’rifi"]},
-    {"id":"c1-s2","title":"1-tamoyil: odamlar tanlovlar orasida murosa qiladi","sourceTopics":["1-1a Principle 1: People Face Trade-Offs"]},
-    {"id":"c1-s3","title":"2-tamoyil: xarajat — voz kechilgan eng yaxshi imkoniyat","sourceTopics":["1-1b Principle 2: The Cost of Something Is What You Give Up to Get It"]},
-    {"id":"c1-s4","title":"3-tamoyil: oqilona odamlar chegaradagi o‘zgarishni solishtiradi","sourceTopics":["1-1c Principle 3: Rational People Think at the Margin"]},
-    {"id":"c1-s5","title":"4-tamoyil: odamlar rag‘batga javob beradi","sourceTopics":["1-1d Principle 4: People Respond to Incentives"]},
-    {"id":"c1-s6","title":"5-tamoyil: savdo barchaga foyda keltirishi mumkin","sourceTopics":["1-2a Principle 5: Trade Can Make Everyone Better Off"]},
-    {"id":"c1-s7","title":"6-tamoyil: bozorlar ko‘pincha iqtisodiy faoliyatni yaxshi muvofiqlashtiradi","sourceTopics":["1-2b Principle 6: Markets Are Usually a Good Way to Organize Economic Activity","Adam Smith and the Invisible Hand","Case Study: Adam Smith Would Have Loved Uber"]},
-    {"id":"c1-s8","title":"7-tamoyil: hukumat ba’zan bozor natijasini yaxshilashi mumkin","sourceTopics":["1-2c Principle 7: Governments Can Sometimes Improve Market Outcomes"]},
-    {"id":"c1-s9","title":"8–10-tamoyillar: iqtisodiyot yaxlit holda qanday ishlaydi?","sourceTopics":["1-3a Standard of Living and Productivity","1-3b Inflation and Money Growth","1-3c Short-Run Trade-Off between Inflation and Unemployment"]},
-    {"id":"c1-s10","title":"O‘nta tamoyilni bir xaritada ko‘rish","sourceTopics":["1-4 Conclusion","Table 1: Ten Principles of Economics","Chapter in a Nutshell","Key Concepts"]},
-    {"id":"c1-s11","title":"Manbadagi barcha takrorlash savollariga javoblar","sourceTopics":["Questions for Review 1–10"]},
-    {"id":"c1-s12","title":"Muammolar va qo‘llash mashqlari: to‘liq yechimlar","sourceTopics":["Problems and Applications 1–11"]},
-    {"id":"c1-s13","title":"QuickQuiz: javob va sabablar","sourceTopics":["QuickQuiz 1–4","QuickQuiz 5–7","QuickQuiz 8–10","QuickQuiz Answers"]}
+    {
+      "id": "c1-s1",
+      "title": "Iqtisodiyot nima uchun muhim?",
+      "sourceTopics": [
+        "Kirish: tanqislik va iqtisodiyot ta’rifi"
+      ]
+    },
+    {
+      "id": "c1-s2",
+      "title": "1-tamoyil: odamlar tanlovlar orasida murosa qiladi",
+      "sourceTopics": [
+        "1-1a Principle 1: People Face Trade-Offs"
+      ]
+    },
+    {
+      "id": "c1-s3",
+      "title": "2-tamoyil: xarajat — voz kechilgan eng yaxshi imkoniyat",
+      "sourceTopics": [
+        "1-1b Principle 2: The Cost of Something Is What You Give Up to Get It"
+      ]
+    },
+    {
+      "id": "c1-s4",
+      "title": "3-tamoyil: oqilona odamlar chegaradagi o‘zgarishni solishtiradi",
+      "sourceTopics": [
+        "1-1c Principle 3: Rational People Think at the Margin"
+      ]
+    },
+    {
+      "id": "c1-s5",
+      "title": "4-tamoyil: odamlar rag‘batga javob beradi",
+      "sourceTopics": [
+        "1-1d Principle 4: People Respond to Incentives"
+      ]
+    },
+    {
+      "id": "c1-s6",
+      "title": "5-tamoyil: savdo barchaga foyda keltirishi mumkin",
+      "sourceTopics": [
+        "1-2a Principle 5: Trade Can Make Everyone Better Off"
+      ]
+    },
+    {
+      "id": "c1-s7",
+      "title": "6-tamoyil: bozorlar ko‘pincha iqtisodiy faoliyatni yaxshi muvofiqlashtiradi",
+      "sourceTopics": [
+        "1-2b Principle 6: Markets Are Usually a Good Way to Organize Economic Activity",
+        "Adam Smith and the Invisible Hand",
+        "Case Study: Adam Smith Would Have Loved Uber"
+      ]
+    },
+    {
+      "id": "c1-s8",
+      "title": "7-tamoyil: hukumat ba’zan bozor natijasini yaxshilashi mumkin",
+      "sourceTopics": [
+        "1-2c Principle 7: Governments Can Sometimes Improve Market Outcomes"
+      ]
+    },
+    {
+      "id": "c1-s9",
+      "title": "8–10-tamoyillar: iqtisodiyot yaxlit holda qanday ishlaydi?",
+      "sourceTopics": [
+        "1-3a Standard of Living and Productivity",
+        "1-3b Inflation and Money Growth",
+        "1-3c Short-Run Trade-Off between Inflation and Unemployment"
+      ]
+    },
+    {
+      "id": "c1-s10",
+      "title": "O‘nta tamoyilni bir xaritada ko‘rish",
+      "sourceTopics": [
+        "1-4 Conclusion",
+        "Table 1: Ten Principles of Economics",
+        "Chapter in a Nutshell",
+        "Key Concepts"
+      ]
+    },
+    {
+      "id": "c1-s11",
+      "title": "Manbadagi barcha takrorlash savollariga javoblar",
+      "sourceTopics": [
+        "Questions for Review 1–10"
+      ]
+    },
+    {
+      "id": "c1-s12",
+      "title": "Muammolar va qo‘llash mashqlari: to‘liq yechimlar",
+      "sourceTopics": [
+        "Problems and Applications 1–11"
+      ]
+    },
+    {
+      "id": "c1-s13",
+      "title": "QuickQuiz: javob va sabablar",
+      "sourceTopics": [
+        "QuickQuiz 1–4",
+        "QuickQuiz 5–7",
+        "QuickQuiz 8–10",
+        "QuickQuiz Answers"
+      ]
+    }
   ],
   "sourceReviewCount": 10,
   "sourceApplicationCount": 11,
@@ -25,9 +116,35 @@
   "reviewAnswered": 10,
   "applicationsAnswered": 11,
   "quickQuizAnswered": 10,
-  "topicCoverage": ["1-1a","1-1b","1-1c","1-1d","1-2a","1-2b","Adam Smith and the Invisible Hand","Case Study: Adam Smith Would Have Loved Uber","1-2c","1-3a","1-3b","1-3c","1-4","Table 1","Chapter in a Nutshell","Key Concepts","Questions for Review","Problems and Applications","QuickQuiz"],
+  "topicCoverage": [
+    "1-1a",
+    "1-1b",
+    "1-1c",
+    "1-1d",
+    "1-2a",
+    "1-2b",
+    "Adam Smith and the Invisible Hand",
+    "Case Study: Adam Smith Would Have Loved Uber",
+    "1-2c",
+    "1-3a",
+    "1-3b",
+    "1-3c",
+    "1-4",
+    "Table 1",
+    "Chapter in a Nutshell",
+    "Key Concepts",
+    "Questions for Review",
+    "Problems and Applications",
+    "QuickQuiz"
+  ],
   "wordCount": 4951,
   "diagramCount": 0,
-  "interactiveTypes": ["opportunity"],
-  "warnings": ["Manbadagi statistikalar tarixiy (jumladan 2019 va 2022-yil ma’lumotlari); joriy raqam sifatida taqdim etilmagan.", "Application 5 yechimi $3 mln kutilgan tushum va $1 mln barcha qolgan qo‘shimcha xarajat deb shartlaydi; boshqa ishlab chiqarish xarajatlari bo‘lsa, ularni ham hisoblash kerak.", "Manbadagi 2014-yil Uber so‘rovi tarixiy so‘rov sifatida ko‘rsatildi, universal yoki bugungi xulosa emas."]
+  "interactiveTypes": [
+    "opportunity"
+  ],
+  "warnings": [
+    "Manbadagi statistikalar tarixiy (jumladan 2019 va 2022-yil ma’lumotlari); joriy raqam sifatida taqdim etilmagan.",
+    "Application 5 yechimi $3 mln kutilgan tushum va $1 mln barcha qolgan qo‘shimcha xarajat deb shartlaydi; boshqa ishlab chiqarish xarajatlari bo‘lsa, ularni ham hisoblash kerak.",
+    "Manbadagi 2014-yil Uber so‘rovi tarixiy so‘rov sifatida ko‘rsatildi, universal yoki bugungi xulosa emas."
+  ]
 }
