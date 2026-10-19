@@ -1,6 +1,6 @@
 # Nashr qilish
 
-* Production: https://mankiw-presentation.vercel.app (Vercel loyihasi `mankiw-presentation`, `.vercel/project.json` orqali bog‘langan)
+* Production: https://mankiw-chapters.vercel.app (Vercel loyihasi `mankiw-chapters`, `.vercel/project.json` orqali bog‘langan)
 * Kod: GitHub `uzbtrust/mankiw-chapters` (kitob PDF va bob matnlari git’ga kirmaydi)
 * Yig‘ish: `python3 scripts/build.py` → `dist/` (Vercel) + `outputs/iqtisodiyot-NN-bob.html` (internetsiz nusxa)
 * Chiqarish: `npm run deploy` (ya’ni `vercel deploy --prod --yes`). `.vercelignore` faqat `dist/` va `vercel.json` ni qoldiradi.

@@ -46,7 +46,18 @@
           "value": "10-chapter-mankiw.vercel.app"
         }
       ],
-      "destination": "https://mankiw-presentation.vercel.app/$1",
+      "destination": "https://mankiw-chapters.vercel.app/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mankiw-presentation.vercel.app"
+        }
+      ],
+      "destination": "https://mankiw-chapters.vercel.app/$1",
       "permanent": true
     }
   ]

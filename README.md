@@ -3,7 +3,7 @@
 N. Gregory Mankiw, *Principles of Economics* (10-nashr) boblarining o‘zbekcha o‘quv sayti:
 izohli darslar, chizmalar, interaktiv modellar va yechimli savollar. Og‘zaki imtihonga tayyorlanish uchun.
 
-Sayt: <https://mankiw-presentation.vercel.app>
+Sayt: <https://mankiw-chapters.vercel.app>
 
 > **Yangi bob qo‘shish yoki bobni tahrirlash — avval [RULE.md](RULE.md) ni o‘qing.** U yerda kitobdan ajratish,
 > tushuntirish uslubi, bob skeleti, komponentlar, LaTeX formulalar, chizma ranglari va tekshiruvlar yozilgan.

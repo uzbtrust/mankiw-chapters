@@ -15,7 +15,7 @@ o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buz
 * N. Gregory Mankiw, *Principles of Economics* (10-nashr) kitobining o‘zbekcha (lotin) o‘quv sayti.
 * O‘quvchi **og‘zaki universitet imtihoniga** tayyorlanadi, ko‘pincha **telefonda** o‘qiydi.
 * Shuning uchun: kitobga sodiqlik + sodda o‘zbekcha + qisqa paragraflar + aniq formulalar + yechilgan mashqlar.
-* Sayt: <https://mankiw-presentation.vercel.app> · Kod: <https://github.com/uzbtrust/mankiw-chapters>.
+* Sayt: <https://mankiw-chapters.vercel.app> · Kod: <https://github.com/uzbtrust/mankiw-chapters>.
 * Mavjud boblarni andozaga keltirish va push qilish tartibi: **`TUGATISH.md`**.
 
 ## 1. Papkalar va qaysi faylga tegish mumkin
@@ -304,8 +304,8 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 * GitHub: <https://github.com/uzbtrust/mankiw-chapters> (ochiq). `reference/book` va `reference/source-text`
   git’ga kirmaydi (mualliflik huquqi) — kitob PDF’ni loyiha egasidan oling.
 * Yordamchilar (do‘stlar) faqat o‘z bobini push qiladi — tartib `TUGATISH.md` da (bir martalik GitHub device login).
-* Vercel loyihasi: `mankiw-presentation` (`.vercel/project.json`, faqat egasining kompyuterida).
-  Egasi: `git pull` → `npm run build` → `npm run deploy` → <https://mankiw-presentation.vercel.app>.
+* Vercel loyihasi: `mankiw-chapters` (`.vercel/project.json`, faqat egasining kompyuterida).
+  Egasi: `git pull` → `npm run build` → `npm run deploy` → <https://mankiw-chapters.vercel.app>.
 * Windows / macOS / Linux: `npm run …` buyruqlari Python’ni o‘zi topadi (`scripts/py.cjs`); to‘g‘ridan-to‘g‘ri chaqirish:
   `node scripts/py.cjs scripts/build.py --check 11`.
 
