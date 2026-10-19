@@ -16,7 +16,8 @@ o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buz
 * O‘quvchi **og‘zaki universitet imtihoniga** tayyorlanadi, ko‘pincha **telefonda** o‘qiydi.
 * Shuning uchun: kitobga sodiqlik + sodda o‘zbekcha + qisqa paragraflar + aniq formulalar + yechilgan mashqlar.
 * Sayt: <https://mankiw-chapters.vercel.app> · Kod: <https://github.com/uzbtrust/mankiw-chapters>.
-* Mavjud boblarni andozaga keltirish va push qilish tartibi: **`TUGATISH.md`**.
+* Mavjud 1–10-boblarni andozaga keltirish va push qilish tartibi: **`TUGATISH.md`** (kitob kerak emas).
+  Yangi bob qo‘shish (§2) uchun kitob kerak — PDF loyiha egasidan olinadi.
 
 ## 1. Papkalar va qaysi faylga tegish mumkin
 

@@ -1,5 +1,9 @@
 # TUGATISH.md — bitta bobni tugatib, GitHub’ga yuborish
 
+> **Bu fayl faqat mavjud 1–10-boblar uchun:** ular allaqachon yozilgan, vazifa — ularni yangi yagona dizayn va
+> tuzilishga (`RULE.md`) keltirish. Kitob kerak emas: mazmun saytda bor. Yangi boblar (11+) qo‘shish — alohida
+> tizim, `RULE.md` §2 (u yerda kitob kerak).
+
 **Odam uchun (bir marta o‘qing):**
 
 ```bash
@@ -28,7 +32,7 @@ GitHub’ga push qilasan. Bob tayyor deb hisoblanadi, qachonki: `npm run check -
    foydalanuvchi "TUGATISH.md ni davom ettir" deydi — `git log` va `npm run check -- N` dan qayerdaligingni top.
 4. **Deploy qilma** (Vercel loyiha egasida). Faqat GitHub’ga push.
 5. **Yetishmayotgan dastur bo‘lsa — so‘ramasdan o‘zing o‘rnat** (§0). Foydalanuvchidan faqat quyidagilarni so‘raysan:
-   kitob PDF (agar yo‘q bo‘lsa, §3), GitHub kodi kiritilganini tasdiqlash (§6), hamda
+   GitHub kodi kiritilganini tasdiqlash (§6), hamda
    o‘rnatish parol yoki tugma bosishni talab qilsa.
 6. Foydalanuvchi bilan **o‘zbek tilida**, qisqa gaplashing.
 
@@ -82,7 +86,7 @@ export PATH="$HOME/.local/bin:$PATH"
 ```bash
 npm install
 ```
-PDF’dan matn ajratish uchun `pdftotext` (poppler) bo‘lmasa: `python3 -m pip install --user pypdf`
+Faqat kitob PDF bo‘lsa (§3, ixtiyoriy) va `pdftotext` (poppler) bo‘lmasa: `python3 -m pip install --user pypdf`
 (Windows: `py -3 -m pip install --user pypdf`). Skript o‘zi qaysi biri borligini aniqlaydi.
 
 ---
@@ -115,13 +119,20 @@ git config user.email >/dev/null || git config user.email "yordamchi@users.norep
 Ishni boshlashdan oldin foydalanuvchiga bir qatorda ayt: *"N-bobni boshlayapman (1…N−1 tayyor)."*
 Quyida `N` — bob raqami (masalan 4), `NN` — ikki xonali (04).
 
-## 3. Kitob matni
+## 3. Manba — mavjud bob (kitob shart emas)
 
-Kerak fayl: `reference/source-text/chapter-NN.txt` (git’da yo‘q — mualliflik huquqi). Bo‘lmasa:
+Asosiy manba — bobning hozirgi `chapter-NN.html` va `chapter-NN.json`. Kitob PDF **so‘ralmaydi**.
 
-1. `reference/book/` da PDF bormi? Yo‘q bo‘lsa — foydalanuvchidan so‘ra: *"Kitob PDF faylini (Mankiw 1–10 boblar)
-   loyiha egasidan oling va kompyuterdagi yo‘lini yozing."* Faylni `reference/book/` ga nusxala.
-2. Ajrat (PDF sahifalari = kitob sahifalari, `--offset 0`):
+* **Bor mazmunni qayta joylaysan va soddalashtirasan** — yangi fakt, raqam, statistika qo‘shilmaydi.
+* **QuickQuiz** `To‘g‘ri javob: c) …` matni — hozirgi javobdagi to‘g‘ri variant mazmunidan (masalan,
+  "Javob: b — PPF ustida" → `To‘g‘ri javob: b) nuqta PPF ustida bo‘ladi.`). Noto‘g‘ri variantlarni o‘ylab topma.
+* **Atamalar (`cN-terms`)** — bobda ta’riflangan barcha asosiy atamalar: mavjud atamalar ro‘yxati, `<strong>` bilan
+  ajratilgan tushunchalar, JSON `topicCoverage`. Inglizcha nomi matnda qavsda bor yoki umumiy qabul qilingan atama.
+* **Kicker raqamlari** (`N-1a`) — mavjud kicker, JSON `sections[].sourceTopics` / `topicCoverage` dan.
+  Aniqlab bo‘lmasa, eng yaqin bo‘lim raqamini (`N-2`) yoz.
+
+**Ixtiyoriy — aniqroq natija uchun:** `reference/book/` da kitob PDF bo‘lsa (egasi Telegram’da yuborgan bo‘lishi mumkin),
+undan bob matnini ajratib (Key Concepts to‘liq ro‘yxati, QuickQuiz variantlari, bo‘lim raqamlari) foydalan:
 
 | Bob | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -130,10 +141,7 @@ Kerak fayl: `reference/source-text/chapter-NN.txt` (git’da yo‘q — muallifl
 ```bash
 node scripts/py.cjs scripts/extract_chapter.py reference/book/<fayl>.pdf --chapter N --pages A-B
 ```
-PDF boshqa nashr/fayl bo‘lsa: avval `--find "Chapter N"` bilan sahifani top.
-
-Matnni **to‘liq** o‘qi (bo‘lib-bo‘lib). Undan ol: Key Concepts ro‘yxati, QuickQuiz variantlari matni, Questions for
-Review va Problems and Applications ning aniq shartlari, bo‘lim raqamlari (`N-1a` …).
+→ `reference/source-text/chapter-NN.txt`. PDF yo‘q bo‘lsa — bu qadamni o‘tkazib yubor, foydalanuvchidan so‘rama.
 
 ## 4. Bobni RULE.md andozasiga keltirish
 
@@ -150,7 +158,7 @@ npm run check -- N        # barcha buzilgan qoidalar ro‘yxati — shu ro‘yxa
    (`7-1a · To‘lashga tayyorlik`), birinchi bo‘lim `Kirish · …`. Aralash bo‘limlardagi atamalar ro‘yxati, og‘zaki reja,
    tuzoqlar — `cN-terms` / `cN-oral` ga ko‘chadi. Har `<details class="answer">` o‘z bo‘limida.
    JSON `sections` — HTML bilan bir xil tartib, `title` = h2 matni.
-2. **`cN-terms`:** kitobning **to‘liq** Key Concepts ro‘yxati `<div class="key-concepts"><dl>` ichida:
+2. **`cN-terms`:** bobning asosiy atamalari (§3; kitob bo‘lsa — Key Concepts to‘liq) `<div class="key-concepts"><dl>` ichida:
    `<dt>O‘zbekcha atama <span class="en">english term</span></dt><dd>bir gapli sodda ta’rif</dd>`.
 3. **`cN-oral`:** `ul.recap` (5–8 asosiy fikr) + `<h3>Og‘zaki javob rejasi</h3><ol class="step-list">` +
    `<div class="warning"><strong>Imtihon tuzoqlari.</strong><ul>…</ul></div>`.
