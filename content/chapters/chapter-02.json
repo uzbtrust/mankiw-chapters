@@ -1,5 +1,5 @@
 {
-  "id": "chapter-02",
+  "id": 2,
   "title": "Iqtisodchi kabi fikrlash",
   "englishTitle": "Thinking Like an Economist",
   "lead": "Iqtisodchi iqtisodiyotni model, taxmin va dalil yordamida tahlil qiladi; siyosatni baholashda esa fakt bilan qadriyatni farqlaydi. Bobda aylana oqim, ishlab chiqarish imkoniyatlari chegarasi va iqtisodiy grafiklarni o‘qish o‘rganiladi.",
@@ -87,24 +87,38 @@
       ]
     },
     {
-      "id": "c2-s9",
-      "title": "Asosiy atamalar va QuickQuiz: sakkizta izohli javob",
+      "id": "c2-terms",
+      "title": "Asosiy atamalar",
       "sourceTopics": [
         "Key Concepts",
-        "QuickQuiz 1-8"
+        "Appendix: Graphing A Brief Review"
       ]
     },
     {
-      "id": "c2-s10",
-      "title": "Takrorlash savollari va amaliy masalalar",
+      "id": "c2-quick",
+      "title": "Tezkor savollar: javob va sabab",
       "sourceTopics": [
-        "Questions for Review 1-10",
-        "Problems and Applications 1-6"
+        "QuickQuiz 1–8",
+        "QuickQuiz Answers"
       ]
     },
     {
-      "id": "c2-s11",
-      "title": "Qisqacha takrorlash, og‘zaki javob rejasi va keng tarqalgan xatolar",
+      "id": "c2-review",
+      "title": "Takrorlash savollari",
+      "sourceTopics": [
+        "Questions for Review 1–10"
+      ]
+    },
+    {
+      "id": "c2-apps",
+      "title": "Masalalar va qo‘llash",
+      "sourceTopics": [
+        "Problems and Applications 1–6"
+      ]
+    },
+    {
+      "id": "c2-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
         "2-4 Let’s Get Going",
         "Chapter in a Nutshell"
@@ -134,12 +148,22 @@
     "Appendix Graphing A Brief Review",
     "Questions for Review 1-10",
     "Problems and Applications 1-6",
-    "QuickQuiz 1-8"
+    "QuickQuiz 1-8",
+    "In the News: Why Tech Companies Hire Economists",
+    "Ask the Experts: Ticket Resale",
+    "Table A-1: Novels Purchased by Emma",
+    "Figures A-1 to A-7",
+    "Key Concepts",
+    "Chapter in a Nutshell"
   ],
-  "wordCount": 4368,
+  "wordCount": 6149,
   "diagramCount": 8,
   "interactiveTypes": [
     "ppf"
   ],
-  "warnings": []
+  "warnings": [
+    "Kitobdagi 93% ekspert so‘rovi, 2012-yil chipta qayta savdosi so‘rovi, 2016-yil texnologiya kompaniyalari maqolasi va 2020-yil grafik misollari tarixiy manba sifatida berilgan.",
+    "TUGATISH.md talabiga ko‘ra mavjud sakkiz figure.diagram va interaktiv model baytma-bayt saqlandi; ayrim eski SVG atributlari RULE.md §7ning yangi chizma andozasiga to‘liq mos emas.",
+    "Application 2 va 3 chizmalaridagi shartli miqdorlar o‘quv tasviri; kitobdagi aniq raqamlar sifatida berilmagan."
+  ]
 }
