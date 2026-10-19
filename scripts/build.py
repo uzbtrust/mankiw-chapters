@@ -198,7 +198,7 @@ def check_standard(n, body, meta):
                 errs.append(f'{sid}: bu bo‘limda savol-javob bo‘lmasin')
         else:
             if not re.fullmatch(LESSON_LABEL + r' · \S.{0,60}', kicker):
-                errs.append(f'{sid}: kicker «{kicker}» → «{n}-1a · Qisqa mavzu» shaklida bo‘lsin')
+                errs.append(f'{sid}: kicker «{kicker}» → «{n}-1a · Qisqa mavzu» (kitob raqami) yoki «Kirish · …» / «Yakun · …» / «Ilova · …» shaklida bo‘lsin')
             if '<details class="answer"' in inner:
                 errs.append(f'{sid}: savol-javoblar faqat quick/review/apps bo‘limlarida')
         if titles.get(sid) != h2:
