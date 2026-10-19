@@ -10,7 +10,7 @@
   "sections": [
     {
       "id": "c5-s1",
-      "title": "Nega elastiklik?",
+      "title": "Yo‘nalishdan tashqari, javob miqdorini ham o‘lchash",
       "sourceTopics": [
         "bob kirish qismi",
         "benzin va vaqt ufqi"
@@ -18,7 +18,7 @@
     },
     {
       "id": "c5-s2",
-      "title": "Talab elastikligining determinantlari",
+      "title": "Talab elastikligini belgilaydigan to‘rt omil",
       "sourceTopics": [
         "5-1a",
         "yaqin o‘rinbosarlar",
@@ -30,7 +30,7 @@
     },
     {
       "id": "c5-s3",
-      "title": "Talab elastikligini hisoblash va turlari",
+      "title": "Foizlar, o‘rta nuqta usuli va elastiklik turlari",
       "sourceTopics": [
         "5-1b",
         "5-1c midpoint method",
@@ -39,7 +39,7 @@
     },
     {
       "id": "c5-s4",
-      "title": "Umumiy tushum va talab elastikligi",
+      "title": "Umumiy tushum narx va miqdor ko‘paytmasi",
       "sourceTopics": [
         "5-1e total revenue",
         "5-1f linear demand elasticity along curve"
@@ -47,7 +47,7 @@
     },
     {
       "id": "c5-s5",
-      "title": "To‘g‘ri chiziqli talabda o‘zgaruvchi elastiklik",
+      "title": "To‘g‘ri chiziqli talabda qiyalik o‘zgarmasa ham elastiklik o‘zgaradi",
       "sourceTopics": [
         "chiziqli talab jadvali va grafigi",
         "interaktiv elastiklik"
@@ -55,7 +55,7 @@
     },
     {
       "id": "c5-s6",
-      "title": "Daromad va o‘zaro narx elastikligi",
+      "title": "Daromad elastikligi va o‘zaro narx elastikligi",
       "sourceTopics": [
         "5-1g income elasticity",
         "cross-price elasticity"
@@ -63,7 +63,7 @@
     },
     {
       "id": "c5-s7",
-      "title": "Taklif elastikligi",
+      "title": "Sotuvchilar narxga qanchalik javob beradi?",
       "sourceTopics": [
         "5-2a determinants",
         "5-2b midpoint",
@@ -74,38 +74,44 @@
     },
     {
       "id": "c5-s8",
-      "title": "Bug‘doy va fermer daromadi",
+      "title": "Bug‘doy: nega hosildorlik oshishi fermer daromadini kamaytirishi mumkin?",
       "sourceTopics": [
         "5-3a technological advance in wheat"
       ]
     },
     {
       "id": "c5-s9",
-      "title": "OPEC va neft narxi",
+      "title": "Neft: nega OPEC narxni uzoq muddat baland ushlab turolmadi?",
       "sourceTopics": [
         "5-3b short run and long run oil"
       ]
     },
     {
       "id": "c5-s10",
-      "title": "Giyohvand moddalar siyosati",
+      "title": "Noqonuniy giyohvand moddalar: taqiq va talabni kamaytirish oqibati",
       "sourceTopics": [
         "5-3c interdiction and education"
       ]
     },
     {
       "id": "c5-s11",
-      "title": "Ride-share yangilik maqolasi",
+      "title": "Ride-share bozori: yo‘lovchi va haydovchi sezgirligi",
       "sourceTopics": [
         "In the News: Elasticity of Supply and Demand in the Ride-share Market"
       ]
     },
     {
-      "id": "c5-s12",
-      "title": "Xulosa va og‘zaki imtihon",
+      "id": "c5-terms",
+      "title": "Asosiy atamalar",
       "sourceTopics": [
-        "Chapter in a Nutshell",
         "Key Concepts"
+      ]
+    },
+    {
+      "id": "c5-quick",
+      "title": "Tezkor savollar: javob va sabab",
+      "sourceTopics": [
+        "QuickQuiz 1–11"
       ]
     },
     {
@@ -116,17 +122,19 @@
       ]
     },
     {
-      "id": "c5-applications",
-      "title": "Masalalar va qo‘llanishlar",
+      "id": "c5-apps",
+      "title": "Masalalar va qo‘llash",
       "sourceTopics": [
         "Problems and Applications"
       ]
     },
     {
-      "id": "c5-quick",
-      "title": "Tezkor savollar",
+      "id": "c5-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
-        "QuickQuiz 1–11"
+        "5-4",
+        "Chapter in a Nutshell",
+        "og‘zaki javob rejasi"
       ]
     }
   ],
