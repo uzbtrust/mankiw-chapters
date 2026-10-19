@@ -173,6 +173,7 @@ npm run check -- N        # barcha buzilgan qoidalar ro‘yxati — shu ro‘yxa
    `Keng tarqalgan xato.` / `Imtihon tuzoqlari.` / `Diqqat.`; recap → `Qisqasi.`.
 6. **Formulalar → LaTeX (RULE.md §6):** asosiy formulalar `.formula` kartada (`formula-title` + `formula-legend`),
    matndagi belgilar `\( … \)`. `<sub>`, `<sup>`, "P×Q", "Q₂−Q₁" kabi oddiy matn formula qolmasin.
+   Bir nechta tenglama — har biri alohida qatorda (`gathered`), uzuni `aligned` bilan bo‘linadi: telefonga sig‘ishini build tekshiradi.
 7. **Soddalik:** paragraf ≤ 80 so‘z; bitta paragraf — bitta fikr; qisqa gaplar. 2 tadan ortiq hisob — formula +
    `ol.step-list` yoki jadval (aynan `c5-s3` dagidek). Ko‘p qismli masala: `<h4>a)</h4>…<h4>b)</h4>…`, oxirida aniq javob.
    Raqamli ma’lumot ≥ 2 qator — jadval (ustun nomida birlik).

@@ -164,6 +164,81 @@ def strip_tags(h):
     return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', h)).strip()
 
 
+def tex_unescape(t):
+    return t.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&').replace('&nbsp;', ' ')
+
+
+# 360 px telefonda formula uchun joy — o‘sha formula shrifti em larida (asosiy matnda / javob ichida):
+# display .formula ≈ 11,4 / 10,5;  step-list qatoridagi \( … \) ≈ 13,9 / 11,8.
+# tex_width() haqiqiy o‘lchovdan −5…+9% adashadi (≈110 formula bilan solishtirilgan) — chegara shunga ozgina yuqoriroq.
+FIT_EM = {'formula': {'main': 11.75, 'answer': 10.75}, 'step': {'main': 14.0, 'answer': 11.9}}
+TEX_TOKEN = re.compile(r'\{,\}|\\[A-Za-z]+|\\.|\S')
+TEX_EM = {r'\qquad': 2, r'\quad': 1, r'\,': .17, r'\:': .22, r'\;': .28, r'\!': -.17, '\\ ': .25,
+          ',': .45, '{,}': .28, '/': .5, r'\%': .75, r'\Rightarrow': 1.56, r'\Longrightarrow': 2.16, r'\iff': 2.16, r'\implies': 2.16}
+TEX_EM.update(dict.fromkeys(['=', '<', '>', r'\le', r'\ge', r'\leq', r'\geq', r'\approx', r'\ne', r'\neq', r'\equiv', r'\to'], 1.22))
+TEX_EM.update(dict.fromkeys(['+', '-', r'\times', r'\cdot', r'\pm', r'\div'], 1.1))
+TEX_EM.update(dict.fromkeys(['(', ')', '[', ']', '|', r'\{', r'\}', r'\lvert', r'\rvert', r'\vert'], .33))
+TEX_EM.update({op: .5 * (len(op) - 1) + .17 for op in (r'\max', r'\min', r'\ln', r'\log', r'\exp', r'\lim')})
+
+
+def _tex_arg(toks, i):
+    """i dagi bitta argument: {…} guruhi yoki bitta token → (tokenlar, keyingi i)."""
+    if i >= len(toks):
+        return [], i
+    if toks[i] != '{':
+        return [toks[i]], i + 1
+    depth, j = 0, i
+    while j < len(toks):
+        depth += {'{': 1, '}': -1}.get(toks[j], 0)
+        j += 1
+        if not depth:
+            break
+    return toks[i + 1:j - 1], j
+
+
+def _tex_run(toks, s, d):
+    """Tokenlar kengligi (em). s — o‘lcham ko‘paytuvchisi, d — display uslubi (TeX: unda \\frac to‘liq o‘lchamda)."""
+    w, i = 0.0, 0
+    while i < len(toks):
+        t = toks[i]
+        i += 1
+        if t == '{':
+            a, i = _tex_arg(toks, i - 1)
+            w += _tex_run(a, s, d)
+        elif t in (r'\frac', r'\dfrac', r'\tfrac'):
+            a, i = _tex_arg(toks, i)
+            b, i = _tex_arg(toks, i)
+            k = s if t == r'\dfrac' or (t == r'\frac' and d) else s * .75
+            w += max(_tex_run(a, k, False), _tex_run(b, k, False)) + .15 * s
+        elif t in ('_', '^'):
+            a, i = _tex_arg(toks, i)
+            w += _tex_run(a, s * .7, False)
+        elif t in (r'\text', r'\textrm', r'\mathrm', r'\operatorname'):
+            a, i = _tex_arg(toks, i)
+            w += .47 * s * len(''.join(a))
+        elif t in (r'\left', r'\right'):
+            a, i = _tex_arg(toks, i)
+            w += 0 if a == ['.'] else .33 * s
+        elif t in (r'\sum', r'\prod'):
+            w += 1.2 * s
+            while d and i < len(toks) and toks[i] in ('_', '^'):  # displayda chegaralar ostida/ustida turadi
+                _, i = _tex_arg(toks, i + 1)
+        elif t in TEX_EM:
+            w += TEX_EM[t] * s
+        else:
+            w += s * (.75 if t[0] == '\\' else .5 if t.isdigit() else .68 if t.isupper() else .55)
+    return w
+
+
+def tex_width(tex, display=True):
+    """Formulaning taxminiy kengligi (em): qatorlar (\\\\) ichidan eng kengi, & ustunlari qo‘shiladi."""
+    cols = {}
+    for line in re.sub(r'\\(?:begin|end)\{\w+\*?\}', '', tex).split('\\\\'):
+        for k, cell in enumerate(line.split('&')):
+            cols[k] = max(cols.get(k, 0), _tex_run(TEX_TOKEN.findall(cell), 1, display))
+    return sum(cols.values())
+
+
 def check_standard(n, body, meta):
     """RULE.md §4–§6 dagi mexanik qoidalar. Har bir buzilish — bitta tushunarli xabar."""
     errs = []
@@ -232,6 +307,24 @@ def check_standard(n, body, meta):
     for f in re.findall(r'<div class="formula">(.*?)</div>', flat, flags=re.S):
         if '\\[' not in f:
             errs.append('formula: .formula ichida LaTeX \\[ … \\] bo‘lsin, oddiy matn emas: ' + strip_tags(f)[:50])
+    answers = [m.span() for m in re.finditer(r'<details class="answer".*?</details>', flat, flags=re.S)]
+    for m in re.finditer(r'\\\[(.+?)\\\]', flat, flags=re.S):
+        tex = tex_unescape(m[1]).strip()
+        if '\\qquad' in tex:
+            errs.append(f'formula «{tex[:50]}»: tenglamalarni \\qquad bilan yonma-yon yozmang — har biri alohida qatorda: '
+                        '\\begin{gathered} … \\\\ … \\end{gathered} (RULE.md §6)')
+            continue
+        where = 'answer' if any(a <= m.start() < b for a, b in answers) else 'main'
+        if (w := tex_width(tex)) > FIT_EM['formula'][where]:
+            errs.append(f'formula telefonga sig‘maydi (≈{w:.1f}em > {FIT_EM["formula"][where]}em): «{tex[:50]}» — '
+                        'qatorlarga bo‘ling: gathered yoki aligned (RULE.md §6)')
+    for ol in re.finditer(r'<ol class="step-list">.*?</ol>', flat, flags=re.S):
+        where = 'answer' if any(a <= ol.start() < b for a, b in answers) else 'main'
+        for m in re.finditer(r'\\\((.+?)\\\)', ol[0], flags=re.S):
+            tex = tex_unescape(m[1]).strip()
+            if (w := tex_width(tex, display=False)) > FIT_EM['step'][where]:
+                errs.append(f'qadamdagi formula telefonga sig‘maydi (≈{w:.1f}em > {FIT_EM["step"][where]}em): «{tex[:50]}» — '
+                            'a/b o‘rniga \\dfrac{a}{b} yozing yoki ikki qadamga bo‘ling (RULE.md §6)')
     if re.search(r'<su[bp]>', flat):
         errs.append('<sub>/<sup> o‘rniga LaTeX \\( … \\) ishlating')
     for t in re.findall(r'<table>.*?</table>', flat, flags=re.S):
@@ -278,8 +371,7 @@ def render_math(bodies):
     jobs = [(n, m) for n, body in bodies for m in MATH_RE.finditer(body)]
     if not jobs:
         return bodies
-    unescape = lambda t: t.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&').replace('&nbsp;', ' ')
-    req = [{'tex': unescape(m[1] if m[1] is not None else m[2]).strip(), 'display': m[1] is not None} for _, m in jobs]
+    req = [{'tex': tex_unescape(m[1] if m[1] is not None else m[2]).strip(), 'display': m[1] is not None} for _, m in jobs]
     r = subprocess.run(['node', str(TEX)], input=json.dumps(req), capture_output=True, text=True, encoding='utf-8')
     if r.returncode != 0:
         raise SystemExit('LaTeX: scripts/tex.cjs ishlamadi (npm install qiling): ' + r.stderr.strip()[:300])

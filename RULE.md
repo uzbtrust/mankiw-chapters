@@ -206,6 +206,16 @@ Yig‘ish vaqtida LaTeX → MathML (Temml) ga aylanadi: brauzer o‘zi chiroyli 
 * Kasr: displayda `\frac`, matn ichida `\dfrac` faqat `step-list` da; oddiy paragrafda kasrli ifoda bo‘lsa — display qiling.
 * Modul (minus tashlanadi): `\left| … \right|`. Delta: `\Delta`.
 * HTML ichida `<` va `>` ni `&lt;` va `&gt;` deb yozing (`\(E_d &gt; 1\)`).
+* **Telefonga sig‘sin (build tekshiradi).** Display formula 360 px telefonda o‘z kartasidan chiqmasin:
+  asosiy matnda ≈ 11 em, javob (`details`) ichida ≈ 10 em — taxminan 18–20 belgi.
+  * Bir nechta tenglama — **har biri alohida qatorda**; `\qquad` bilan yonma-yon yozish taqiqlangan:
+    `\[ \begin{gathered} Q_s=2P \\ Q_d=300-P \end{gathered} \]`
+  * Uzun bitta tenglama — `aligned` bilan `=` yoki `+` dan bo‘ling (`&` tekislash nuqtasi):
+    `\[ \begin{aligned} Q_d(P) &= Q_{d,\text{A}}(P) \\ &\quad + Q_{d,\text{B}}(P) \end{aligned} \]`
+  * Juda uzun kasr — bo‘laklarini alohida qatorda hisoblang: avval `\%\Delta Q=…`, `\%\Delta P=…`,
+    keyin `E_d=\left|\frac{\%\Delta Q}{\%\Delta P}\right|` (yangi belgilarni `formula-legend` ga qo‘shing).
+  * `step-list` qadamidagi `\( … \)` ham sig‘sin (≈ 12–14 em): kasrni `a/b` emas, `\dfrac{a}{b}` bilan yozing;
+    baribir uzun bo‘lsa — ikki ifodaga bo‘ling (`\(… = 2\,000 - 2\,200\) \(= -200\)`) yoki ikki qadamga ajrating.
 * Formula xato bo‘lsa build aniq qaysi bob va qaysi ifoda ekanini aytadi.
 
 ## 7. Chizmalar (inline SVG)
@@ -282,6 +292,7 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 * savollar soni (`source…Count` = `<details>` soni), raqamlar takrorlanmasligi, savollar to‘g‘ri bo‘limda;
 * `cN-terms` da `dl` (≥ 5, har `dt` da `.en`), `cN-oral` da `recap` + `step-list` + `warning`;
 * `.formula` ichida LaTeX, `<sub>/<sup>` yo‘qligi, LaTeX sintaksisi;
+* display formula va `step-list` dagi hisob telefonga sig‘ishi (kenglik LaTeX dan taxminan hisoblanadi), `\qquad` yo‘qligi (§6);
 * jadvalda `thead/tbody` va `.table-wrap`; paragraf ≤ 80 so‘z;
 * kirill harf yo‘qligi, teglar balansi, takroriy ID yo‘qligi, taqiqlangan teglar.
 
@@ -296,7 +307,7 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 - [ ] Kitobning har bir bo‘limi, qutisi, muhim chizmasi qamrab olingan (inventar bilan solishtiring).
 - [ ] Barcha QuickQuiz / Review / Problems savollari javoblangan, raqamlar kitob bilan bir xil.
 - [ ] Hisob-kitoblar qayta tekshirilgan (foiz, elastiklik, ortiqchalik maydoni, soliq yuki, imkoniyat xarajati).
-- [ ] Telefon (375 px) da: formula sig‘adi, jadval o‘qiladi, chizma ko‘rinadi, gorizontal surilish yo‘q.
+- [ ] Telefon (360–375 px) da: formula sig‘adi, jadval o‘qiladi, chizma ko‘rinadi, gorizontal surilish yo‘q.
 - [ ] Yorug‘ va qorong‘u rejimda o‘qiladi.
 - [ ] Inglizcha atamalar faqat birinchi marta qavsda; `o‘ g‘` U+2018 bilan.
 
