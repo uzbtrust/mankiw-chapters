@@ -68,44 +68,53 @@
     },
     {
       "id": "c1-s9",
-      "title": "8–10-tamoyillar: iqtisodiyot yaxlit holda qanday ishlaydi?",
+      "title": "8-tamoyil: turmush darajasi unumdorlikka bog‘liq",
       "sourceTopics": [
-        "1-3a Standard of Living and Productivity",
-        "1-3b Inflation and Money Growth",
-        "1-3c Short-Run Trade-Off between Inflation and Unemployment"
+        "1-3a Standard of Living and Productivity"
       ]
     },
     {
       "id": "c1-s10",
-      "title": "O‘nta tamoyilni bir xaritada ko‘rish",
+      "title": "9-tamoyil: pul haddan tashqari ko‘paytirilsa narxlar oshadi",
       "sourceTopics": [
-        "1-4 Conclusion",
-        "Table 1: Ten Principles of Economics",
-        "Chapter in a Nutshell",
-        "Key Concepts"
+        "1-3b Inflation and Money Growth"
       ]
     },
     {
       "id": "c1-s11",
-      "title": "Manbadagi barcha takrorlash savollariga javoblar",
+      "title": "10-tamoyil: qisqa muddatda inflyatsiya va ishsizlik o‘rtasidagi murosa",
+      "sourceTopics": [
+        "1-3c Short-Run Trade-Off between Inflation and Unemployment"
+      ]
+    },
+    {
+      "id": "c1-s12",
+      "title": "O‘nta tamoyilni bir xaritada ko‘rish",
+      "sourceTopics": [
+        "1-4 Conclusion",
+        "Table 1: Ten Principles of Economics",
+        "Chapter in a Nutshell"
+      ]
+    },
+    {
+      "id": "c1-review",
+      "title": "Takrorlash savollari",
       "sourceTopics": [
         "Questions for Review 1–10"
       ]
     },
     {
-      "id": "c1-s12",
-      "title": "Muammolar va qo‘llash mashqlari: to‘liq yechimlar",
+      "id": "c1-apps",
+      "title": "Masalalar va qo‘llash",
       "sourceTopics": [
         "Problems and Applications 1–11"
       ]
     },
     {
-      "id": "c1-s13",
-      "title": "QuickQuiz: javob va sabablar",
+      "id": "c1-quick",
+      "title": "Tezkor savollar: javob va sabab",
       "sourceTopics": [
-        "QuickQuiz 1–4",
-        "QuickQuiz 5–7",
-        "QuickQuiz 8–10",
+        "QuickQuiz 1–10",
         "QuickQuiz Answers"
       ]
     }
