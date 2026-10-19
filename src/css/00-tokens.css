@@ -1,0 +1,176 @@
+/* ==========================================================================
+   00 · DESIGN TOKENS  — yagona haqiqat manbai.
+   Rang, shrift, radius, soya, harakat. Boshqa CSS fayllar faqat shu o‘zgaruvchilardan
+   foydalanadi (qattiq yozilgan hex/px o‘rniga var(--…)).
+   Qorong‘u rejim: <html class="dark"> (sahifa chizilishidan oldin qo‘llanadi).
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  /* ---- Rang · yuzalar ------------------------------------------------- */
+  --bg: #ffffff; /* asosiy fon */
+  --bg-alt: #f5f5f7; /* Apple’ning kulrang bo‘lim foni */
+  --bg-elev: #ffffff; /* kartalar, dialoglar */
+  --bg-sunk: #fbfbfd; /* chizma / model foni */
+  --glass: rgba(255, 255, 255, 0.72); /* shaffof (blur) panel */
+  --glass-solid: rgba(255, 255, 255, 0.94); /* blur qo‘llanmasa */
+
+  /* ---- Rang · matn ---------------------------------------------------- */
+  --fg: #1d1d1f;
+  --fg-2: #424245;
+  --fg-3: #6e6e73; /* ikkilamchi matn (AA 4.9:1) */
+  --fg-4: #86868b; /* faqat dekor / disabled */
+
+  /* ---- Rang · chiziq -------------------------------------------------- */
+  --line: rgba(0, 0, 0, 0.1);
+  --line-soft: rgba(0, 0, 0, 0.06);
+  --line-strong: rgba(0, 0, 0, 0.18);
+
+  /* ---- Rang · urg‘u (Apple ko‘k) -------------------------------------- */
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --accent-press: #006edb;
+  --accent-ink: #0066cc; /* matn ichidagi havola */
+  --accent-soft: rgba(0, 113, 227, 0.09);
+  --on-accent: #ffffff;
+
+  /* ---- Rang · iqtisodiy semantika (chizma, model, sxema) -------------- */
+  --demand: #0071e3; /* talab */
+  --supply: #f56300; /* taklif */
+  --supply-ink: #c93400; /* taklif yozuvi (matn) */
+  --ref: #8e8e93; /* yordamchi / dashed chiziq */
+  --good: #248a3d; /* foyda, ortiqcha, ijobiy */
+  --bad: #d70015; /* yo‘qotish, DWL, salbiy */
+  --social: #8944ab; /* ijtimoiy xarajat / foyda */
+  --surplus-c: rgba(0, 113, 227, 0.14); /* iste’molchi ortiqchasi */
+  --surplus-p: rgba(245, 99, 0, 0.16); /* ishlab chiqaruvchi ortiqchasi */
+  --dwl: rgba(215, 0, 21, 0.14); /* sof yo‘qotish */
+  --svg-ink: #3a3a3c; /* chizma matni */
+  --svg-axis: #6e6e73; /* chizma o‘qlari */
+  --svg-grid: rgba(0, 0, 0, 0.07); /* chizma to‘ri */
+
+  /* ---- Shrift: San Francisco (tizim shrifti, hech narsa yuklanmaydi) --- */
+  --font:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  --mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+  /* Matematik formulalar uchun (Apple’ning "New York" serifi bor joyda): */
+  --serif: ui-serif, 'New York', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+
+  /* ---- Matn o‘lchamlari (suyuq) --------------------------------------- */
+  --fs-hero: clamp(2.75rem, 1.4rem + 6.4vw, 6rem); /* 44 → 96 */
+  --fs-h1: clamp(2.25rem, 1.3rem + 4.2vw, 4rem); /* 36 → 64 */
+  --fs-h2: clamp(1.75rem, 1.2rem + 2.4vw, 3rem); /* 28 → 48 */
+  --fs-h3: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem); /* 20 → 28 */
+  --fs-lead: clamp(1.1875rem, 1.05rem + 0.6vw, 1.5rem); /* 19 → 24 */
+  --fs-body: 1.0625rem; /* 17 */
+  --fs-sm: 0.875rem; /* 14 */
+  --fs-xs: 0.75rem; /* 12 */
+  --reader-size: 18px; /* o‘qish matni; A−/A+ tugmalari o‘zgartiradi */
+  --track-hero: -0.045em;
+  --track-display: -0.03em;
+  --track-tight: -0.015em;
+
+  /* ---- Radius ---------------------------------------------------------- */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-pill: 980px;
+
+  /* ---- Soya ------------------------------------------------------------ */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.04), 0 12px 36px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.06), 0 32px 90px rgba(0, 0, 0, 0.18);
+  --backdrop: rgba(0, 0, 0, 0.32);
+
+  /* ---- Oraliq (8px asosli) --------------------------------------------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 140px;
+  --gutter: clamp(20px, 5vw, 48px);
+
+  /* ---- Maket ----------------------------------------------------------- */
+  --nav-h: 52px; /* global yuqori panel balandligi */
+  --max: 1120px; /* bosh sahifa kontent kengligi */
+  --max-wide: 1280px;
+  --read: 700px; /* o‘qish ustuni kengligi */
+
+  /* ---- Harakat (CSS) --------------------------------------------------- */
+  --ease: cubic-bezier(0.28, 0.11, 0.32, 1); /* apple.com egri chizig‘i */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* expo-out */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 0.2s;
+  --t: 0.4s;
+  --t-slow: 0.8s;
+
+  /* ---- Qatlamlar --------------------------------------------------------- */
+  --z-reading: 60;
+  --z-nav: 50;
+  --z-bar: 45;
+  --z-dialog: 100;
+}
+
+/* ==========================================================================
+   QORONG‘U REJIM — <html class="dark">
+   ========================================================================== */
+:root.dark {
+  color-scheme: dark;
+  --bg: #000000;
+  --bg-alt: #111113;
+  --bg-elev: #1c1c1e;
+  --bg-sunk: #161618;
+  --glass: rgba(22, 22, 24, 0.72);
+  --glass-solid: rgba(22, 22, 24, 0.96);
+
+  --fg: #f5f5f7;
+  --fg-2: #d2d2d7;
+  --fg-3: #a1a1a6;
+  --fg-4: #6e6e73;
+
+  --line: rgba(255, 255, 255, 0.14);
+  --line-soft: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.26);
+
+  --accent: #0a84ff;
+  --accent-hover: #409cff;
+  --accent-press: #0071e3;
+  --accent-ink: #2997ff;
+  --accent-soft: rgba(10, 132, 255, 0.16);
+
+  --demand: #4aa3ff;
+  --supply: #ff9f0a;
+  --supply-ink: #ffb340;
+  --ref: #8e8e93;
+  --good: #30d158;
+  --bad: #ff453a;
+  --social: #bf5af2;
+  --surplus-c: rgba(74, 163, 255, 0.22);
+  --surplus-p: rgba(255, 159, 10, 0.22);
+  --dwl: rgba(255, 69, 58, 0.22);
+  --svg-ink: #d2d2d7;
+  --svg-axis: #a1a1a6;
+  --svg-grid: rgba(255, 255, 255, 0.09);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.4), 0 12px 36px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.5), 0 32px 90px rgba(0, 0, 0, 0.7);
+  --backdrop: rgba(0, 0, 0, 0.6);
+}
+
+/* Blur qo‘llab-quvvatlanmasa, panel zich fon oladi */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  :root {
+    --glass: var(--glass-solid);
+  }
+}

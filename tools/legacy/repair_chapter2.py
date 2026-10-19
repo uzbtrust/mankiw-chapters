@@ -1,0 +1,37 @@
+from pathlib import Path
+import re,json,html
+p=Path('/Users/uzbtrust/Documents/Codex/2026-10-13/sh-2/work/chapters/chapter-02.html')
+s=p.read_text().replace('qatnovi kamaydimI','qatnovi kamaydimi')
+circle='''<figure class="diagram"><svg viewBox="0 0 660 420" role="img" aria-label="Aylana oqimda haqiqiy mahsulot va pul qarama-qarshi oqadi"><title>Aylana oqim: haqiqiy oqim va pul</title><desc>Tovarlar firmadan mahsulot bozori orqali uy xo‘jaligiga, omil xizmatlari uy xo‘jaligidan omillar bozori orqali firmaga boradi. Pul har ikki bozorda qarama-qarshi oqadi.</desc><defs><marker id="c2-real" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#17695f"/></marker><marker id="c2-money" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#c06843"/></marker></defs><g font-family="system-ui" font-size="13" fill="#254839"><rect x="220" y="20" width="220" height="66" fill="#e5efdf" stroke="#81918b"/><text x="330" y="47" text-anchor="middle">Tovar va xizmatlar</text><text x="330" y="68" text-anchor="middle">bozori</text><rect x="220" y="326" width="220" height="66" fill="#e5efdf" stroke="#81918b"/><text x="330" y="353" text-anchor="middle">Ishlab chiqarish omillari</text><text x="330" y="375" text-anchor="middle">bozori</text><rect x="20" y="176" width="170" height="70" fill="#f5f2e9" stroke="#81918b"/><text x="105" y="216" text-anchor="middle">Uy xo‘jaliklari</text><rect x="470" y="176" width="170" height="70" fill="#f5f2e9" stroke="#81918b"/><text x="555" y="216" text-anchor="middle">Firmalar</text><g fill="none" stroke="#17695f" stroke-width="3" marker-end="url(#c2-real)"><path d="M470 186L425 87"/><path d="M235 87L190 186"/><path d="M190 236L235 325"/><path d="M425 325L470 236"/></g><g fill="none" stroke="#c06843" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#c2-money)"><path d="M120 176Q145 52 219 48"/><path d="M441 48Q525 52 555 176"/><path d="M555 246Q525 361 441 366"/><path d="M219 366Q135 355 120 246"/></g><text x="183" y="133" text-anchor="end" fill="#17695f">tovar / xizmat</text><text x="476" y="133" fill="#17695f">tovar / xizmat</text><text x="177" y="285" text-anchor="end" fill="#17695f">omil xizmati</text><text x="480" y="285" fill="#17695f">omil xizmati</text><text x="93" y="92" fill="#a95335">xarajat</text><text x="523" y="92" fill="#a95335">tushum</text><text x="48" y="335" fill="#a95335">omil daromadi</text><text x="514" y="335" fill="#a95335">ish haqi, ijara, foyda</text></g></svg><figcaption>Yashil uzluksiz o‘qlar — haqiqiy mahsulot va omil xizmatlari; to‘q sariq uzilgan o‘qlar — ular uchun to‘lov. Har bir bozorning ikki oqimi qarama-qarshi yo‘naladi.</figcaption></figure>'''
+s=re.sub(r'<figure class="diagram"><svg[^>]*aria-labelledby="circ-title circ-desc".*?</figure>',circle,s,flags=re.S)
+
+def chart(title,xlabel,ylabel,curves,marks,caption,xmax=100,ymax=100):
+    X=lambda x:80+x/xmax*470;Y=lambda y:340-y/ymax*285
+    paths=''.join('<polyline points="'+' '.join(f'{X(x):.1f},{Y(y):.1f}' for x,y in points)+f'" fill="none" stroke="{color}" stroke-width="3" '+('stroke-dasharray="6 5"' if dash else '')+'/>' for points,color,dash in curves)
+    dots=''.join(f'<circle cx="{X(x):.1f}" cy="{Y(y):.1f}" r="5" fill="#c06843"/><text x="{X(x)+9:.1f}" y="{Y(y)-9:.1f}" font-size="12">{html.escape(label)}</text>' for x,y,label in marks)
+    ticks=''.join(f'<text x="{X(x):.1f}" y="363" text-anchor="middle">{x:g}</text>' for x in [0,xmax/2,xmax])+' '.join(f'<text x="67" y="{Y(y)+4:.1f}" text-anchor="end">{y:g}</text>' for y in [0,ymax/2,ymax])
+    return f'<figure class="diagram"><svg viewBox="0 0 650 425" role="img" aria-label="{html.escape(title)}"><title>{html.escape(title)}</title><g font-family="system-ui" font-size="12" fill="#254839"><path d="M80 45V340H560" fill="none" stroke="#81918b" stroke-width="1.5"/>{ticks}{paths}{dots}<text x="320" y="402" text-anchor="middle">{html.escape(xlabel)}</text><text x="22" y="195" transform="rotate(-90 22 195)" text-anchor="middle">{html.escape(ylabel)}</text></g></svg><figcaption>{caption}</figcaption></figure>'
+
+main=chart('PPF: manbadagi A va B nuqtalarining joylashuvi','Avtomobillar · dona','Kompyuterlar · dona',[
+ ([(0,3000),(200,2850),(400,2600),(600,2200),(700,2000),(800,1600),(900,950),(1000,0)],'#17695f',False),
+ ([(0,4000),(200,3850),(400,3450),(600,2950),(700,2650),(800,2150),(900,1250),(1000,0)],'#81918b',True)],[(600,2200,'A'),(700,2000,'B'),(300,1000,'D'),(800,2700,'C')],
+ 'A=(600; 2 200), B=(700; 2 000). A dan B ga o‘tish: 100 avtomobil uchun 200 kompyuterdan voz kechiladi. D ichkarida, C eski chegaradan tashqarida. Uzilgan chiziq kompyuter texnologiyasi yaxshilanishini ko‘rsatadi. Egri chiziqning oraliq shakli tushuntirish uchun chizilgan.',1000,4000)
+s=re.sub(r'<figure class="diagram"><svg[^>]*aria-labelledby="ppf-title ppf-desc".*?</figure>',main,s,flags=re.S)
+
+front=[(x,100*(1-(x/100)**2)) for x in range(0,101,5)]
+milk=chart('Kasallik sut ishlab chiqarish imkonini qisqartiradi','Pechenye · shartli birlik','Sut · shartli birlik',[(front,'#17695f',False),([(x,y*.5) for x,y in front],'#c06843',True)],[(40,35,'ichki nuqta'),(65,80,'tashqi nuqta')],'Sodda tasvir: pechenye maksimumi o‘zgarmaydi, sut maksimumi kamayadi. Sigirlar yarmi nobud bo‘lishi butun PPF aynan yarmiga tushadi degani emas; mahsulotlar texnologiyasi va umumiy resurslar natijani belgilaydi.')
+guns=chart('Qurol, iste’mol va tinchlik dividendi','Qurol · shartli birlik','Sariyog‘ · shartli birlik',[(front,'#17695f',False)],[(80,36,'H'),(70,51,'H′'),(30,91,'D'),(20,96,'D′'),(40,30,'samarasiz'),(80,80,'imkonsiz')],'H — Hawks, D — Doves tanlovi. Chizma uchun berilgan PPFda qurol 10 birlikka kamaysa, H→H′ sariyog‘ni 15, D→D′ esa 5 birlikka oshiradi. Raqamlar tushuntirish uchun tuzilgan; kitobda aniq PPF tenglamasi berilmagan.')
+env=chart('Kamroq ifloslantiruvchi texnologiya','Sanoat mahsuloti · shartli birlik','Atrof-muhit tozaligi · indeks',[(front,'#81918b',True),([(x,100*(1-(x/100)**3)) for x in range(0,101,5)],'#17695f',False)],[(60,64,'oldingi'),(60,78.4,'yangisi')],'Bir xil 60 birlik sanoat mahsulotida tozalik indeksi yangi usulda yuqoriroq. Yashil yangi chegara tashqariga chiqadi; uzilgan chiziq oldingi texnologiya. Miqdorlar o‘quv misolidir.')
+workers=chart('Larry, Moe va Curly: aniq ishlab chiqarish chegarasi','O‘rilgan maysazor · dona','Yuvilgan avtomobil · dona',[([(0,40),(20,30),(30,20),(40,0)],'#17695f',False)],[(40,0,'A'),(0,40,'B'),(20,20,'C'),(25,25,'D')],'Aniq PPF burilishlari: (0;40), (20;30), (30;20), (40;0). Curly avval o‘rishga o‘tadi, so‘ng Larry, oxirida Moe; har qadamda yo‘qotilgan yuvish miqdori oshadi. D chegarada, C ichkarida.',40,40)
+def insert_answer(kind,num,figure):
+    global s
+    pat=rf'(<details class="answer" data-kind="{kind}" data-q="{num}">.*?<div class="answer-body">)(.*?)(</div></details>)'
+    s,n=re.subn(pat,lambda m:m[1]+m[2]+figure+m[3],s,count=1,flags=re.S)
+    assert n==1,(kind,num)
+insert_answer('review',6,milk)
+insert_answer('application',2,guns)
+insert_answer('application',3,env)
+insert_answer('application',4,workers)
+p.write_text(s)
+j=p.with_suffix('.json');m=json.loads(j.read_text());m['diagramCount']=7;m['wordCount']=len(re.sub('<[^>]+>',' ',s).split());j.write_text(json.dumps(m,ensure_ascii=False,indent=2))
+print('Chapter2 flow directions, PPF geometry and 4 exercise diagrams corrected.')

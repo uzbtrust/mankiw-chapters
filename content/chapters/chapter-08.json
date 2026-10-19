@@ -1,0 +1,117 @@
+{
+  "id": "chapter-08",
+  "title": "Soliqning xarajatlari",
+  "englishTitle": "Application: The Costs of Taxation",
+  "lead": "Soliq davlat xizmatlarini moliyalashtiradi, lekin xaridor va sotuvchi narxlari orasida pona yaratib, ayrim o‘zaro foydali savdolarni to‘xtatadi. Bob soliq tushumi, iste’molchi va ishlab chiqaruvchi ortiqchaligi hamda sof yo‘qotish orasidagi farqni talab-taklif orqali tushuntiradi.",
+  "sourcePages": [
+    153,
+    168
+  ],
+  "sections": [
+    {
+      "id": "c8-s1",
+      "title": "Soliqning yashirin narxi: bitimlardan voz kechish",
+      "sourceTopics": [
+        "8-bob kirish"
+      ]
+    },
+    {
+      "id": "c8-s2",
+      "title": "Soliqdan oldin va keyin farovonlikni o‘lchash",
+      "sourceTopics": [
+        "8-1 The Deadweight Loss of Taxation",
+        "8-1a How a Tax Affects Market Participants"
+      ]
+    },
+    {
+      "id": "c8-s3",
+      "title": "Sof yo‘qotish qayerdan keladi: savdodan qolgan yutuqlar",
+      "sourceTopics": [
+        "8-1b Deadweight Losses and the Gains from Trade"
+      ]
+    },
+    {
+      "id": "c8-s4",
+      "title": "Talab va taklif egiluvchanligi yo‘qotish miqdorini belgilaydi",
+      "sourceTopics": [
+        "8-2 The Determinants of the Deadweight Loss"
+      ]
+    },
+    {
+      "id": "c8-s5",
+      "title": "Tarixiy holat: soliq va mehnat taklifi bahsi",
+      "sourceTopics": [
+        "The Deadweight Loss Debate",
+        "labor-tax case study"
+      ]
+    },
+    {
+      "id": "c8-s6",
+      "title": "Soliq kattalashganda: sof yo‘qotish va tushum bir xil yurmaydi",
+      "sourceTopics": [
+        "8-3 Deadweight Loss and Tax Revenue as Taxes Vary",
+        "The Laffer Curve and Supply-Side Economics"
+      ]
+    },
+    {
+      "id": "c8-s7",
+      "title": "Yakun: samaradorlik, tenglik va davlat dasturlari",
+      "sourceTopics": [
+        "8-4 Conclusion",
+        "Chapter in a Nutshell",
+        "Key Concept"
+      ]
+    },
+    {
+      "id": "c8-s8",
+      "title": "Takrorlash savollari: tushunchalarni tekshirish",
+      "sourceTopics": [
+        "Questions for Review 1–5"
+      ]
+    },
+    {
+      "id": "c8-s9",
+      "title": "Masalalar va qo‘llanmalar: barcha javoblar",
+      "sourceTopics": [
+        "Problems and Applications 1–10"
+      ]
+    },
+    {
+      "id": "c8-s10",
+      "title": "Tezkor test: javob kaliti va qisqa asos",
+      "sourceTopics": [
+        "QuickQuiz 1–9 and answer key"
+      ]
+    }
+  ],
+  "sourceReviewCount": 5,
+  "sourceApplicationCount": 10,
+  "sourceQuickQuizCount": 9,
+  "reviewAnswered": 5,
+  "applicationsAnswered": 10,
+  "quickQuizAnswered": 9,
+  "topicCoverage": [
+    "8-1",
+    "8-1a",
+    "8-1b",
+    "8-2",
+    "8-3",
+    "8-4",
+    "Chapter in a Nutshell",
+    "Key Concept",
+    "Questions for Review",
+    "Problems and Applications",
+    "QuickQuiz",
+    "Laffer Curve and Supply-Side Economics",
+    "labor-tax debate"
+  ],
+  "wordCount": 4810,
+  "diagramCount": 7,
+  "interactiveTypes": [
+    "tax"
+  ],
+  "warnings": [
+    "Bobdagi 40% mehnat solig‘i, Shvetsiya 1980-yillaridagi taxminan 80% stavka, 2012 IGM paneli va 2016-yildan keyingi kuzatuvlar tarixiy manba ma’lumotlari; ular bugungi holat sifatida ko‘rsatilmagan.",
+    "Diagrammalarning konseptual ko‘rinishlari sonli o‘qlar berilmagan joyda aniq narx va miqdor da’vo qilmaydi; 10-masala grafigi tenglamalardan olingan."
+  ]
+}

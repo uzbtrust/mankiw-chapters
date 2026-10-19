@@ -1,0 +1,78 @@
+<div id="reader" hidden>
+  <div class="reader-bar">
+    <div class="reader-bar-in">
+      <button id="mobile-nav-open" class="quiet-button" type="button" aria-haspopup="dialog">
+        <svg class="rd-ico" aria-hidden="true"><use href="#rd-list" /></svg>
+        <span class="qb-label">Boblar</span>
+      </button>
+      <div class="bar-title" aria-hidden="true">
+        <span id="reader-position"></span>
+        <span class="bar-name" id="bar-title"></span>
+      </div>
+      <div class="bar-actions">
+        <button id="answer-toggle" class="quiet-button" type="button" aria-pressed="false">
+          <svg class="rd-ico" aria-hidden="true"><use href="#rd-answers" /></svg>
+          <span class="qb-label">Yechimlarni ochish</span>
+        </button>
+        <button id="presentation-toggle" class="quiet-button" type="button" aria-pressed="false">
+          <svg class="rd-ico" aria-hidden="true"><use href="#rd-screen" /></svg>
+          <span class="qb-label">Taqdimot</span>
+        </button>
+        <button id="print-button" class="quiet-button" type="button">
+          <svg class="rd-ico" aria-hidden="true"><use href="#rd-print" /></svg>
+          <span class="qb-label">Chop etish</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="reader-layout">
+    <aside class="chapter-sidebar">
+      <a class="back-link" href="#bosh-sahifa">
+        <svg class="rd-ico" aria-hidden="true"><use href="#rd-chev-l" /></svg>
+        Barcha boblar
+      </a>
+      <p class="eyebrow"><!--@count--> BOB · O‘QUV YO‘LI</p>
+      <div class="rail-track">
+        <span class="rail-ind" aria-hidden="true"></span>
+        <nav id="chapter-nav" aria-label="Boblar"></nav>
+      </div>
+      <div class="sidebar-note">
+        Tushunchani o‘z so‘zingiz bilan tushuntira olsangiz, uni yaxshiroq eslab qolasiz.
+      </div>
+    </aside>
+    <div class="reader-main">
+      <header id="chapter-header" class="chapter-header"></header>
+      <nav id="inline-toc" class="inline-toc" aria-label="Bob bo‘limlari"></nav>
+      <article id="chapter-content" class="chapter-content"></article>
+      <div id="chapter-end" class="chapter-end"></div>
+    </div>
+    <aside class="toc-sidebar">
+      <p class="eyebrow" id="toc-label">SHU BOBDA</p>
+      <div class="rail-track toc-track">
+        <span class="rail-ind" aria-hidden="true"></span>
+        <nav id="toc-nav" aria-labelledby="toc-label"></nav>
+      </div>
+      <a class="top-link" href="#" id="back-to-top">
+        <svg class="rd-ico" aria-hidden="true"><use href="#rd-arrow-u" /></svg>
+        Boshiga
+      </a>
+    </aside>
+  </div>
+</div>
+<div id="presentation-bar" class="presentation-bar" role="toolbar" aria-label="Taqdimot boshqaruvi" hidden>
+  <button id="slide-prev" class="pres-btn" type="button" aria-label="Oldingi bo‘lim">
+    <svg class="rd-ico" aria-hidden="true"><use href="#rd-chev-l" /></svg>
+    <span>Oldingi</span>
+  </button>
+  <div class="pres-mid">
+    <span id="slide-position" aria-live="polite"></span>
+    <span class="pres-progress" aria-hidden="true"><i id="slide-progress"></i></span>
+  </div>
+  <button id="slide-next" class="pres-btn" type="button" aria-label="Keyingi bo‘lim">
+    <span>Keyingi</span>
+    <svg class="rd-ico" aria-hidden="true"><use href="#rd-chev-r" /></svg>
+  </button>
+  <button id="slide-exit" class="pres-btn pres-exit" type="button" aria-label="Taqdimotdan chiqish">
+    <svg class="rd-ico" aria-hidden="true"><use href="#rd-x" /></svg>
+  </button>
+</div>

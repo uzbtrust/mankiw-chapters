@@ -1,0 +1,91 @@
+<svg class="rd-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="rd-list" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" /></symbol>
+  <symbol id="rd-answers" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="m8.4 12.3 2.4 2.4 4.8-5.2" />
+  </symbol>
+  <symbol id="rd-screen" viewBox="0 0 24 24">
+    <rect x="3" y="4.5" width="18" height="12" rx="2.5" />
+    <path d="M12 16.5V20M8 20h8" />
+  </symbol>
+  <symbol id="rd-print" viewBox="0 0 24 24">
+    <path
+      d="M7 9V4h10v5M7 17H5.5A1.5 1.5 0 0 1 4 15.5v-5A1.5 1.5 0 0 1 5.5 9h13a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-1.5 1.5H17"
+    />
+    <rect x="7" y="14" width="10" height="6" rx="1" />
+  </symbol>
+  <symbol id="rd-chev-l" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6" /></symbol>
+  <symbol id="rd-chev-r" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6" /></symbol>
+  <symbol id="rd-chev-d" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6" /></symbol>
+  <symbol id="rd-arrow-u" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+  <symbol id="rd-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" /></symbol>
+  <symbol id="rd-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="6.5" />
+    <path d="m16 16 4.5 4.5" />
+  </symbol>
+  <symbol id="rd-check" viewBox="0 0 24 24"><path d="m5.5 12.5 4.2 4.2L18.5 7.8" /></symbol>
+</svg>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+  <h2 id="search-title" class="sr-only">Mavzuni toping</h2>
+  <div class="search-field">
+    <svg class="rd-ico" aria-hidden="true"><use href="#rd-search" /></svg>
+    <label class="sr-only" for="search-input">Atama, mavzu yoki savol</label>
+    <input
+      type="search"
+      id="search-input"
+      placeholder="Masalan: imkoniyat xarajati, elastiklik, soliq…"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      enterkeyhint="go"
+      role="combobox"
+      aria-expanded="false"
+      aria-controls="search-results"
+      aria-autocomplete="list"
+    />
+    <button class="search-close" id="search-close" type="button" aria-label="Qidiruvni yopish">
+      <span>Yopish</span>
+      <kbd aria-hidden="true">Esc</kbd>
+    </button>
+  </div>
+  <p id="search-status" class="search-status" role="status">
+    <!--@count--> bobning tushuntirishlari va yechimlari bo‘yicha qidirish.
+  </p>
+  <div id="search-results" role="listbox" aria-label="Natijalar"></div>
+  <div class="search-foot" aria-hidden="true">
+    <span>
+      <kbd>↑</kbd>
+      <kbd>↓</kbd>
+      tanlash
+    </span>
+    <span>
+      <kbd>↵</kbd>
+      ochish
+    </span>
+    <span>
+      <kbd>esc</kbd>
+      yopish
+    </span>
+  </div>
+</dialog>
+<dialog id="mobile-nav" class="mobile-nav" aria-labelledby="mobile-nav-title">
+  <div class="sheet-grab" aria-hidden="true"></div>
+  <div class="dialog-top">
+    <h2 id="mobile-nav-title">Bobni tanlang</h2>
+    <button
+      id="mobile-nav-close"
+      class="icon-button sheet-close"
+      type="button"
+      aria-label="Boblar menyusini yopish"
+    >
+      <svg class="rd-ico" aria-hidden="true"><use href="#rd-x" /></svg>
+    </button>
+  </div>
+  <nav id="mobile-chapter-links" aria-label="Mobil boblar"></nav>
+</dialog>
+<div id="announcer" class="sr-only" aria-live="polite"></div>
+<noscript>
+  <p class="no-script">
+    Boblarni tanlash va chizmalarni o‘zgartirish uchun brauzeringizda JavaScript yoqilgan bo‘lishi kerak.
+  </p>
+</noscript>

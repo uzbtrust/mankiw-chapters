@@ -1,0 +1,159 @@
+{
+  "id": "chapter-04",
+  "title": "Talab va taklifning bozor kuchlari",
+  "englishTitle": "The Market Forces of Supply and Demand",
+  "lead": "Bozor narxlari xaridorlar va sotuvchilarning qarorlarini muvofiqlashtiradi. Talab va taklif egri chiziqlarini o‘qib, muvozanat qanday shakllanishi va hodisalar uni qanday o‘zgartirishini o‘rganamiz.",
+  "sourcePages": [
+    61,
+    86
+  ],
+  "sections": [
+    {
+      "id": "c4-s1",
+      "title": "Narxlar qanday topiladi?",
+      "sourceTopics": [
+        "4-1",
+        "4-1a",
+        "4-1b"
+      ]
+    },
+    {
+      "id": "c4-s2",
+      "title": "Xaridorlar qancha sotib olmoqchi?",
+      "sourceTopics": [
+        "4-2",
+        "4-2a",
+        "4-2b",
+        "4-2c",
+        "Figures 1-4",
+        "demand determinants",
+        "Case Study: Two Ways to Reduce Smoking"
+      ]
+    },
+    {
+      "id": "c4-s3",
+      "title": "Sotuvchilar qancha taklif qiladi?",
+      "sourceTopics": [
+        "4-3",
+        "4-3a",
+        "4-3b",
+        "4-3c",
+        "Figures 5-7",
+        "supply determinants"
+      ]
+    },
+    {
+      "id": "c4-s4",
+      "title": "Muvozanat, ortiqcha taklif va taqchillik",
+      "sourceTopics": [
+        "4-4",
+        "4-4a",
+        "4-4b",
+        "Figures 8-12",
+        "three-step analysis",
+        "simultaneous shifts"
+      ]
+    },
+    {
+      "id": "c4-s5",
+      "title": "Signal, samaradorlik va adolat",
+      "sourceTopics": [
+        "4-5",
+        "Price Gouging expert feature",
+        "2020 IGM panel"
+      ]
+    },
+    {
+      "id": "c4-s6",
+      "title": "Asosiy tushunchalar",
+      "sourceTopics": [
+        "Key Concepts",
+        "Chapter in a Nutshell"
+      ]
+    },
+    {
+      "id": "c4-s7",
+      "title": "Javob rejasi va xatolar",
+      "sourceTopics": [
+        "oral outline",
+        "common traps"
+      ]
+    },
+    {
+      "id": "c4-s8",
+      "title": "QuickQuiz — izohli javoblar",
+      "sourceTopics": [
+        "QuickQuiz 1-13"
+      ]
+    },
+    {
+      "id": "c4-s9",
+      "title": "Takrorlash savollari va javoblar",
+      "sourceTopics": [
+        "Review Questions 1-9"
+      ]
+    },
+    {
+      "id": "c4-s10",
+      "title": "11 ta masalani to‘liq ishlaymiz",
+      "sourceTopics": [
+        "Problems and Applications 1-11",
+        "Requested diagrams for applications 1, 3, 4, 6, 8, 9, 10 and 11"
+      ]
+    }
+  ],
+  "sourceReviewCount": 9,
+  "sourceApplicationCount": 11,
+  "sourceQuickQuizCount": 13,
+  "reviewAnswered": 9,
+  "applicationsAnswered": 11,
+  "quickQuizAnswered": 13,
+  "topicCoverage": [
+    "4-1",
+    "4-1a",
+    "4-1b",
+    "4-2",
+    "4-2a",
+    "4-2b",
+    "4-2c",
+    "4-3",
+    "4-3a",
+    "4-3b",
+    "4-3c",
+    "4-4",
+    "4-4a",
+    "4-4b",
+    "4-5",
+    "all figures 1-12",
+    "all source QuickQuiz blocks",
+    "Questions for Review",
+    "Problems and Applications",
+    "Price Gouging feature",
+    "Key Concepts",
+    "Chapter in a Nutshell",
+    "Case Study: Two Ways to Reduce Smoking",
+    "Cigarette and marijuana relation",
+    "Every requested application diagram"
+  ],
+  "wordCount": 6648,
+  "diagramCount": 30,
+  "interactiveTypes": [
+    "market"
+  ],
+  "warnings": [],
+  "qualityChecks": [
+    "All 9 review questions, 11 applications and 13 QuickQuiz questions checked against the source; all 23 lettered application subparts are covered.",
+    "QuickQuiz 5 now asks about hamburger price increasing pizza demand; QuickQuiz 6 now asks about income increasing and inferior pasta demand.",
+    "Printed QuickQuiz key checked: c,b,a,b,a,d,a,c,d,b,a,c,d.",
+    "Application 4(c) uses the lower TV price to explain increased streaming demand and decreased cinema demand; it no longer attributes the latter to a higher streaming price.",
+    "Application 7 separates movements along hot-dog demand from ketchup and input demand shifts; orange juice result is conditional on substitution.",
+    "Application 10(b) evaluates a rise in flour price versus a rise in milk price, matching the source wording.",
+    "All six pizza schedule points plotted on both curves; exact common point Q=81, P=6.",
+    "All five old and expanded basketball demand points plotted; fixed supply Q=8000 intersects at P=8 and P=12 respectively.",
+    "Orange demand and supply both increase: quantity rises; diagrams show price increasing, unchanged and decreasing.",
+    "Cigarette figures preserve source points (20,5), (10,5) and (12,10); historical 10%,4%,12% statements distinguish estimates from illustrative figure points.",
+    "HTML stack is balanced and local fragment parsing finds exactly 10 direct sibling sections; malformed bold tag and missing opening paragraph repaired.",
+    "All 30 SVGs parse as XML and have title/description; IDs are unique and begin c4-.",
+    "No Cyrillic, Armenian or Georgian characters remain; source statistics remain labeled historical."
+  ]
+}

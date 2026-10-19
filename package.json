@@ -1,0 +1,22 @@
+{
+  "name": "mankiw-presentation",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Iqtisodiyot — Mankiw Principles of Economics 10e: o‘zbekcha o‘quv sayti",
+  "scripts": {
+    "build": "node scripts/py.cjs scripts/build.py",
+    "check": "node scripts/py.cjs scripts/build.py --check",
+    "status": "node scripts/py.cjs scripts/build.py --status",
+    "dev": "node scripts/py.cjs scripts/build.py --no-offline --lenient && node scripts/py.cjs -m http.server 4173 --directory dist",
+    "format": "prettier --write \"src/**/*.{js,css,html}\"",
+    "deploy": "node scripts/py.cjs scripts/build.py && vercel deploy --prod --yes"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "prettier": "^3.3.0",
+    "temml": "0.13.5"
+  }
+}

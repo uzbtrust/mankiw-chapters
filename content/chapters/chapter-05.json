@@ -1,0 +1,169 @@
+{
+  "id": "chapter-05",
+  "title": "Elastiklik va uning qo‘llanilishi",
+  "englishTitle": "Elasticity and Its Application",
+  "lead": "Elastiklik bozor ishtirokchilari narx, daromad va boshqa determinantlardagi o‘zgarishlarga qanchalik kuchli javob berishini foizlarda o‘lchaydi. Bob hisoblash usullarini umumiy tushum bilan bog‘laydi va bug‘doy, neft, noqonuniy narkotik hamda rideshare misollarida qo‘llaydi.",
+  "sourcePages": [
+    87,
+    110
+  ],
+  "sections": [
+    {
+      "id": "c5-s1",
+      "title": "Nega elastiklik?",
+      "sourceTopics": [
+        "bob kirish qismi",
+        "benzin va vaqt ufqi"
+      ]
+    },
+    {
+      "id": "c5-s2",
+      "title": "Talab elastikligining determinantlari",
+      "sourceTopics": [
+        "5-1a",
+        "yaqin o‘rinbosarlar",
+        "zaruriyat va hashamat",
+        "bozor chegarasi",
+        "vaqt ufqi",
+        "real dunyo elastikliklari"
+      ]
+    },
+    {
+      "id": "c5-s3",
+      "title": "Talab elastikligini hisoblash va turlari",
+      "sourceTopics": [
+        "5-1b",
+        "5-1c midpoint method",
+        "5-1d demand curve varieties"
+      ]
+    },
+    {
+      "id": "c5-s4",
+      "title": "Umumiy tushum va talab elastikligi",
+      "sourceTopics": [
+        "5-1e total revenue",
+        "5-1f linear demand elasticity along curve"
+      ]
+    },
+    {
+      "id": "c5-s5",
+      "title": "To‘g‘ri chiziqli talabda o‘zgaruvchi elastiklik",
+      "sourceTopics": [
+        "chiziqli talab jadvali va grafigi",
+        "interaktiv elastiklik"
+      ]
+    },
+    {
+      "id": "c5-s6",
+      "title": "Daromad va o‘zaro narx elastikligi",
+      "sourceTopics": [
+        "5-1g income elasticity",
+        "cross-price elasticity"
+      ]
+    },
+    {
+      "id": "c5-s7",
+      "title": "Taklif elastikligi",
+      "sourceTopics": [
+        "5-2a determinants",
+        "5-2b midpoint",
+        "taklif egri chiziqlari",
+        "quvvat va vaqt",
+        "5-2c"
+      ]
+    },
+    {
+      "id": "c5-s8",
+      "title": "Bug‘doy va fermer daromadi",
+      "sourceTopics": [
+        "5-3a technological advance in wheat"
+      ]
+    },
+    {
+      "id": "c5-s9",
+      "title": "OPEC va neft narxi",
+      "sourceTopics": [
+        "5-3b short run and long run oil"
+      ]
+    },
+    {
+      "id": "c5-s10",
+      "title": "Giyohvand moddalar siyosati",
+      "sourceTopics": [
+        "5-3c interdiction and education"
+      ]
+    },
+    {
+      "id": "c5-s11",
+      "title": "Ride-share yangilik maqolasi",
+      "sourceTopics": [
+        "In the News: Elasticity of Supply and Demand in the Ride-share Market"
+      ]
+    },
+    {
+      "id": "c5-s12",
+      "title": "Xulosa va og‘zaki imtihon",
+      "sourceTopics": [
+        "Chapter in a Nutshell",
+        "Key Concepts"
+      ]
+    },
+    {
+      "id": "c5-review",
+      "title": "Takrorlash savollari",
+      "sourceTopics": [
+        "Questions for Review"
+      ]
+    },
+    {
+      "id": "c5-applications",
+      "title": "Masalalar va qo‘llanishlar",
+      "sourceTopics": [
+        "Problems and Applications"
+      ]
+    },
+    {
+      "id": "c5-quick",
+      "title": "Tezkor savollar",
+      "sourceTopics": [
+        "QuickQuiz 1–11"
+      ]
+    }
+  ],
+  "sourceReviewCount": 9,
+  "sourceApplicationCount": 12,
+  "sourceQuickQuizCount": 11,
+  "reviewAnswered": 9,
+  "applicationsAnswered": 12,
+  "quickQuizAnswered": 11,
+  "topicCoverage": [
+    "5-1a",
+    "5-1b",
+    "5-1c",
+    "5-1d",
+    "5-1e",
+    "5-1f",
+    "5-1g",
+    "5-2a",
+    "5-2b",
+    "5-2c",
+    "5-3a",
+    "5-3b",
+    "5-3c",
+    "5-4",
+    "In the News",
+    "Chapter in a Nutshell",
+    "Key Concepts",
+    "Questions for Review",
+    "Problems and Applications",
+    "QuickQuiz"
+  ],
+  "wordCount": 4833,
+  "diagramCount": 6,
+  "interactiveTypes": [
+    "elasticity"
+  ],
+  "warnings": [
+    "Tarixiy elastiklik baholari va yangilik maqolasi raqamlari manba davriga tegishli; bugungi o‘lchov sifatida berilmagan."
+  ]
+}

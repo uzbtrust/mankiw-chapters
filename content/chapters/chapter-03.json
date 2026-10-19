@@ -1,0 +1,144 @@
+{
+  "id": "chapter-03",
+  "title": "O‘zaro bog‘liqlik va savdodan olinadigan foyda",
+  "englishTitle": "Interdependence and the Gains from Trade",
+  "lead": "Savdo odamlar va mamlakatlarga nisbiy ustunligi bor faoliyatga ixtisoslashib, iste’mol imkoniyatlarini kengaytirishga yordam beradi. Mutlaq unumdorlikdan ko‘ra imkoniyat xarajatini taqqoslash savdoning yo‘nalishi va manfaatli narx oralig‘ini ochib beradi.",
+  "sourcePages": [
+    45,
+    60
+  ],
+  "sections": [
+    {
+      "id": "c3-s1",
+      "title": "O‘zaro bog‘liqlik nega foyda keltiradi?",
+      "sourceTopics": [
+        "Kirish",
+        "3-1 A Parable for the Modern Economy"
+      ]
+    },
+    {
+      "id": "c3-s2",
+      "title": "Ishlab chiqarish chegarasi va o‘zini o‘zi ta’minlash",
+      "sourceTopics": [
+        "3-1a Production Possibilities"
+      ]
+    },
+    {
+      "id": "c3-s3",
+      "title": "Savdo iste’mol tanlovini kengaytiradi",
+      "sourceTopics": [
+        "3-1b Specialization and Trade",
+        "Figure 2: exact Frank and Ruby post-trade consumption points"
+      ]
+    },
+    {
+      "id": "c3-s4",
+      "title": "Mutlaq ustunlik va imkoniyat xarajati",
+      "sourceTopics": [
+        "3-2a Absolute Advantage",
+        "3-2b Opportunity Cost and Comparative Advantage"
+      ]
+    },
+    {
+      "id": "c3-s5",
+      "title": "Savdo narxi va ikkala tomonning foydasi",
+      "sourceTopics": [
+        "3-2c Comparative Advantage and Trade",
+        "3-2d The Price of the Trade",
+        "The Legacy of Adam Smith and David Ricardo"
+      ]
+    },
+    {
+      "id": "c3-s6",
+      "title": "Naomi Osaka maysani o‘zi o‘rishi kerakmi?",
+      "sourceTopics": [
+        "3-3a Should Naomi Osaka Mow Her Own Lawn?"
+      ]
+    },
+    {
+      "id": "c3-s7",
+      "title": "Import, eksport va savdoning taqsimot ta’siri",
+      "sourceTopics": [
+        "3-3b Should the United States Trade with Other Countries?",
+        "Ask the Experts: Trade between China and the United States"
+      ]
+    },
+    {
+      "id": "c3-s8",
+      "title": "Vazifalarni bo‘lish, mashq qilish va samaradorlik",
+      "sourceTopics": [
+        "In the News: Economics within a Marriage",
+        "3-4 Conclusion",
+        "Chapter in a Nutshell",
+        "Key Concepts"
+      ]
+    },
+    {
+      "id": "c3-review",
+      "title": "Bo‘lim oxiridagi savollar",
+      "sourceTopics": [
+        "Questions for Review"
+      ]
+    },
+    {
+      "id": "c3-apps",
+      "title": "Masalalar va qo‘llash",
+      "sourceTopics": [
+        "Problems and Applications",
+        "All 33 lettered subparts; source tables 2(a), 2(c); exact PPF and trade points"
+      ]
+    },
+    {
+      "id": "c3-quick",
+      "title": "QuickQuiz: javoblar va sabablar",
+      "sourceTopics": [
+        "QuickQuiz pages 50, 53, 55"
+      ]
+    }
+  ],
+  "sourceReviewCount": 6,
+  "sourceApplicationCount": 9,
+  "sourceQuickQuizCount": 8,
+  "reviewAnswered": 6,
+  "applicationsAnswered": 9,
+  "quickQuizAnswered": 8,
+  "topicCoverage": [
+    "3-1",
+    "3-1a",
+    "3-1b",
+    "3-2a",
+    "3-2b",
+    "3-2c",
+    "3-2d",
+    "3-3a",
+    "3-3b",
+    "3-4",
+    "Questions for Review",
+    "Problems and Applications",
+    "QuickQuiz",
+    "Adam Smith and David Ricardo",
+    "Economics within a Marriage",
+    "Ask the Experts"
+  ],
+  "wordCount": 4350,
+  "diagramCount": 7,
+  "interactiveTypes": [
+    "advantage"
+  ],
+  "warnings": [],
+  "qualityChecks": [
+    "All 6 review questions, 9 applications and 8 QuickQuiz checked against source; all 33 lettered application subparts covered.",
+    "Printed quiz key b,c,d,b,a,d,b,d checked; Kayla and roommate both have 1.5 laundry loads per dinner opportunity cost.",
+    "Source rancher name is Ruby. Exact Frank/Ruby production, trade and consumption retained; figures now use correct 32/8 and 48/24 intercepts.",
+    "Frank consumption (17 potatoes,5 meat); Ruby consumption (27 potatoes,13 meat); each lies outside the respective individual PPF.",
+    "Naomi Osaka example preserves 2 hours/$30000, Hari 4 hours/$50 and strictly beneficial hiring range 50<wage<30000.",
+    "Required productivity and opportunity-cost tables added to application 2; country PPFs slope downward on common quantitative axes.",
+    "Application 2 trade preserved: 200 million cars for 400 million tons grain; final US 200 cars/600 grain, Japan 200 cars/400 grain.",
+    "Canada PPF, initial 10 cars/150 wheat and trade 10 cars/200 wheat correctly plotted with million-unit axes.",
+    "Scotland exports sweaters and imports scones; lower sweater productivity retains distinct opportunity costs 40 versus 50.",
+    "German/French wine time X is positive; equal opportunity costs at X=3, Germany exports cars for 0<X<3.",
+    "Application 8 consumption trade points added: US 50 shirts/13 computers, China 50 shirts/7 computers; no comparative-advantage difference after China reaches 100 shirts or 20 computers.",
+    "PPF curvature now attributes outward bowing to increasing opportunity cost; equal opportunity costs give no strict comparative advantage.",
+    "HTML stack balanced, local fragment has 11 direct sibling sections; all 7 SVGs parse and ARIA references resolve to unique c3- IDs."
+  ]
+}

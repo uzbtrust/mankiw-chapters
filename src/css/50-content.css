@@ -1,0 +1,700 @@
+/* ==========================================================================
+   50 · CONTENT — maqola tipografiyasi va komponentlar (#chapter-content ichi).
+   Hamma o‘lcham em da: matn hajmi --reader-size (A−/A+) bilan birga o‘zgaradi.
+   Yuzalar (--card) kulrang karta; chiziq faqat qator ajratuvchi hairline.
+   ========================================================================== */
+#chapter-content {
+  --card: var(--bg-alt);
+  --card-pad: 1.25em 1.4em;
+  font-size: var(--reader-size);
+  line-height: 1.65;
+  color: var(--fg);
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+:root.dark #chapter-content {
+  --card: var(--bg-elev);
+}
+@media (max-width: 640px) {
+  #chapter-content {
+    --card-pad: 1.05em 1.1em;
+    line-height: 1.6;
+  }
+}
+
+/* ---- Bo‘lim ------------------------------------------------------------- */
+#chapter-content .lesson-section {
+  position: relative;
+}
+#chapter-content .lesson-section + .lesson-section {
+  margin-top: clamp(56px, 10vw, 88px);
+  padding-top: clamp(40px, 7vw, 64px);
+  border-top: 1px solid var(--line-soft);
+}
+.lesson-section > * + * {
+  margin-top: 1.1em;
+}
+.section-kicker {
+  font-size: 0.84em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.lesson-section > h2 {
+  margin-top: 0.4em;
+  font-size: clamp(1.65rem, calc(var(--reader-size) * 1.2 + 1.2vw), 2.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: var(--track-display);
+}
+.lesson-section > h2 + * {
+  margin-top: 1.3em;
+}
+
+/* ---- Sarlavhalar, matn ---------------------------------------------------- */
+
+:where(#chapter-content) h3 {
+  font-size: 1.32em;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+:where(#chapter-content) h4 {
+  font-size: 1.08em;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+}
+.lesson-section > h3 {
+  margin-top: 2.3em;
+}
+.lesson-section > h4 {
+  margin-top: 1.9em;
+}
+.lesson-section > :is(h3, h4) + * {
+  margin-top: 0.7em;
+}
+:where(#chapter-content) :is(p, ul, ol, dl) {
+  max-width: 68ch;
+}
+:where(#chapter-content) :is(b, strong) {
+  font-weight: 600;
+}
+:where(#chapter-content) sub,
+:where(#chapter-content) sup {
+  font-size: 0.72em;
+  line-height: 0;
+}
+:where(#chapter-content) a {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color var(--t-fast) var(--ease);
+}
+:where(#chapter-content) a:hover {
+  text-decoration-color: currentColor;
+}
+:where(#chapter-content) code,
+:where(#chapter-content) kbd {
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  background: var(--card);
+  font-family: var(--mono);
+  font-size: 0.88em;
+}
+
+/* ---- Ro‘yxatlar --------------------------------------------------------- */
+:where(#chapter-content) :is(ul, ol):not([class]) {
+  padding-left: 1.35em;
+}
+:where(#chapter-content) li + li {
+  margin-top: 0.45em;
+}
+:where(#chapter-content) li::marker {
+  color: var(--fg-3);
+}
+:where(#chapter-content) ol:not([class]) li::marker {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+:where(#chapter-content) li > :is(p, ul, ol) + :is(p, ul, ol) {
+  margin-top: 0.5em;
+}
+
+/* ---- Umumiy yuza (karta) komponentlari ---------------------------------- */
+.example,
+.callout,
+.recap,
+.warning,
+.key-concepts,
+.formula,
+.comparison > *,
+.concept-grid > * {
+  position: relative;
+  padding: var(--card-pad);
+  border-radius: var(--r-lg);
+  background: var(--card);
+}
+.lesson-section
+  > :is(
+    .example,
+    .callout,
+    .recap,
+    .warning,
+    .key-concepts,
+    .formula,
+    .comparison,
+    .concept-grid,
+    .step-list,
+    .table-wrap,
+    .diagram
+  ) {
+  margin-block: 1.7em;
+}
+:is(.example, .callout, .recap, .warning, .key-concepts, .formula, .comparison > *, .concept-grid > *)
+  > *
+  + * {
+  margin-top: 0.75em;
+}
+:is(.example, .callout, .recap, .warning, .key-concepts, .comparison > *, .concept-grid > *) :is(h3, h4) {
+  font-size: 1.06em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  margin-top: 0;
+}
+:is(.example, .callout, .recap, .warning) :is(h3, h4):not(:first-child) {
+  margin-top: 1.2em;
+}
+:is(.example, .callout, .recap, .warning, .key-concepts) > :is(h3, h4) + * {
+  margin-top: 0.5em;
+}
+:is(.example, .callout, .recap, .warning, .comparison > *, .concept-grid > *) p {
+  font-size: 0.97em;
+}
+
+/* Misol — neytral karta */
+.example {
+  background: var(--card);
+}
+/* Muhim fikr — ingichka urg‘u chizig‘i */
+.callout {
+  padding-left: 1.75em;
+}
+.callout::before,
+.warning::before {
+  content: '';
+  position: absolute;
+  left: 0.8em;
+  top: 1.15em;
+  bottom: 1.15em;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.callout > :is(b, strong):first-child,
+.callout > p:first-child > :is(b, strong):first-child,
+.recap > :is(b, strong):first-child,
+.recap > p:first-child > :is(b, strong):first-child {
+  color: var(--accent-ink);
+}
+/* Qisqacha / og‘zaki eslab qolish */
+.recap {
+  background: var(--accent-soft);
+}
+ul.recap {
+  list-style: none;
+  max-width: none;
+}
+ul.recap > li {
+  position: relative;
+  padding-left: 1.15em;
+}
+ul.recap > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+/* Ogohlantirish */
+.warning {
+  padding-left: 1.75em;
+  background: color-mix(in srgb, var(--supply) 9%, transparent);
+}
+.warning::before {
+  background: var(--supply);
+}
+.warning > :is(b, strong):first-child,
+.warning > p:first-child > :is(b, strong):first-child {
+  color: var(--supply-ink);
+}
+
+/* ---- Matematika (LaTeX → MathML, build.py) ------------------------------
+   Shrift: tizimdagi matematik shrift (Apple: STIX Two Math). Veb-shrift yuklanmaydi. */
+math {
+  font-family: 'STIX Two Math', 'STIXTwoMath-Regular', 'Cambria Math', 'Noto Sans Math', math;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-feature-settings: 'dtls' off;
+  math-style: normal;
+}
+:where(#chapter-content) math:not([display='block']) {
+  font-size: 1.06em;
+  padding-inline: 0.06em;
+}
+:where(#chapter-content) math[display='block'] {
+  display: block math;
+  margin: 0;
+  font-size: 1.22em;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.15em;
+}
+math * {
+  border-color: currentColor;
+}
+
+/* Formula — oq karta, markazda, katta */
+.formula {
+  background: var(--bg-elev);
+  box-shadow:
+    0 0 0 1px var(--line),
+    var(--shadow-xs);
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums lining-nums;
+  text-wrap: balance;
+  overflow-x: auto;
+  max-width: none;
+}
+.formula > * {
+  max-width: none;
+}
+.formula p + p {
+  margin-top: 0.5em;
+}
+.formula strong {
+  font-size: 0.88em;
+  color: var(--fg-3);
+}
+.formula strong:only-child {
+  font-size: inherit;
+  color: inherit;
+}
+.formula > math + math {
+  margin-top: 0.7em;
+}
+/* Formula ostidagi belgilar izohi: "Q_d — talab miqdori" */
+.formula-legend {
+  list-style: none;
+  max-width: none;
+  margin: 1em auto 0;
+  padding: 0.9em 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.35em 1.4em;
+  grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr));
+  text-align: left;
+  font-size: 0.82em;
+  line-height: 1.45;
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+.formula-legend li {
+  margin: 0;
+}
+.formula-legend math {
+  color: var(--fg);
+}
+/* Formula sarlavhasi (ixtiyoriy): kichik kulrang yozuv */
+.formula > .formula-title {
+  font-size: 0.78em;
+  font-weight: 600;
+  color: var(--fg-3);
+  letter-spacing: 0;
+}
+:is(.example, .callout, .answer-body) .formula {
+  background: var(--bg);
+}
+
+/* Manba izohi */
+.source-note {
+  max-width: 62ch;
+  padding-left: 1em;
+  border-left: 2px solid var(--line);
+  font-size: 0.86em;
+  line-height: 1.55;
+  color: var(--fg-3);
+}
+.source-note strong {
+  color: var(--fg-2);
+}
+.lesson-section > .source-note {
+  margin-block: 1.4em;
+}
+
+/* Kalit tushunchalar */
+.key-concepts {
+  list-style: none;
+  max-width: none;
+  font-size: 0.97em;
+}
+.key-concepts > h3 {
+  color: var(--fg-3);
+  font-size: 0.86em;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.key-concepts ul {
+  list-style: none;
+  padding: 0;
+}
+.key-concepts li {
+  margin: 0;
+  padding: 0.6em 0;
+  border-top: 1px solid var(--line);
+}
+.key-concepts li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.key-concepts li:last-child {
+  padding-bottom: 0;
+}
+.key-concepts dl {
+  display: grid;
+  grid-template-columns: minmax(8em, 32%) 1fr;
+  column-gap: 1.2em;
+  max-width: none;
+  margin: 0;
+}
+.key-concepts dt,
+.key-concepts dd {
+  margin: 0;
+  padding: 0.6em 0;
+  border-top: 1px solid var(--line);
+}
+.key-concepts dt:first-child,
+.key-concepts dt:first-child + dd {
+  padding-top: 0;
+  border-top: 0;
+}
+.key-concepts dt {
+  font-weight: 600;
+}
+.key-concepts .en {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.84em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--fg-3);
+}
+.key-concepts dd {
+  color: var(--fg-2);
+}
+@media (max-width: 560px) {
+  .key-concepts dl {
+    grid-template-columns: 1fr;
+  }
+  .key-concepts dt {
+    padding-bottom: 0;
+  }
+  .key-concepts dd {
+    padding-top: 0.15em;
+    border-top: 0;
+  }
+  .key-concepts dt:first-child + dd {
+    padding-top: 0.15em;
+  }
+}
+
+/* Tushunchalar to‘ri va taqqoslash */
+.concept-grid,
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
+  gap: 12px;
+}
+.comparison > p {
+  grid-column: 1 / -1;
+  max-width: none;
+}
+.concept-grid > * > p,
+.comparison > * > p {
+  color: var(--fg-2);
+}
+
+/* Bosqichma-bosqich ro‘yxat — katta yumshoq raqamlar */
+.step-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: step;
+}
+.step-list > li {
+  position: relative;
+  min-height: 2.4em;
+  margin-top: 1.3em;
+  padding-left: 3.1em;
+  counter-increment: step;
+}
+.step-list > li:first-child {
+  margin-top: 0;
+}
+.step-list > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.12em;
+  width: 1.7em;
+  font-size: 1.85em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: var(--accent);
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+.step-list > li > strong:first-child {
+  display: block;
+}
+
+/* ---- Jadval --------------------------------------------------------------- */
+.table-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--r-md);
+  background-color: var(--card);
+  background-image:
+    linear-gradient(to right, var(--card), var(--card)), linear-gradient(to left, var(--card), var(--card)),
+    linear-gradient(to right, color-mix(in srgb, var(--fg) 16%, transparent), transparent),
+    linear-gradient(to left, color-mix(in srgb, var(--fg) 16%, transparent), transparent);
+  background-position: left, right, left, right;
+  background-size:
+    24px 100%,
+    24px 100%,
+    12px 100%,
+    12px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  scrollbar-width: thin;
+}
+:is(.example, .callout, .answer-body) .table-wrap {
+  --card: var(--bg);
+}
+.table-wrap table {
+  width: 100%;
+  min-width: max-content;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+.table-wrap :is(th, td) {
+  padding: 0.75em 1em;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.table-wrap th {
+  padding-block: 0.85em 0.7em;
+  font-size: 0.86em;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--fg-3);
+  letter-spacing: 0;
+}
+.table-wrap tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.table-wrap tbody th {
+  color: var(--fg);
+  font-size: 1em;
+}
+.table-wrap td:first-child {
+  font-weight: 500;
+}
+.table-wrap td {
+  min-width: 4.5em;
+}
+/* Telefonda 4+ ustunli jadval kartalarga aylanadi (build.py har bir katakka data-label yozadi). */
+@media (max-width: 560px) {
+  .table-wrap:has(> .t-stack) {
+    overflow: visible;
+    background: none;
+    border-radius: 0;
+  }
+  .table-wrap .t-stack,
+  .t-stack tbody,
+  .t-stack tr,
+  .table-wrap .t-stack :is(td, th) {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+  .t-stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .t-stack tr {
+    padding: 0.85em 1em;
+    border-radius: var(--r-md);
+    background: var(--card);
+  }
+  .t-stack tr + tr {
+    margin-top: 8px;
+  }
+  .table-wrap .t-stack :is(td, th) {
+    display: grid;
+    grid-template-columns: minmax(6.5em, 42%) 1fr;
+    gap: 0.9em;
+    padding: 0.45em 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 1em;
+  }
+  .table-wrap .t-stack tr > :last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .t-stack :is(td, th)::before {
+    content: attr(data-label);
+    font-size: 0.86em;
+    font-weight: 500;
+    color: var(--fg-3);
+  }
+  /* birinchi katak — karta sarlavhasi */
+  .table-wrap .t-stack tr > :first-child {
+    display: block;
+    padding-top: 0;
+    font-size: 1.04em;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .t-stack tr > :first-child::before {
+    display: block;
+    margin-bottom: 0.1em;
+    font-size: 0.78em;
+  }
+  .t-stack tr > :first-child[data-label='']::before {
+    display: none;
+  }
+}
+
+/* ---- Javoblar: details.answer ------------------------------------------- */
+details.answer {
+  background: var(--card);
+  border-radius: var(--r-md);
+}
+details.answer + details.answer {
+  margin-top: 8px;
+}
+.answer > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8em;
+  min-height: 44px;
+  padding: 0.85em 1.1em;
+  border-radius: var(--r-md);
+  list-style: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.012em;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background-color var(--t-fast) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.answer > summary::-webkit-details-marker {
+  display: none;
+}
+.answer > summary::after {
+  content: '';
+  flex: none;
+  align-self: center;
+  width: 0.5em;
+  height: 0.5em;
+  margin-left: auto;
+  margin-right: 0.2em;
+  border-right: 2px solid var(--fg-3);
+  border-bottom: 2px solid var(--fg-3);
+  border-radius: 1px;
+  transform: rotate(-45deg);
+  transition: transform var(--t) var(--ease-out);
+}
+.answer[open] > summary::after {
+  transform: rotate(45deg);
+}
+.answer.is-closing > summary::after {
+  transform: rotate(-45deg);
+}
+.answer > summary:focus-visible {
+  outline-offset: -3px;
+  border-radius: var(--r-md);
+}
+@media (hover: hover) {
+  .answer > summary:hover {
+    background: color-mix(in srgb, var(--fg) 4%, transparent);
+  }
+}
+.answer > summary:active {
+  background: color-mix(in srgb, var(--fg) 7%, transparent);
+}
+.q-number {
+  flex: none;
+  min-width: 2.3em;
+  padding: 0.12em 0.6em;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.82em;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+.answer-body {
+  margin: 0 1.1em;
+  padding: 1em 0 1.3em;
+  border-top: 1px solid var(--line);
+}
+.answer-body > * + * {
+  margin-top: 0.85em;
+}
+.answer-body > :is(h3, h4) {
+  margin-top: 1.5em;
+  font-size: 1.06em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+}
+.answer-body > :is(.formula, .table-wrap, .step-list, .diagram) {
+  margin-block: 1.1em;
+}
+.answer-body > :first-child {
+  margin-top: 0;
+}
+.answer-body > .formula {
+  font-size: 1.04em;
+}

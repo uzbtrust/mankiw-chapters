@@ -1,0 +1,186 @@
+{
+  "id": "chapter-10",
+  "title": "Tashqi ta’sirlar",
+  "englishTitle": "Externalities",
+  "lead": "Bitimda qatnashmagan odamlarga yetadigan haq to‘lanmagan zarar yoki foyda xususiy qarorni jamiyat uchun maqbul tanlovdan og‘dirishi mumkin. Bob bu farqni grafik va hisob bilan tushuntirib, davlat rag‘batlari hamda xususiy kelishuvlarning imkoniyati va shartlarini ko‘rsatadi.",
+  "sourcePages": [
+    189,
+    209
+  ],
+  "sections": [
+    {
+      "id": "c10-s1",
+      "title": "Bizning qarorimiz boshqalarga ham ta’sir qiladi",
+      "sourceTopics": [
+        "Kirish",
+        "Externality definition and examples"
+      ]
+    },
+    {
+      "id": "c10-s2",
+      "title": "Xususiy xarajat va jamiyatning to‘liq xarajati",
+      "sourceTopics": [
+        "10-1",
+        "10-1a Welfare Economics: A Recap",
+        "10-1b Negative Externalities",
+        "Figures 1 and 2",
+        "Internalizing the externality"
+      ]
+    },
+    {
+      "id": "c10-s3",
+      "title": "Ijobiy tashqi ta’sir: bozor nega kamroq beradi?",
+      "sourceTopics": [
+        "10-1c Positive Externalities",
+        "Figure 3",
+        "Externality interactive"
+      ]
+    },
+    {
+      "id": "c10-s4",
+      "title": "Bilim tarqalishi, sanoat siyosati va patent",
+      "sourceTopics": [
+        "Case Study: Technology Spillovers, Industrial Policy, and Patent Protection"
+      ]
+    },
+    {
+      "id": "c10-s5",
+      "title": "Davlatning bevosita qoidalari",
+      "sourceTopics": [
+        "10-2",
+        "10-2a Command-and-Control Policies: Regulation",
+        "Ask the Experts: Covid Vaccines"
+      ]
+    },
+    {
+      "id": "c10-s6",
+      "title": "Zararga narx qo‘yish",
+      "sourceTopics": [
+        "10-2b Market-Based Policy 1: Corrective Taxes and Subsidies",
+        "Glop factories example",
+        "Case Study: Why Is Gasoline Taxed So Heavily?"
+      ]
+    },
+    {
+      "id": "c10-s7",
+      "title": "Ifloslanish ruxsatnomalarini savdo qilish",
+      "sourceTopics": [
+        "10-2c Market-Based Policy 2: Tradable Pollution Permits",
+        "Figure 4",
+        "SO2 allowances historical example"
+      ]
+    },
+    {
+      "id": "c10-s8",
+      "title": "Toza muhit, muqobil xarajat va uglerod narxi",
+      "sourceTopics": [
+        "10-2d Objections to the Economic Analysis of Pollution",
+        "Case Study: Climate Change and Carbon Taxes",
+        "Ask the Experts: Carbon Taxes"
+      ]
+    },
+    {
+      "id": "c10-s9",
+      "title": "Davlatsiz ham yechim topish mumkin",
+      "sourceTopics": [
+        "10-3",
+        "10-3a The Types of Private Solutions",
+        "Apple grower and beekeeper example"
+      ]
+    },
+    {
+      "id": "c10-s10",
+      "title": "Kouz teoremasi: kelishuv samarali natijani topadi",
+      "sourceTopics": [
+        "10-3b The Coase Theorem",
+        "Emily, Clifford, and Horace examples"
+      ]
+    },
+    {
+      "id": "c10-s11",
+      "title": "Nega foydali kelishuv ham amalga oshmay qoladi?",
+      "sourceTopics": [
+        "10-3c Why Private Solutions Do Not Always Work",
+        "In the News: The Coase Theorem in Action",
+        "Questions to Discuss 1-2",
+        "10-4 Conclusion"
+      ]
+    },
+    {
+      "id": "c10-s12",
+      "title": "Takrorlash savollari va izohli javoblar",
+      "sourceTopics": [
+        "Questions for Review 1-6"
+      ]
+    },
+    {
+      "id": "c10-s13",
+      "title": "Masalalar: grafik, hisob va sababiy izoh",
+      "sourceTopics": [
+        "Problems and Applications 1-9, all subparts"
+      ]
+    },
+    {
+      "id": "c10-s14",
+      "title": "Tezkor tekshiruv: javobning sababini ayting",
+      "sourceTopics": [
+        "QuickQuiz 1-8",
+        "QuickQuiz Answers"
+      ]
+    },
+    {
+      "id": "c10-s15",
+      "title": "Bobni bir mantiqiy zanjir bilan tushuntirish",
+      "sourceTopics": [
+        "10-4 Conclusion",
+        "Chapter in a Nutshell",
+        "Key Concepts",
+        "Oral explanation outline and seven common errors"
+      ]
+    }
+  ],
+  "sourceReviewCount": 6,
+  "sourceApplicationCount": 9,
+  "sourceQuickQuizCount": 8,
+  "reviewAnswered": 6,
+  "applicationsAnswered": 9,
+  "quickQuizAnswered": 8,
+  "topicCoverage": [
+    "Kirish",
+    "10-1",
+    "10-1a",
+    "10-1b",
+    "10-1c",
+    "Technology Spillovers, Industrial Policy, and Patent Protection",
+    "10-2",
+    "10-2a",
+    "Covid Vaccines expert survey",
+    "10-2b",
+    "Why Is Gasoline Taxed So Heavily?",
+    "10-2c",
+    "SO2 permits historical example",
+    "10-2d",
+    "Climate Change and Carbon Taxes",
+    "Carbon Taxes expert surveys",
+    "10-3",
+    "10-3a",
+    "10-3b",
+    "10-3c",
+    "The Coase Theorem in Action",
+    "News discussion questions 1-2",
+    "10-4",
+    "Chapter in a Nutshell",
+    "Key Concepts",
+    "Questions for Review 1-6",
+    "Problems and Applications 1-9",
+    "QuickQuiz 1-8"
+  ],
+  "wordCount": 8219,
+  "diagramCount": 9,
+  "interactiveTypes": [
+    "externality"
+  ],
+  "warnings": [
+    "Cindy masalasida shaxsiy ifloslanish zarari taqsimoti manbada aniqlanmagan; umumiy formula va teng taqsimot farazi ochiq izohlandi."
+  ]
+}

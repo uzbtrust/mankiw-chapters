@@ -1,0 +1,489 @@
+/* ==========================================================================
+   20 · CHROME — skip-link, yuqori panel (topbar), o‘qish chizig‘i va umumiy tugma primitivlari.
+   [Agent: chrome+landing]
+
+   BOSHQA EGALAR UCHUN QAYTA ISHLATILADIGAN KLASSLAR (nomlari barqaror):
+     .btn                 asos: pill tugma (min 44px). Doim .btn-primary yoki .btn-secondary bilan.
+     .btn-primary         to‘ldirilgan --accent pill (asosiy harakat).
+     .btn-secondary       yumshoq ko‘k pill (--accent-soft), ikkilamchi harakat.
+     .btn-lg              kattaroq o‘lcham (bosh sahifa CTA).
+     .link-more           matnli havola + "›" (ikkilamchi harakat, pastki chiziqsiz).
+     .icon-button         dumaloq 32px (sensorda 44px) ikonli tugma: ✕, ⟵ va h.k.
+     .quiet-button        kichik pill-tugma (Yechimlarni ochish, Taqdimot, Chop etish, Qayta yuklash).
+                          [aria-pressed="true"] yoki .is-on — yoqilgan holat.
+     kbd                  klaviatura tugmasi belgisi.
+     .skip-link           "Asosiy mazmunga o‘tish" (fokus olganda ko‘rinadi).
+   Mahalliy "to‘ldirish" o‘zgaruvchilari (--fill, --fill-hover) shu primitivlarda aniqlangan;
+   boshqa joyda kerak bo‘lsa, ularni o‘z selektoringizda qayta e’lon qiling.
+
+   Eslatma: sahifa boshidagi (topbar) shaffoflik GSAP bilan boshqariladi (motion/20-chrome.js);
+   JS bo‘lmasa panel doim shisha + chiziq holatida qoladi.
+   ========================================================================== */
+
+/* ---- umumiy "to‘ldirish" ranglari (matn rangidan hosil bo‘ladi → qorong‘u rejimda avtomatik) ---- */
+.btn,
+.quiet-button,
+.icon-button,
+.topbar,
+.size-control {
+  --fill: color-mix(in srgb, var(--fg) 6%, transparent);
+  --fill-hover: color-mix(in srgb, var(--fg) 11%, transparent);
+}
+
+/* ---- Skip link ---------------------------------------------------------- */
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: calc(var(--z-dialog) + 10);
+  padding: 10px 20px;
+  border-radius: var(--r-pill);
+  background: var(--fg);
+  color: var(--bg);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  transform: translate(-50%, -160%);
+  transition: transform var(--t) var(--ease);
+}
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+}
+
+/* ---- Yuqori panel ------------------------------------------------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  height: var(--nav-h);
+  color: var(--fg);
+}
+/* shisha fon + chiziq: alohida qatlam, shuning uchun uni silliq yoqib/o‘chirish mumkin */
+.topbar-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--glass);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 1px 0 var(--line-soft);
+  pointer-events: none;
+}
+.topbar-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  height: 100%;
+  max-width: var(--max-wide);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Wordmark ----------------------------------------------------------- */
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  color: var(--fg);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: var(--track-tight);
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--r-pill);
+  transition: opacity var(--t-fast) var(--ease);
+}
+.wordmark:hover {
+  opacity: 0.72;
+}
+.wordmark-mark {
+  flex: none;
+}
+.wordmark-mark rect:first-child {
+  fill: var(--accent);
+}
+.wordmark-mark circle,
+.wordmark-mark rect + circle + rect {
+  fill: var(--on-accent);
+}
+
+/* ---- O‘ng tomon amallari ------------------------------------------------- */
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+/* Qidiruv "maydoni" */
+.search-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 232px;
+  height: 32px;
+  padding: 0 6px 0 11px;
+  border-radius: var(--r-pill);
+  background: var(--fill);
+  color: var(--fg-3);
+  font-size: var(--fs-sm);
+  letter-spacing: -0.01em;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+.search-open .icon {
+  flex: none;
+  color: var(--fg-2);
+}
+.search-label {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.search-open:active {
+  transform: scale(0.98);
+}
+.search-kbd {
+  background: transparent;
+  border-color: var(--line);
+}
+
+/* Matn o‘lchami: "A A" segment */
+.size-control {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: var(--r-pill);
+  background: var(--fill);
+}
+.size-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 28px;
+  border-radius: var(--r-pill);
+  color: var(--fg-2);
+  line-height: 1;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+.size-btn:active:not(:disabled) {
+  transform: scale(0.92);
+}
+.aa {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.aa-sm {
+  font-size: 13px;
+}
+.aa-lg {
+  font-size: 19px;
+}
+/* Matn o‘lchami faqat o‘qish ko‘rinishida kerak; :has() bo‘lmagan brauzerda doim ko‘rinadi. */
+@supports selector(:has(*)) {
+  body:has(#reader[hidden]) .size-control {
+    display: none;
+  }
+}
+
+/* Tema tugmasi: quyosh ↔ oy */
+#theme-toggle {
+  display: inline-grid;
+}
+.theme-icon {
+  grid-area: 1 / 1;
+  transition:
+    opacity var(--t) var(--ease),
+    transform 0.55s var(--ease-out);
+}
+.icon-sun {
+  opacity: 0;
+  transform: rotate(-80deg) scale(0.4);
+}
+.dark .icon-moon {
+  opacity: 0;
+  transform: rotate(80deg) scale(0.4);
+}
+.dark .icon-sun {
+  opacity: 1;
+  transform: none;
+}
+
+/* Telefon: qidiruv faqat belgi */
+@media (max-width: 640px) {
+  .search-open {
+    justify-content: center;
+    min-width: 36px;
+    width: 36px;
+    padding: 0;
+  }
+  .search-label,
+  .search-kbd {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  body:has(#reader:not([hidden])) .wordmark-text {
+    display: none;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .search-kbd {
+    display: none;
+  }
+}
+
+/* ---- O‘qish chizig‘i: panelning pastki qirrasiga yopishgan 2px ------------ */
+.reading-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#reading-progress {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.2s linear;
+}
+
+/* ==========================================================================
+   Primitivlar
+   ========================================================================== */
+
+/* ---- .btn ---------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: -0.014em;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-lg {
+  min-height: 52px;
+  padding: 0 30px;
+  font-size: 1.1875rem;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.btn-primary:active {
+  background: var(--accent-press);
+}
+.btn-secondary {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+.btn-secondary:active {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+/* Qorong‘u rejimda oq matn uchun kontrast: to‘ldirish biroz to‘qroq ko‘k */
+:root.dark .btn-primary {
+  background: var(--accent-press);
+}
+:root.dark .btn-primary:active {
+  background: color-mix(in srgb, var(--accent-press) 86%, black);
+}
+
+/* ---- .link-more (matn + ›) ------------------------------------------------ */
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  min-height: 44px;
+  color: var(--accent-ink);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  letter-spacing: -0.014em;
+  line-height: 1.2;
+  transition: opacity var(--t-fast) var(--ease);
+}
+.link-more::after {
+  content: '›';
+  content: '›' / '';
+  font-size: 1.35em;
+  line-height: 1;
+  transform: translateY(-0.04em);
+  transition: transform var(--t-fast) var(--ease);
+}
+.link-more:active {
+  opacity: 0.7;
+}
+
+/* ---- .icon-button --------------------------------------------------------- */
+.icon-button {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--fg-2);
+  font-size: 16px;
+  line-height: 1;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+/* sichqoncha uchun ko‘rinmas, kattaroq bosish maydoni (44px) */
+.icon-button::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+.icon-button:active {
+  transform: scale(0.9);
+}
+
+/* ---- .quiet-button -------------------------------------------------------- */
+.quiet-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  background: var(--fill);
+  color: var(--fg);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+.quiet-button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.quiet-button[aria-pressed='true'],
+.quiet-button.is-on {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+/* ---- kbd ----------------------------------------------------------------- */
+kbd {
+  display: inline-block;
+  min-width: 22px;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-alt);
+  color: var(--fg-3);
+  font-family: var(--font);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---- hover (faqat sichqoncha bor qurilmalarda: sensorda "yopishib qolmasin") ---- */
+@media (hover: hover) {
+  .search-open:hover,
+  .size-btn:hover:not(:disabled),
+  .icon-button:hover,
+  .quiet-button:hover:not(:disabled) {
+    background: var(--fill-hover);
+  }
+  .search-open:hover {
+    color: var(--fg-2);
+  }
+  .icon-button:hover {
+    color: var(--fg);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hover);
+  }
+  :root.dark .btn-primary:hover {
+    background: color-mix(in srgb, var(--accent-press) 90%, white);
+  }
+  .btn-secondary:hover {
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+  .link-more:hover::after {
+    transform: translate(3px, -0.04em);
+  }
+}
+
+/* ---- sensorli qurilmalar: ≥44px bosish maydoni ------------------------------ */
+@media (pointer: coarse) {
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+  .icon-button::before {
+    display: none;
+  }
+  .search-open {
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+  .search-label {
+    display: none;
+  }
+  .size-control {
+    padding: 0;
+  }
+  .size-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .quiet-button {
+    min-height: 44px;
+    padding-inline: 18px;
+  }
+  .top-actions {
+    gap: 2px;
+  }
+}
+
+/* ---- Mavzu almashishi (View Transitions): yumshoq o‘tish ---------------------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+  animation-timing-function: var(--ease);
+}
+
+@media print {
+  .topbar,
+  .skip-link {
+    display: none;
+  }
+}

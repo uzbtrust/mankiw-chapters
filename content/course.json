@@ -1,0 +1,10 @@
+{
+  "book": "N. Gregory Mankiw, Principles of Economics, 10-nashr",
+  "taughtInClass": [1, 2, 3, 4, 5],
+  "parts": [
+    { "label": "I QISM", "title": "Iqtisodiy fikrlash", "chapters": [1, 2, 3] },
+    { "label": "II QISM", "title": "Bozorlar qanday ishlaydi?", "chapters": [4, 5, 6] },
+    { "label": "III QISM", "title": "Bozorlar va farovonlik", "chapters": [7, 8, 9] },
+    { "label": "IV QISM", "title": "Davlat sektori iqtisodiyoti", "chapters": [10] }
+  ]
+}

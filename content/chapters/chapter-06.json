@@ -1,0 +1,179 @@
+{
+  "id": "chapter-06",
+  "title": "Taklif, talab va davlat siyosati",
+  "englishTitle": "Supply, Demand, and Government Policies",
+  "lead": "Davlat narxlarni cheklaganda yoki soliq joriy qilganda xaridor va sotuvchilarning qarorlari qanday o‘zgarishini o‘rganamiz. Narx nazorati, ijara, eng kam ish haqi va soliq yukini grafiklar hamda to‘liq yechilgan mashqlar orqali tushuntiramiz.",
+  "sourcePages": [
+    111,
+    131
+  ],
+  "sections": [
+    {
+      "id": "c6-s1",
+      "title": "Narxni qonun bilan belgilash nimani o‘zgartiradi?",
+      "sourceTopics": [
+        "Chapter 6 introduction"
+      ]
+    },
+    {
+      "id": "c6-s2",
+      "title": "Yuqori narx chegarasi: arzon narx va taqchillik",
+      "sourceTopics": [
+        "6-1",
+        "6-1a",
+        "Figure 1",
+        "Rationing"
+      ]
+    },
+    {
+      "id": "c6-s3",
+      "title": "Asl holatlar: benzin navbatlari va ijara nazorati",
+      "sourceTopics": [
+        "Gasoline case study",
+        "Figure 2",
+        "Rent control case study",
+        "Figure 3",
+        "Ask the Experts: Rent Control"
+      ]
+    },
+    {
+      "id": "c6-s4",
+      "title": "Quyi narx chegarasi va mehnat bozoridagi ortiqcha taklif",
+      "sourceTopics": [
+        "6-1b",
+        "Figure 4",
+        "Minimum wage case study",
+        "Figure 5"
+      ]
+    },
+    {
+      "id": "c6-s5",
+      "title": "Eng kam ish haqi haqidagi bahs va tarixiy dalillar",
+      "sourceTopics": [
+        "Minimum wage case study",
+        "Ask the Experts: Minimum Wage",
+        "In the News: Should the Minimum Wage Be $15 an Hour?",
+        "In the News: Questions to Discuss 1-2"
+      ]
+    },
+    {
+      "id": "c6-s6",
+      "title": "Narx nazoratini qanday baholaymiz?",
+      "sourceTopics": [
+        "6-1c",
+        "Alternative policies"
+      ]
+    },
+    {
+      "id": "c6-s7",
+      "title": "Sotuvchiga soliq: kim yuboradi, kim yuk ko‘taradi?",
+      "sourceTopics": [
+        "6-2",
+        "6-2a",
+        "Figure 6"
+      ]
+    },
+    {
+      "id": "c6-s8",
+      "title": "Xaridorga soliq va ish haqi solig‘i",
+      "sourceTopics": [
+        "6-2b",
+        "Figure 7",
+        "Payroll tax case study",
+        "Figure 8"
+      ]
+    },
+    {
+      "id": "c6-s9",
+      "title": "Elastiklik va hashamat solig‘ining kutilmagan yuki",
+      "sourceTopics": [
+        "6-2c",
+        "Figure 9",
+        "Luxury tax case study"
+      ]
+    },
+    {
+      "id": "c6-s10",
+      "title": "Atamalar va masalani yechish tartibi",
+      "sourceTopics": [
+        "Key Concepts",
+        "Chapter in a Nutshell",
+        "6-3"
+      ]
+    },
+    {
+      "id": "c6-s11",
+      "title": "QuickQuiz: sakkiz savolning izohi",
+      "sourceTopics": [
+        "QuickQuiz 1-8"
+      ]
+    },
+    {
+      "id": "c6-s12",
+      "title": "Takrorlash uchun yetti savol",
+      "sourceTopics": [
+        "Questions for Review 1-7"
+      ]
+    },
+    {
+      "id": "c6-s13",
+      "title": "Amaliy mashqlar 1–5: narxlar va soliq to‘lovchisi",
+      "sourceTopics": [
+        "Problems and Applications 1-5"
+      ]
+    },
+    {
+      "id": "c6-s14",
+      "title": "Amaliy mashqlar 6–10: elastiklik va aniq hisoblar",
+      "sourceTopics": [
+        "Problems and Applications 6-10"
+      ]
+    },
+    {
+      "id": "c6-s15",
+      "title": "Og‘zaki javob rejasi va keng tarqalgan xatolar",
+      "sourceTopics": [
+        "6-3 Conclusion",
+        "Oral exam synthesis"
+      ]
+    }
+  ],
+  "sourceReviewCount": 7,
+  "sourceApplicationCount": 10,
+  "sourceQuickQuizCount": 8,
+  "reviewAnswered": 7,
+  "applicationsAnswered": 10,
+  "quickQuizAnswered": 8,
+  "topicCoverage": [
+    "6-1",
+    "6-1a",
+    "6-1b",
+    "6-1c",
+    "6-2",
+    "6-2a",
+    "6-2b",
+    "6-2c",
+    "6-3",
+    "Figures 1-9",
+    "Gasoline case study",
+    "Rent control case study",
+    "Minimum wage case study",
+    "Payroll tax case study",
+    "Luxury tax case study",
+    "Ask the Experts: Rent Control",
+    "Ask the Experts: Minimum Wage",
+    "In the News: Should the Minimum Wage Be $15 an Hour?",
+    "In the News: Questions to Discuss 1-2",
+    "Chapter in a Nutshell",
+    "Key Concepts",
+    "QuickQuiz 1-8",
+    "Questions for Review 1-7",
+    "Problems and Applications 1-10"
+  ],
+  "wordCount": 6274,
+  "diagramCount": 22,
+  "interactiveTypes": [
+    "controls"
+  ],
+  "warnings": []
+}

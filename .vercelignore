@@ -1,0 +1,14 @@
+node_modules
+content
+src
+scripts
+docs
+tools
+reference
+outputs
+build
+.prettierrc.json
+package.json
+package-lock.json
+README.md
+.DS_Store

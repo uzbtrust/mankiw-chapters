@@ -1,0 +1,166 @@
+{
+  "id": "chapter-09",
+  "title": "Xalqaro savdo: kim yutadi va kim zarar ko‘radi?",
+  "englishTitle": "Application: International Trade",
+  "lead": "Savdosiz narxni jahon narxi bilan taqqoslab, import va eksportni aniqlaymiz. Iste’molchi, ishlab chiqaruvchi va davlat yutuqlari orqali erkin savdo, tarif, kvota hamda subsidiyaning oqibatlarini tushuntiramiz.",
+  "sourcePages": [
+    169,
+    187
+  ],
+  "sections": [
+    {
+      "id": "c9-s1",
+      "title": "Savdo yo‘nalishini qanday aniqlaymiz?",
+      "sourceTopics": [
+        "Kirish",
+        "9-1",
+        "9-1a",
+        "9-1b",
+        "9-2: kichik mamlakat farazi"
+      ]
+    },
+    {
+      "id": "c9-s2",
+      "title": "Eksportchi: ishlab chiqaruvchi yutadi",
+      "sourceTopics": [
+        "9-2a",
+        "Figure 2"
+      ]
+    },
+    {
+      "id": "c9-s3",
+      "title": "Importchi: iste’molchi yutadi",
+      "sourceTopics": [
+        "9-2b",
+        "Figure 3",
+        "g‘oliblar zarar ko‘rganlarni qoplash imkoniyati"
+      ]
+    },
+    {
+      "id": "c9-s4",
+      "title": "Tarif: himoyaning iqtisodiy bahosi",
+      "sourceTopics": [
+        "9-2c",
+        "Figure 4"
+      ]
+    },
+    {
+      "id": "c9-s5",
+      "title": "Kvota rentasi va prezidentga tavsiya",
+      "sourceTopics": [
+        "FYI: Import Quotas",
+        "9-2d"
+      ]
+    },
+    {
+      "id": "c9-s6",
+      "title": "Savdoning grafikdan tashqaridagi foydalari",
+      "sourceTopics": [
+        "9-2e"
+      ]
+    },
+    {
+      "id": "c9-s7",
+      "title": "Savdoni cheklash uchun besh dalil",
+      "sourceTopics": [
+        "9-3",
+        "9-3a",
+        "9-3b",
+        "9-3c",
+        "9-3d",
+        "9-3e"
+      ]
+    },
+    {
+      "id": "c9-s8",
+      "title": "Savdo bitimlari, WTO va ekspertlar",
+      "sourceTopics": [
+        "Case Study: Trade Agreements and the World Trade Organization",
+        "Ask the Experts: Trade Deals and Tariffs"
+      ]
+    },
+    {
+      "id": "c9-s9",
+      "title": "Rivojlanish, oddiy buyumlar va «ixtirochi» hikoyasi",
+      "sourceTopics": [
+        "In the News: Trade as a Tool for Economic Development",
+        "Questions to Discuss 1–2",
+        "9-4"
+      ]
+    },
+    {
+      "id": "c9-review",
+      "title": "Nazorat savollari: 6 ta javob",
+      "sourceTopics": [
+        "Questions for Review 1–6"
+      ]
+    },
+    {
+      "id": "c9-applications",
+      "title": "Masalalar va qo‘llanishlar: 10 ta yechim",
+      "sourceTopics": [
+        "Problems and Applications 1–10"
+      ]
+    },
+    {
+      "id": "c9-quick",
+      "title": "QuickQuiz: 8 ta javob va sabablari",
+      "sourceTopics": [
+        "QuickQuiz 1–8",
+        "QuickQuiz Answers"
+      ]
+    },
+    {
+      "id": "c9-s13",
+      "title": "Atamalar va og‘zaki imtihon rejasi",
+      "sourceTopics": [
+        "Key Concepts",
+        "Chapter in a Nutshell",
+        "og‘zaki takror"
+      ]
+    }
+  ],
+  "sourceReviewCount": 6,
+  "sourceApplicationCount": 10,
+  "sourceQuickQuizCount": 8,
+  "reviewAnswered": 6,
+  "applicationsAnswered": 10,
+  "quickQuizAnswered": 8,
+  "topicCoverage": [
+    "Kirish",
+    "9-1",
+    "9-1a",
+    "9-1b",
+    "9-2",
+    "9-2a",
+    "9-2b",
+    "9-2c",
+    "9-2d",
+    "9-2e",
+    "9-3",
+    "9-3a",
+    "9-3b",
+    "9-3c",
+    "9-3d",
+    "9-3e",
+    "9-4",
+    "Figures 1–4",
+    "FYI: Import Quotas",
+    "Case Study: Trade Agreements and the World Trade Organization",
+    "Ask the Experts: Trade Deals and Tariffs",
+    "In the News: Trade as a Tool for Economic Development",
+    "Questions to Discuss 1–2",
+    "Chapter in a Nutshell",
+    "Key Concepts",
+    "Questions for Review 1–6",
+    "Problems and Applications 1–10",
+    "QuickQuiz 1–8",
+    "QuickQuiz Answers"
+  ],
+  "wordCount": 6268,
+  "diagramCount": 15,
+  "interactiveTypes": [
+    "trade"
+  ],
+  "warnings": []
+}

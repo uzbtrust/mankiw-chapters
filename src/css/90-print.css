@@ -1,0 +1,208 @@
+/* ==========================================================================
+   90 · PRINT — chop etish uslublari. [Agent: reader]
+   Oq fonda qora matn; panellar yo‘q; yechimlar ochiq (JS beforeprint da ochadi); chizma/misol/yechim
+   sahifa o‘rtasida bo‘linmaydi. Qorong‘u rejimda ham yorug‘ ranglar bosiladi.
+   ========================================================================== */
+@media print {
+  @page {
+    margin: 18mm 16mm 20mm;
+  }
+
+  /* Qorong‘u rejim tokenlarini yorug‘ qiymatlarga qaytaramiz (chizma ranglari ham oqda ko‘rinsin) */
+  :root,
+  :root.dark {
+    color-scheme: light;
+    --bg: #fff;
+    --bg-alt: #fff;
+    --bg-elev: #fff;
+    --bg-sunk: #fff;
+    --glass: #fff;
+    --glass-solid: #fff;
+    --fg: #000;
+    --fg-2: #1d1d1f;
+    --fg-3: #424245;
+    --fg-4: #6e6e73;
+    --line: rgba(0, 0, 0, 0.25);
+    --line-soft: rgba(0, 0, 0, 0.18);
+    --line-strong: rgba(0, 0, 0, 0.4);
+    --accent: #0066cc;
+    --accent-ink: #0066cc;
+    --accent-soft: transparent;
+    --demand: #0071e3;
+    --supply: #f56300;
+    --supply-ink: #c93400;
+    --ref: #8e8e93;
+    --good: #248a3d;
+    --bad: #d70015;
+    --social: #8944ab;
+    --surplus-c: rgba(0, 113, 227, 0.14);
+    --surplus-p: rgba(245, 99, 0, 0.16);
+    --dwl: rgba(215, 0, 21, 0.14);
+    --svg-ink: #3a3a3c;
+    --svg-axis: #6e6e73;
+    --svg-grid: rgba(0, 0, 0, 0.07);
+    --shadow-xs: none;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --reader-size: 11pt;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000;
+  }
+  body {
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  /* Interfeys elementlari */
+  .skip-link,
+  .reading-line,
+  .topbar,
+  .reader-bar,
+  .chapter-sidebar,
+  .toc-sidebar,
+  #inline-toc,
+  #presentation-bar,
+  .chapter-end,
+  .model-pending,
+  .load-error button,
+  .sim-controls,
+  dialog,
+  #announcer,
+  noscript {
+    display: none !important;
+  }
+  #reader[hidden] {
+    display: none !important;
+  }
+
+  /* Maket: bitta ustun, to‘liq kenglik */
+  .reader-layout {
+    display: block;
+    max-width: none;
+    padding: 0;
+  }
+  .reader-main {
+    max-width: none;
+  }
+  .chapter-header {
+    padding: 0 0 8mm;
+    margin-bottom: 8mm;
+    border-bottom: 1px solid #999;
+  }
+  .chapter-header h1 {
+    font-size: 26pt;
+    line-height: 1.1;
+  }
+  .chapter-header .lead {
+    font-size: 12pt;
+    color: #333;
+  }
+  .chapter-facts {
+    margin-top: 5mm;
+    padding-top: 3mm;
+  }
+  .chapter-facts strong {
+    font-size: 12pt;
+  }
+
+  /* Taqdimot rejimida bosilsa ham barcha bo‘limlar chiqadi */
+  body.is-presentation #chapter-content .lesson-section[hidden] {
+    display: block !important;
+  }
+  body.is-presentation #chapter-content {
+    padding: 0;
+  }
+  body.is-presentation #chapter-header,
+  body.is-presentation .reader-layout {
+    display: block;
+  }
+
+  /* Matn oqimi */
+  h1,
+  h2,
+  h3,
+  h4,
+  .section-kicker,
+  summary {
+    break-after: avoid;
+  }
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+  figure,
+  .diagram,
+  .example,
+  .callout,
+  .warning,
+  .recap,
+  .formula,
+  .table-wrap,
+  .comparison,
+  .concept-grid > *,
+  .step-list > li,
+  .key-concepts,
+  details.answer,
+  table,
+  tr,
+  svg {
+    break-inside: avoid;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Qutilar: foni bosilmaydi, shuning uchun ingichka chiziq */
+  .callout,
+  .example,
+  .warning,
+  .recap,
+  .formula,
+  .comparison,
+  .key-concepts,
+  .source-note,
+  details.answer {
+    background: none !important;
+    box-shadow: none !important;
+    border: 1px solid #aaa !important;
+    border-radius: 6px !important;
+  }
+  .table-wrap,
+  .diagram,
+  .diagram-wide {
+    overflow: visible !important;
+    max-width: 100% !important;
+  }
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Yechimlar har doim ochiq */
+  details.answer > summary {
+    list-style: none;
+    font-weight: 600;
+  }
+  details.answer > summary::-webkit-details-marker {
+    display: none;
+  }
+  details.answer .answer-body {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+  }
+  @supports selector(::details-content) {
+    details.answer::details-content {
+      display: block;
+      content-visibility: visible;
+      height: auto;
+    }
+  }
+}

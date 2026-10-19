@@ -1,0 +1,419 @@
+/* ==========================================================================
+   60 · DIAGRAMS — figure.diagram va 127 ta inline SVG ni tokenlarga bog‘lash.
+   SVG ichidagi qattiq yozilgan ranglar (presentation atributlari) CSS bilan
+   ustidan yoziladi: kontent o‘zgarmaydi, yorug‘/qorong‘u rejim avtomatik.
+   ========================================================================== */
+
+/* ---- Karta (figure) ----------------------------------------------------- */
+#chapter-content .diagram {
+  --dg-bg: var(--card, var(--bg-alt));
+  --dg-pad: 1em;
+  --dg-ds: 0.82; /* SVG eng kichik kengligi = viewBox kengligi × shu koeffitsiyent */
+  --dg-vb: 640;
+  --dg-demand: var(--demand);
+  --dg-demand-ink: var(--accent-ink);
+  --dg-supply: color-mix(in srgb, var(--supply) 88%, var(--fg)); /* 3:1 (WCAG 1.4.11) yorug‘ fonda ham */
+  --dg-ref: color-mix(in srgb, var(--ref) 84%, var(--fg));
+  --dg-supply-ink: var(--supply-ink);
+  --dg-supply2: color-mix(in srgb, var(--supply) 58%, var(--bad));
+  --dg-good: var(--good);
+  --dg-good-ink: color-mix(in srgb, var(--good) 78%, var(--fg));
+  --dg-social-ink: color-mix(in srgb, var(--social) 82%, var(--fg));
+  --dg-ink: var(--svg-ink);
+  --dg-axis: var(--svg-axis);
+  --dg-guide: color-mix(in srgb, var(--svg-axis) 58%, transparent);
+  /* Yuzalar: har oilada 3 pog‘ona (1 — och, 2 — asosiy, 3 — to‘q) va alfa foizlari; qorong‘u rejimda
+     pog‘ona farqi yorug‘dagidan kam bo‘lmasligi uchun foizlar alohida (ΔE ≥ yorug‘ rejimdagi qadam). */
+  --dg-c1: 9%;
+  --dg-c2: 19%;
+  --dg-c3: 34%;
+  --dg-p1: 9%;
+  --dg-p2: 19%;
+  --dg-p3: 36%;
+  --dg-g1: 9%;
+  --dg-g2: 21%;
+  --dg-g3: 36%;
+  --dg-dl: 16%;
+  --dg-cs1: color-mix(in srgb, var(--demand) var(--dg-c1), transparent);
+  --dg-cs: color-mix(in srgb, var(--demand) var(--dg-c2), transparent);
+  --dg-cs2: color-mix(in srgb, var(--demand) var(--dg-c3), transparent);
+  --dg-ps1: color-mix(in srgb, var(--supply) var(--dg-p1), transparent);
+  --dg-ps: color-mix(in srgb, var(--supply) var(--dg-p2), transparent);
+  --dg-ps2: color-mix(in srgb, var(--supply) var(--dg-p3), transparent);
+  --dg-dwl: color-mix(in srgb, var(--bad) var(--dg-dl), transparent);
+  --dg-gain: color-mix(in srgb, var(--good) var(--dg-g2), transparent);
+  --dg-rev: rgba(255, 204, 0, 0.32);
+  --dg-flat: color-mix(in srgb, var(--ref) 24%, transparent);
+  --dg-box: var(--bg-elev);
+  margin: 1.8em 0;
+  min-width: 0;
+  max-width: 100%;
+  padding: var(--dg-pad);
+  background-color: var(--dg-bg);
+  border-radius: var(--r-lg);
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  container-type: inline-size;
+  /* chetdagi yumshoq soya: faqat surish mumkin bo‘lgan tomonda ko‘rinadi */
+  background-image:
+    linear-gradient(to right, var(--dg-bg), var(--dg-bg)),
+    linear-gradient(to left, var(--dg-bg), var(--dg-bg)),
+    linear-gradient(to right, color-mix(in srgb, var(--fg) 16%, transparent), transparent),
+    linear-gradient(to left, color-mix(in srgb, var(--fg) 16%, transparent), transparent);
+  background-position: left, right, left, right;
+  background-size:
+    22px 100%,
+    22px 100%,
+    12px 100%,
+    12px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+:root.dark #chapter-content .diagram {
+  --dg-c1: 16%;
+  --dg-c2: 28%;
+  --dg-c3: 45%;
+  --dg-p1: 13%;
+  --dg-p2: 24%;
+  --dg-p3: 40%;
+  --dg-g1: 14%;
+  --dg-g2: 26%;
+  --dg-g3: 40%;
+  --dg-dl: 34%;
+  --dg-rev: rgba(255, 214, 10, 0.32);
+  --dg-flat: color-mix(in srgb, var(--ref) 26%, transparent);
+}
+/* Izohda "CS yashil" deyilgan chizmalar (7-bob hammasi, 9-bob 1-chizma): iste’molchi oilasi yashil */
+#chapter-content .diagram:has(> svg[aria-labelledby^='c7-']),
+#chapter-content .diagram:has(> svg[aria-labelledby^='c9-fig-1-']) {
+  --dg-cs1: color-mix(in srgb, var(--good) var(--dg-g1), transparent);
+  --dg-cs: color-mix(in srgb, var(--good) var(--dg-g2), transparent);
+  --dg-cs2: color-mix(in srgb, var(--good) var(--dg-g3), transparent);
+}
+#chapter-content .diagram:has(> svg[viewBox^='0 0 650']) {
+  --dg-vb: 650;
+}
+#chapter-content .diagram:has(> svg[viewBox^='0 0 660']) {
+  --dg-vb: 660;
+}
+#chapter-content .diagram:has(> svg[viewBox^='0 0 720']) {
+  --dg-vb: 720;
+}
+#chapter-content .diagram:has(> svg[viewBox^='0 0 960']) {
+  --dg-vb: 960;
+  --dg-ds: 0.9;
+}
+#chapter-content .diagram > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: calc(var(--dg-vb) * var(--dg-ds) * 1px);
+  overflow: visible;
+}
+#chapter-content .diagram > figcaption {
+  position: sticky;
+  left: 0;
+  width: 100cqw;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.85em;
+  font-size: 0.82em;
+  line-height: 1.5;
+  color: var(--fg-3);
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+/* 70-simulations.css dagi eski qoidalar ustidan */
+#chapter-content .diagram::before {
+  content: none;
+}
+@media (max-width: 640px) {
+  #chapter-content .diagram {
+    --dg-ds: 0.92;
+    --dg-pad: 0.75em;
+    border-radius: var(--r-md);
+  }
+}
+/* Surish kerakligini bildiruvchi yozuv: faqat SVG karta ichiga sig‘maganda.
+   Chegara = viewBox kengligi × --dg-ds (konteyner so‘rovlari var() ni qabul qilmaydi). */
+#chapter-content .diagram > figcaption::before {
+  content: var(--dg-hint, none);
+  display: block;
+  margin-bottom: 0.35em;
+  font-size: 0.92em;
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+@container (max-width: 541px) {
+  #chapter-content .diagram > figcaption {
+    --dg-hint: 'Surib ko‘ring →';
+  }
+}
+@container (max-width: 591px) {
+  #chapter-content .diagram:has(> svg[viewBox^='0 0 720']) > figcaption {
+    --dg-hint: 'Surib ko‘ring →';
+  }
+}
+@container (max-width: 865px) {
+  #chapter-content .diagram:has(> svg[viewBox^='0 0 960']) > figcaption {
+    --dg-hint: 'Surib ko‘ring →';
+  }
+}
+@media (max-width: 640px) {
+  @container (max-width: 608px) {
+    #chapter-content .diagram > figcaption {
+      --dg-hint: 'Surib ko‘ring →';
+    }
+  }
+  @container (max-width: 663px) {
+    #chapter-content .diagram:has(> svg[viewBox^='0 0 720']) > figcaption {
+      --dg-hint: 'Surib ko‘ring →';
+    }
+  }
+}
+
+/* ---- SVG: umumiy ------------------------------------------------------- */
+.diagram svg text {
+  fill: var(--dg-ink);
+  font-family: var(--font);
+  letter-spacing: 0;
+  /* yozuv chiziq ustiga tushsa ham o‘qilsin: karta rangidagi yupqa "halo" */
+  paint-order: stroke fill;
+  stroke: var(--dg-bg);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.diagram svg :is(path, line, polyline, polygon, rect, circle) {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.diagram svg rect {
+  stroke-linejoin: miter;
+}
+
+/* ---- Matn ranglari ------------------------------------------------------ */
+.diagram
+  svg
+  :is(
+    [fill='#334941'],
+    [fill='#33483f'],
+    [fill='#263c34'],
+    [fill='#365449'],
+    [fill='#263e36'],
+    [fill='#254839'],
+    [fill='#263b36'],
+    [fill='#202d29']
+  ) {
+  fill: var(--dg-ink);
+}
+.diagram svg :is([fill='#50635c'], [fill='#52645d']) {
+  fill: var(--dg-axis);
+}
+.diagram svg text:is([fill='#17695f'], [fill='#3f968a']) {
+  fill: var(--dg-demand-ink);
+}
+.diagram svg text[fill='#7d86a0'] {
+  fill: var(--dg-social-ink);
+}
+.diagram
+  svg
+  text:is([fill='#c06843'], [fill='#a14e30'], [fill='#a95335'], [fill='#9d472e'], [fill='#82563f']) {
+  fill: var(--dg-supply-ink);
+}
+.diagram svg text[fill='#81918b'] {
+  fill: var(--dg-axis);
+}
+
+/* ---- Chiziqlar ---------------------------------------------------------- */
+/* o‘qlar, belgilar (ticks) */
+.diagram svg [stroke='#81918b'],
+.diagram svg [stroke='#52635f'],
+.diagram svg [stroke='#42524e'],
+.diagram svg [stroke='#6c8575'] {
+  stroke: var(--dg-axis);
+}
+/* yordamchi uzilgan chiziqlar */
+.diagram svg :is([stroke='#81918b'], [stroke='#8c9c90'], [stroke='#52735e'])[stroke-dasharray],
+.diagram svg [stroke='#8c9c90'] {
+  stroke: var(--dg-guide);
+}
+/* qalin kulrang = yordamchi egri chiziq (eski holat) */
+.diagram svg [stroke='#81918b']:is([stroke-width='3'], [stroke-width='4'], [stroke-width='5']) {
+  stroke: var(--dg-ref);
+}
+/* talab */
+.diagram svg [stroke='#17695f'] {
+  stroke: var(--dg-demand);
+}
+.diagram svg [stroke='#3f968a'] {
+  stroke: color-mix(in srgb, var(--dg-demand) 62%, transparent);
+}
+.diagram svg [stroke='#7d86a0'] {
+  stroke: var(--social);
+}
+/* taklif */
+.diagram svg [stroke='#c06843'] {
+  stroke: var(--dg-supply);
+}
+.diagram svg :is([stroke='#82563f'], [stroke='#a14e30'], [stroke='#9d472e']) {
+  stroke: var(--dg-supply2);
+}
+
+/* ---- To‘ldirish (nuqta, o‘q uchi) --------------------------------------- */
+.diagram svg :not(text)[fill='#17695f'] {
+  fill: var(--dg-demand);
+}
+.diagram svg :not(text)[fill='#c06843'] {
+  fill: var(--dg-supply);
+}
+.diagram svg :not(text)[fill='#81918b'] {
+  fill: var(--dg-ref);
+}
+.diagram svg :not(text)[fill='#3f968a'] {
+  fill: var(--dg-demand);
+}
+
+/* ---- Yuzalar: ortiqchalik, yo‘qotish, tushum ---------------------------- */
+.diagram
+  svg
+  :is(polygon, rect, path)[fill^='#']:not([fill='#17695f']):not([fill='#c06843']):not([fill='#81918b']) {
+  fill-opacity: 1;
+}
+.diagram svg :is(polygon, rect, path)[fill='#e0eee7'] {
+  fill: var(--dg-cs1);
+  opacity: 1;
+}
+.diagram
+  svg
+  :is(polygon, rect, path):is(
+    [fill='#d4e9df'],
+    [fill='#d7eee7'],
+    [fill='#dcece7'],
+    [fill='#d8e9df'],
+    [fill='#91c5b0']
+  ) {
+  fill: var(--dg-cs);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path)[fill='#b5d9cc'] {
+  fill: var(--dg-cs2);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path)[fill='#f7e8df'] {
+  fill: var(--dg-ps1);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path):is([fill='#f2dacf'], [fill='#f4ddcd'], [fill='#d4b2a0']) {
+  fill: var(--dg-ps);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path)[fill='#e6bfa9'] {
+  fill: var(--dg-ps2);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path):is([fill='#f0bdb2'], [fill='#d98258'], [fill='#f2ded5']) {
+  fill: var(--dg-dwl);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path):is([fill='#cbe7dd']) {
+  fill: var(--dg-gain);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path):is([fill='#dec878'], [fill='#d9e4f2']) {
+  fill: var(--dg-rev);
+  opacity: 1;
+}
+.diagram svg :is(polygon, rect, path):is([fill='#e2e8f1'], [fill='#edf0ee']) {
+  fill: var(--dg-flat);
+  opacity: 1;
+}
+.diagram svg rect:is([fill='#e5efdf'], [fill='#f5f2e9']) {
+  fill: var(--dg-box);
+}
+
+/* ---- Chop etish: surish va min-width kerak emas -------------------------- */
+@media print {
+  #chapter-content .diagram {
+    display: block;
+    container-type: normal;
+    background-image: none;
+  }
+  #chapter-content .diagram > svg {
+    min-width: 0;
+  }
+  #chapter-content .diagram > figcaption {
+    position: static;
+    width: auto;
+  }
+  #chapter-content .diagram > figcaption::before {
+    content: none !important;
+  }
+}
+
+/* ---- Maxsus chizmalar: izohdagi rang so‘zlariga mos (yashil, ko‘k …) --------- */
+/* Aylana oqim (2-bob): "yashil uzluksiz o‘qlar" */
+.diagram svg[aria-label^='Aylana oqim'] [stroke='#17695f'] {
+  stroke: var(--dg-good);
+}
+.diagram svg[aria-label^='Aylana oqim'] :not(text)[fill='#17695f'] {
+  fill: var(--dg-good);
+}
+.diagram svg[aria-label^='Aylana oqim'] text[fill='#17695f'] {
+  fill: var(--dg-good-ink);
+}
+/* Yangi texnologiya (2-bob): "yashil yangi chegara" */
+.diagram svg[aria-label^='Kamroq ifloslantiruvchi'] [stroke='#17695f'] {
+  stroke: var(--dg-good);
+}
+/* Emma talab egri chiziqlari D₁ / D₂ / D₃ — hammasi talab, taklif rangida emas */
+.diagram svg[aria-labelledby^='c2-emma'] [stroke='#a14e30'] {
+  stroke: var(--dg-good);
+}
+.diagram svg[aria-labelledby^='c2-emma'] text[fill='#a14e30'] {
+  fill: var(--dg-good-ink);
+}
+/* "yashil maydon" deb tilga olingan yuzalar */
+.diagram svg[aria-labelledby^='c6-g8'] [fill='#d8e9df'] {
+  fill: var(--dg-gain);
+}
+/* Eksport subsidiyasi (9-bob): "qizg‘ish uchburchaklar" ko‘k to‘rtburchak ustida — aralashib binafsha bo‘lmasin */
+.diagram svg[aria-labelledby^='c9-fig-15'] [fill='#f0bdb2'] {
+  fill: color-mix(in srgb, var(--bad) calc(var(--dg-dl) * 1.25), var(--dg-bg));
+}
+/* Eksport subsidiyasi (9-bob): "ko‘k to‘rtburchak" */
+.diagram svg[aria-labelledby^='c9-fig-15'] [fill='#d9e4f2'] {
+  fill: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+/* Tashqi ta’sir (10-bob): ijtimoiy xarajat / qiymat chiziqlari va yozuvlari — binafsha */
+.diagram
+  svg:is([aria-labelledby^='c10-f2'], [aria-labelledby^='c10-f5'], [aria-labelledby^='c10-f8'])
+  [stroke='#81918b'][stroke-width='3'],
+.diagram
+  svg:is([aria-labelledby^='c10-f3'], [aria-labelledby^='c10-f6'], [aria-labelledby^='c10-f7'])
+  [stroke='#17695f'][stroke-dasharray] {
+  stroke: var(--social);
+}
+.diagram svg[aria-labelledby^='c10-f2'] text[x='357'][y='27'],
+.diagram svg[aria-labelledby^='c10-f3'] text[x='430'][y='238'],
+.diagram svg[aria-labelledby^='c10-f5'] text[x='330'][y='28'],
+.diagram svg[aria-labelledby^='c10-f6'] text[x='421'][y='238'],
+.diagram svg[aria-labelledby^='c10-f7'] text[x='377'][y='305'],
+.diagram svg[aria-labelledby^='c10-f8'] text[x='422'][y='191'] {
+  fill: var(--dg-social-ink);
+}
+/* ijobiy tashqi ta’sirda bajarilmagan yutuq ham sof yo‘qotish */
+.diagram svg[aria-labelledby^='c10-f3'] [fill='#dcece7'] {
+  fill: var(--dg-dwl);
+}
+/* Bo‘ron (5-bob): eski maydon — och qizg‘ish, yangi — yashil; kesishmasi loyqalanmasin */
+.diagram svg[aria-labelledby^='c5-storm'] [fill='#f2ded5'] {
+  fill: color-mix(in srgb, var(--bad) calc(var(--dg-dl) * 0.7), transparent);
+}
+/* yangi maydon to‘q (shaffof emas): eski maydon bilan kesishmasi loyqa aralashma bo‘lmay, toza yashil ko‘rinadi */
+.diagram svg[aria-labelledby^='c5-storm'] [fill='#dcece7'] {
+  fill: color-mix(in srgb, var(--good) calc(var(--dg-g2) * 1.15), var(--dg-bg));
+}

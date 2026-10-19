@@ -1,0 +1,161 @@
+{
+  "id": "chapter-07",
+  "title": "Xaridorlar, sotuvchilar va bozorlarning samaradorligi",
+  "englishTitle": "Consumers, Producers, and the Efficiency of Markets",
+  "lead": "Savdodan xaridor va sotuvchi qancha naf olishini hisoblaymiz. Raqobatli muvozanatning samaradorligini, tenglik bilan farqini va bozor samarasiz bo‘lib qoladigan sharoitlarni o‘rganamiz.",
+  "sourcePages": [
+    133,
+    152
+  ],
+  "sections": [
+    {
+      "id": "c7-s1",
+      "title": "Savdo nega ikkala tomonga ham naf keltiradi?",
+      "sourceTopics": [
+        "Chapter opening",
+        "Welfare economics"
+      ]
+    },
+    {
+      "id": "c7-s2",
+      "title": "To‘lashga tayyorlik va xaridor ortiqchaligi",
+      "sourceTopics": [
+        "7-1 Consumer Surplus",
+        "7-1a Willingness to Pay",
+        "Table 1"
+      ]
+    },
+    {
+      "id": "c7-s3",
+      "title": "Talab chizig‘i xaridor nafini qanday o‘lchaydi?",
+      "sourceTopics": [
+        "7-1b Using the Demand Curve to Measure Consumer Surplus",
+        "7-1c How a Lower Price Raises Consumer Surplus",
+        "7-1d What Does Consumer Surplus Measure?",
+        "Figures 1–3"
+      ]
+    },
+    {
+      "id": "c7-s4",
+      "title": "Sotuvchining xarajati va sotuvchi ortiqchaligi",
+      "sourceTopics": [
+        "7-2 Producer Surplus",
+        "7-2a Cost and the Willingness to Sell",
+        "Table 2"
+      ]
+    },
+    {
+      "id": "c7-s5",
+      "title": "Taklif chizig‘i sotuvchi nafini qanday o‘lchaydi?",
+      "sourceTopics": [
+        "7-2b Using the Supply Curve to Measure Producer Surplus",
+        "7-2c How a Higher Price Raises Producer Surplus",
+        "Figures 4–6"
+      ]
+    },
+    {
+      "id": "c7-s6",
+      "title": "Jami ortiqchalik, samaradorlik va tenglik",
+      "sourceTopics": [
+        "7-3 Market Efficiency",
+        "7-3a Benevolent Social Planners",
+        "Equality"
+      ]
+    },
+    {
+      "id": "c7-s7",
+      "title": "Raqobatli muvozanat nega samarali?",
+      "sourceTopics": [
+        "7-3b Evaluating the Market Equilibrium",
+        "Figures 7–8",
+        "Laissez-faire and information",
+        "Welfare interactive demonstration"
+      ]
+    },
+    {
+      "id": "c7-s8",
+      "title": "Buyrak uchun bozor tashkil etish kerakmi?",
+      "sourceTopics": [
+        "Case Study: Should There Be a Market for Organs?",
+        "Ask the Experts: Supplying Kidneys"
+      ]
+    },
+    {
+      "id": "c7-s9",
+      "title": "Bozor qachon samarasiz bo‘lishi mumkin?",
+      "sourceTopics": [
+        "7-4 Conclusion: Market Efficiency and Market Failure",
+        "In the News: How Ticket Resellers Help Allocate Scarce Resources",
+        "Questions to Discuss 1–2"
+      ]
+    },
+    {
+      "id": "c7-s10",
+      "title": "Takrorlash uchun 5 savol",
+      "sourceTopics": [
+        "Questions for Review 1–5"
+      ]
+    },
+    {
+      "id": "c7-s11",
+      "title": "Amaliy masalalar: hisob, grafik va sabab",
+      "sourceTopics": [
+        "Problems and Applications 1–10"
+      ]
+    },
+    {
+      "id": "c7-s12",
+      "title": "Qisqa testlarning javobi va sababi",
+      "sourceTopics": [
+        "QuickQuiz 1–10",
+        "Printed QuickQuiz Answers, page 152"
+      ]
+    },
+    {
+      "id": "c7-s13",
+      "title": "Atamalar, javob tartibi va odatiy xatolar",
+      "sourceTopics": [
+        "Key Concepts",
+        "Chapter in a Nutshell",
+        "Oral examination outline",
+        "Common mistakes"
+      ]
+    }
+  ],
+  "sourceReviewCount": 5,
+  "sourceApplicationCount": 10,
+  "sourceQuickQuizCount": 10,
+  "reviewAnswered": 5,
+  "applicationsAnswered": 10,
+  "quickQuizAnswered": 10,
+  "topicCoverage": [
+    "7-1",
+    "7-1a",
+    "7-1b",
+    "7-1c",
+    "7-1d",
+    "7-2",
+    "7-2a",
+    "7-2b",
+    "7-2c",
+    "7-3",
+    "7-3a",
+    "7-3b",
+    "7-4",
+    "Case Study: Should There Be a Market for Organs?",
+    "Ask the Experts: Supplying Kidneys",
+    "In the News: How Ticket Resellers Help Allocate Scarce Resources",
+    "Questions to Discuss 1–2",
+    "Key Concepts",
+    "Chapter in a Nutshell",
+    "Questions for Review 1–5",
+    "Problems and Applications 1–10",
+    "QuickQuiz 1–10"
+  ],
+  "wordCount": 6979,
+  "diagramCount": 23,
+  "interactiveTypes": [
+    "welfare"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,145 @@
+{
+  "id": "chapter-02",
+  "title": "Iqtisodchi kabi fikrlash",
+  "englishTitle": "Thinking Like an Economist",
+  "lead": "Iqtisodchi iqtisodiyotni model, taxmin va dalil yordamida tahlil qiladi; siyosatni baholashda esa fakt bilan qadriyatni farqlaydi. Bobda aylana oqim, ishlab chiqarish imkoniyatlari chegarasi va iqtisodiy grafiklarni o‘qish o‘rganiladi.",
+  "sourcePages": [
+    17,
+    44
+  ],
+  "sections": [
+    {
+      "id": "c2-s1",
+      "title": "Iqtisodchi kabi fikrlash",
+      "sourceTopics": [
+        "Kirish: iqtisodiy fikrlash"
+      ]
+    },
+    {
+      "id": "c2-s2",
+      "title": "Iqtisodchi olim sifatida",
+      "sourceTopics": [
+        "2-1",
+        "2-1a",
+        "2-1b",
+        "2-1c"
+      ]
+    },
+    {
+      "id": "c2-s3",
+      "title": "Aylana oqim modeli",
+      "sourceTopics": [
+        "2-1d",
+        "Figure 1 Circular Flow"
+      ]
+    },
+    {
+      "id": "c2-s4",
+      "title": "Ishlab chiqarish imkoniyatlari chegarasi",
+      "sourceTopics": [
+        "2-1e",
+        "Figures 2-3",
+        "PPF and growth"
+      ]
+    },
+    {
+      "id": "c2-s5",
+      "title": "Mikroiqtisodiyot va makroiqtisodiyot",
+      "sourceTopics": [
+        "2-1f"
+      ]
+    },
+    {
+      "id": "c2-s6",
+      "title": "Siyosat bo‘yicha maslahatchi",
+      "sourceTopics": [
+        "2-2",
+        "2-2a",
+        "2-2b",
+        "2-2c",
+        "In the News: Why Tech Companies Hire Economists"
+      ]
+    },
+    {
+      "id": "c2-s7",
+      "title": "Iqtisodchilar o‘rtasidagi kelishmovchilik",
+      "sourceTopics": [
+        "2-3",
+        "2-3a",
+        "2-3b",
+        "2-3c",
+        "Ask the Experts: Ticket Resale"
+      ]
+    },
+    {
+      "id": "c2-s8",
+      "title": "Grafik ilovasi",
+      "sourceTopics": [
+        "Appendix: Graphing A Brief Review",
+        "Graphs of a Single Variable",
+        "Coordinate System",
+        "Curves",
+        "Slope",
+        "Cause and Effect",
+        "Omitted Variables",
+        "Reverse Causality",
+        "Figures A-1 to A-7"
+      ]
+    },
+    {
+      "id": "c2-s9",
+      "title": "Tayanch atamalar va QuickQuiz",
+      "sourceTopics": [
+        "Key Concepts",
+        "QuickQuiz 1-8"
+      ]
+    },
+    {
+      "id": "c2-s10",
+      "title": "Review Questions va Problems & Applications",
+      "sourceTopics": [
+        "Questions for Review 1-10",
+        "Problems and Applications 1-6"
+      ]
+    },
+    {
+      "id": "c2-s11",
+      "title": "Og‘zaki imtihon",
+      "sourceTopics": [
+        "2-4 Let’s Get Going",
+        "Chapter in a Nutshell"
+      ]
+    }
+  ],
+  "sourceReviewCount": 10,
+  "sourceApplicationCount": 6,
+  "sourceQuickQuizCount": 8,
+  "reviewAnswered": 10,
+  "applicationsAnswered": 6,
+  "quickQuizAnswered": 8,
+  "topicCoverage": [
+    "2-1a",
+    "2-1b",
+    "2-1c",
+    "2-1d",
+    "2-1e",
+    "2-1f",
+    "2-2a",
+    "2-2b",
+    "2-2c",
+    "2-3a",
+    "2-3b",
+    "2-3c",
+    "2-4",
+    "Appendix Graphing A Brief Review",
+    "Questions for Review 1-10",
+    "Problems and Applications 1-6",
+    "QuickQuiz 1-8"
+  ],
+  "wordCount": 4368,
+  "diagramCount": 8,
+  "interactiveTypes": [
+    "ppf"
+  ],
+  "warnings": []
+}
