@@ -10,14 +10,14 @@
   "sections": [
     {
       "id": "c2-s1",
-      "title": "Iqtisodchi kabi fikrlash",
+      "title": "Iqtisodchi kabi fikrlash: murakkab hayotni tushunarli savollarga ajratish",
       "sourceTopics": [
         "Kirish: iqtisodiy fikrlash"
       ]
     },
     {
       "id": "c2-s2",
-      "title": "Iqtisodchi olim sifatida",
+      "title": "Kuzatuv, nazariya va tekshiruv: iqtisodiyotning ilmiy usuli",
       "sourceTopics": [
         "2-1",
         "2-1a",
@@ -27,7 +27,7 @@
     },
     {
       "id": "c2-s3",
-      "title": "Aylana oqim modeli",
+      "title": "Aylana oqim: tovarlar, ishlab chiqarish omillari va pul",
       "sourceTopics": [
         "2-1d",
         "Figure 1 Circular Flow"
@@ -35,7 +35,7 @@
     },
     {
       "id": "c2-s4",
-      "title": "Ishlab chiqarish imkoniyatlari chegarasi",
+      "title": "Ishlab chiqarish imkoniyatlari egri chizig‘i: tanqislikdan o‘sishgacha",
       "sourceTopics": [
         "2-1e",
         "Figures 2-3",
@@ -51,7 +51,7 @@
     },
     {
       "id": "c2-s6",
-      "title": "Siyosat bo‘yicha maslahatchi",
+      "title": "Iqtisodchi dalilni ham, qadriyatni ham ajratib ko‘rsatadi",
       "sourceTopics": [
         "2-2",
         "2-2a",
@@ -62,7 +62,7 @@
     },
     {
       "id": "c2-s7",
-      "title": "Iqtisodchilar o‘rtasidagi kelishmovchilik",
+      "title": "Ilmiy xulosa, qadriyat va siyosat",
       "sourceTopics": [
         "2-3",
         "2-3a",
@@ -73,7 +73,7 @@
     },
     {
       "id": "c2-s8",
-      "title": "Grafik ilovasi",
+      "title": "Grafik: tasvirlash, bog‘liqlikni ko‘rish va sababni tekshirish",
       "sourceTopics": [
         "Appendix: Graphing A Brief Review",
         "Graphs of a Single Variable",
@@ -88,7 +88,7 @@
     },
     {
       "id": "c2-s9",
-      "title": "Tayanch atamalar va QuickQuiz",
+      "title": "Asosiy atamalar va QuickQuiz: sakkizta izohli javob",
       "sourceTopics": [
         "Key Concepts",
         "QuickQuiz 1-8"
@@ -96,7 +96,7 @@
     },
     {
       "id": "c2-s10",
-      "title": "Review Questions va Problems & Applications",
+      "title": "Takrorlash savollari va amaliy masalalar",
       "sourceTopics": [
         "Questions for Review 1-10",
         "Problems and Applications 1-6"
@@ -104,7 +104,7 @@
     },
     {
       "id": "c2-s11",
-      "title": "Og‘zaki imtihon",
+      "title": "Qisqacha takrorlash, og‘zaki javob rejasi va keng tarqalgan xatolar",
       "sourceTopics": [
         "2-4 Let’s Get Going",
         "Chapter in a Nutshell"
