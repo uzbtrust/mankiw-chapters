@@ -1,5 +1,5 @@
 {
-  "id": "chapter-01",
+  "id": 1,
   "title": "Iqtisodiyotning o‘nta tamoyili",
   "englishTitle": "Ten Principles of Economics",
   "lead": "Iqtisodiyot tanqis resurslar bilan cheksiz istaklar orasidagi tanlovlarni o‘rganadi. O‘nta tamoyil shaxsiy qarorlardan bozorlar va butun iqtisodiyotgacha bo‘lgan sabab-oqibatlarni sodda misollar bilan tushuntiradi.",
@@ -97,6 +97,21 @@
       ]
     },
     {
+      "id": "c1-terms",
+      "title": "Asosiy atamalar",
+      "sourceTopics": [
+        "Key Concepts"
+      ]
+    },
+    {
+      "id": "c1-quick",
+      "title": "Tezkor savollar: javob va sabab",
+      "sourceTopics": [
+        "QuickQuiz 1–10",
+        "QuickQuiz Answers"
+      ]
+    },
+    {
       "id": "c1-review",
       "title": "Takrorlash savollari",
       "sourceTopics": [
@@ -111,11 +126,11 @@
       ]
     },
     {
-      "id": "c1-quick",
-      "title": "Tezkor savollar: javob va sabab",
+      "id": "c1-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
-        "QuickQuiz 1–10",
-        "QuickQuiz Answers"
+        "Chapter in a Nutshell",
+        "Ten Principles of Economics"
       ]
     }
   ],
