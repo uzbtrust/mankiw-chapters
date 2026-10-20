@@ -19,68 +19,81 @@
       "id": "c8-s2",
       "title": "Soliqdan oldin va keyin farovonlikni o‘lchash",
       "sourceTopics": [
-        "8-1 The Deadweight Loss of Taxation",
-        "8-1a How a Tax Affects Market Participants"
+        "8-1",
+        "8-1a"
       ]
     },
     {
       "id": "c8-s3",
       "title": "Sof yo‘qotish qayerdan keladi: savdodan qolgan yutuqlar",
       "sourceTopics": [
-        "8-1b Deadweight Losses and the Gains from Trade"
+        "8-1b"
       ]
     },
     {
       "id": "c8-s4",
       "title": "Talab va taklif egiluvchanligi yo‘qotish miqdorini belgilaydi",
       "sourceTopics": [
-        "8-2 The Determinants of the Deadweight Loss"
+        "8-2"
       ]
     },
     {
       "id": "c8-s5",
       "title": "Tarixiy holat: soliq va mehnat taklifi bahsi",
       "sourceTopics": [
-        "The Deadweight Loss Debate",
-        "labor-tax case study"
+        "8-2",
+        "labor-tax debate"
       ]
     },
     {
       "id": "c8-s6",
       "title": "Soliq kattalashganda: sof yo‘qotish va tushum bir xil yurmaydi",
       "sourceTopics": [
-        "8-3 Deadweight Loss and Tax Revenue as Taxes Vary",
-        "The Laffer Curve and Supply-Side Economics"
+        "8-3",
+        "Laffer Curve and Supply-Side Economics"
       ]
     },
     {
       "id": "c8-s7",
       "title": "Yakun: samaradorlik, tenglik va davlat dasturlari",
       "sourceTopics": [
-        "8-4 Conclusion",
-        "Chapter in a Nutshell",
+        "8-4",
+        "Chapter in a Nutshell"
+      ]
+    },
+    {
+      "id": "c8-terms",
+      "title": "Asosiy atamalar",
+      "sourceTopics": [
         "Key Concept"
       ]
     },
     {
-      "id": "c8-s8",
-      "title": "Takrorlash savollari: tushunchalarni tekshirish",
+      "id": "c8-quick",
+      "title": "Tezkor savollar: javob va sabab",
+      "sourceTopics": [
+        "QuickQuiz 1–9"
+      ]
+    },
+    {
+      "id": "c8-review",
+      "title": "Takrorlash savollari",
       "sourceTopics": [
         "Questions for Review 1–5"
       ]
     },
     {
-      "id": "c8-s9",
-      "title": "Masalalar va qo‘llanmalar: barcha javoblar",
+      "id": "c8-apps",
+      "title": "Masalalar va qo‘llash",
       "sourceTopics": [
         "Problems and Applications 1–10"
       ]
     },
     {
-      "id": "c8-s10",
-      "title": "Tezkor test: javob kaliti va qisqa asos",
+      "id": "c8-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
-        "QuickQuiz 1–9 and answer key"
+        "Chapter in a Nutshell"
       ]
     }
   ],
