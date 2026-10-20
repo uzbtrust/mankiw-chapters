@@ -89,30 +89,39 @@
       ]
     },
     {
-      "id": "c9-review",
-      "title": "Nazorat savollari: 6 ta javob",
+      "id": "c9-terms",
+      "title": "Asosiy atamalar",
       "sourceTopics": [
-        "Questions for Review 1–6"
-      ]
-    },
-    {
-      "id": "c9-applications",
-      "title": "Masalalar va qo‘llanishlar: 10 ta yechim",
-      "sourceTopics": [
-        "Problems and Applications 1–10"
+        "Key Concepts",
+        "Chapter in a Nutshell",
+        "og‘zaki takror"
       ]
     },
     {
       "id": "c9-quick",
-      "title": "QuickQuiz: 8 ta javob va sabablari",
+      "title": "Tezkor savollar: javob va sabab",
       "sourceTopics": [
         "QuickQuiz 1–8",
         "QuickQuiz Answers"
       ]
     },
     {
-      "id": "c9-s13",
-      "title": "Atamalar va og‘zaki imtihon rejasi",
+      "id": "c9-review",
+      "title": "Takrorlash savollari",
+      "sourceTopics": [
+        "Questions for Review 1–6"
+      ]
+    },
+    {
+      "id": "c9-apps",
+      "title": "Masalalar va qo‘llash",
+      "sourceTopics": [
+        "Problems and Applications 1–10"
+      ]
+    },
+    {
+      "id": "c9-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
         "Key Concepts",
         "Chapter in a Nutshell",
