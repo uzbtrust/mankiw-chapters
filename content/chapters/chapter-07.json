@@ -90,35 +90,39 @@
       ]
     },
     {
-      "id": "c7-s10",
-      "title": "Takrorlash uchun 5 savol",
+      "id": "c7-terms",
+      "title": "Asosiy atamalar",
+      "sourceTopics": [
+        "Key Concepts"
+      ]
+    },
+    {
+      "id": "c7-quick",
+      "title": "Tezkor savollar: javob va sabab",
+      "sourceTopics": [
+        "QuickQuiz 1–10"
+      ]
+    },
+    {
+      "id": "c7-review",
+      "title": "Takrorlash savollari",
       "sourceTopics": [
         "Questions for Review 1–5"
       ]
     },
     {
-      "id": "c7-s11",
-      "title": "Amaliy masalalar: hisob, grafik va sabab",
+      "id": "c7-apps",
+      "title": "Masalalar va qo‘llash",
       "sourceTopics": [
         "Problems and Applications 1–10"
       ]
     },
     {
-      "id": "c7-s12",
-      "title": "Qisqa testlarning javobi va sababi",
+      "id": "c7-oral",
+      "title": "Og‘zaki javob rejasi va tuzoqlar",
       "sourceTopics": [
-        "QuickQuiz 1–10",
-        "Printed QuickQuiz Answers, page 152"
-      ]
-    },
-    {
-      "id": "c7-s13",
-      "title": "Atamalar, javob tartibi va odatiy xatolar",
-      "sourceTopics": [
-        "Key Concepts",
         "Chapter in a Nutshell",
-        "Oral examination outline",
-        "Common mistakes"
+        "Oral examination outline"
       ]
     }
   ],
@@ -147,10 +151,10 @@
     "In the News: How Ticket Resellers Help Allocate Scarce Resources",
     "Questions to Discuss 1–2",
     "Key Concepts",
-    "Chapter in a Nutshell",
+    "QuickQuiz 1–10",
     "Questions for Review 1–5",
     "Problems and Applications 1–10",
-    "QuickQuiz 1–10"
+    "Chapter in a Nutshell"
   ],
   "wordCount": 6979,
   "diagramCount": 23,
