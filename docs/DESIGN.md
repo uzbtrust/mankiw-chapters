@@ -4,7 +4,7 @@ Shared contract for everyone editing `src/`. Read it fully before touching a fil
 
 ## 1. What this site is (do not lose sight of it)
 
-A study site for one student preparing for an **oral university exam** on chapters 1–10 of Mankiw's
+A study site for one student preparing for an **oral university exam** on Mankiw's
 *Principles of Economics* (10e), explained in **Uzbek (Latin, with `o‘` `g‘` using U+2018)**.
 The reader must be able to read long explanations comfortably, understand graphs, open worked answers,
 use interactive models, and present a chapter section-by-section. It is used on **phones** and on slow

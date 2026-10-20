@@ -1,7 +1,7 @@
 # RULE.md — Mankiw o‘quv saytiga bob qo‘shish va tahrirlash qoidalari
 
 Bu fayl **har qanday AI modeli** (Claude, ChatGPT, Gemini …) yoki odam uchun yagona qo‘llanma.
-Maqsad: qaysi model ishlamasin, yangi bob mavjud 1–10-boblar bilan **bir xil ko‘rinish, bir xil tuzilish va bir xil
+Maqsad: qaysi model ishlamasin, yangi bob mavjud boblar bilan **bir xil ko‘rinish, bir xil tuzilish va bir xil
 tushuntirish uslubida** chiqishi. Tushuntirish sifati modelga qarab farq qilishi mumkin, lekin quyidagi qoidalar
 o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buzilsa yig‘ish to‘xtaydi).
 
@@ -16,7 +16,7 @@ o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buz
 * O‘quvchi **og‘zaki universitet imtihoniga** tayyorlanadi, ko‘pincha **telefonda** o‘qiydi.
 * Shuning uchun: kitobga sodiqlik + sodda o‘zbekcha + qisqa paragraflar + aniq formulalar + yechilgan mashqlar.
 * Sayt: <https://mankiw-chapters.vercel.app> · Kod: <https://github.com/uzbtrust/mankiw-chapters>.
-* Mavjud 1–10-boblarni andozaga keltirish va push qilish tartibi: **`TUGATISH.md`**.
+* Kitobdan yangi bob qo‘shishning to‘liq ish tartibi (dasturlar, PDF, yozish, tekshirish, push): **`BOB_QOSHISH.md`**.
 * Kitob PDF loyiha egasidan (Telegram) olinadi va **loyiha ildiziga** (`./*.pdf`) qo‘yiladi; git’ga kirmaydi.
 
 ## 1. Papkalar va qaysi faylga tegish mumkin
@@ -35,12 +35,14 @@ o‘zgarmaydi va ularning ko‘pini `scripts/build.py` avtomatik tekshiradi (buz
 Bob soni avtomatik aniqlanadi: `chapter-01 … chapter-NN` uzluksiz bo‘lsa bas. Bosh sahifadagi "10 bob",
 qidiruv matni, "05 / 12" kabi joylar o‘zi yangilanadi.
 
-## 2. Yangi bob qo‘shish — ish tartibi (qadam-baqadam)
+## 2. Yangi bob qo‘shish — ish tartibi (qisqacha)
+
+To‘liq, avtomatik bajariladigan tartib (dasturlar, PDF, bir nechta bob, push, deploy) — **`BOB_QOSHISH.md`**.
 
 1. **Kitobdan ajratish.**
    ```bash
-   node scripts/py.cjs scripts/extract_chapter.py ./KITOB.pdf --find "Chapter 11"     # bob boshlanish sahifasi
-   node scripts/py.cjs scripts/extract_chapter.py ./KITOB.pdf --chapter 11 --pages 231-252 --offset -2
+   node scripts/py.cjs scripts/extract_chapter.py ./KITOB.pdf --list          # PDF dagi boblar va sahifalari
+   node scripts/py.cjs scripts/extract_chapter.py ./KITOB.pdf --chapter 11    # sahifalar avtomatik topiladi
    ```
    Natija: `reference/source-text/chapter-11.txt` (har sahifa `=== KITOB SAHIFASI …; PDF SAHIFASI … ===` bilan).
    Butun matnni bo‘lib-bo‘lib, **qisqartirmasdan** o‘qing.
@@ -62,7 +64,7 @@ qidiruv matni, "05 / 12" kabi joylar o‘zi yangilanadi.
    npm run dev          # http://localhost:4173 — telefon kengligida (375 px) ham ko‘ring
    ```
 7. **§11 yakuniy tekshiruv ro‘yxati** dan o‘ting.
-8. **Chiqarish:** `git add` → `git commit` → `git push` (TUGATISH.md §5–§6). Deploy’ni faqat loyiha egasi qiladi (`npm run deploy`).
+8. **Chiqarish:** `git add` → `git commit` → `git push`; Vercel — `npm run deploy` (BOB_QOSHISH.md §8–§9).
 
 ## 3. Tushuntirish uslubi (o‘zgarmas qoidalar)
 
@@ -315,7 +317,6 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 
 * GitHub: <https://github.com/uzbtrust/mankiw-chapters> (ochiq). kitob PDF (`./*.pdf`) va `reference/source-text`
   git’ga kirmaydi (mualliflik huquqi) — PDF’ni loyiha egasidan (Telegram) olib, loyiha ildiziga qo‘ying.
-* Yordamchilar (do‘stlar) faqat o‘z bobini push qiladi — tartib `TUGATISH.md` da (bir martalik GitHub device login).
 * Vercel loyihasi: `mankiw-chapters` (`.vercel/project.json`, faqat egasining kompyuterida).
   Egasi: `git pull` → `npm run build` → `npm run deploy` → <https://mankiw-chapters.vercel.app>.
 * Windows / macOS / Linux: `npm run …` buyruqlari Python’ni o‘zi topadi (`scripts/py.cjs`); to‘g‘ridan-to‘g‘ri chaqirish:
@@ -323,8 +324,7 @@ Dizayn tayyor va barcha boblar uchun **bir xil**. Bob qo‘shishda `src/` ga teg
 
 ## 13. Yangi AI uchun tayyor topshiriq matni
 
-> Bu loyihadagi `RULE.md` ni to‘liq o‘qi va unga qat’iy amal qil. Namuna: `content/chapters/chapter-03.html`,
-> `chapter-05.html` (`c5-s3`). Kitob: loyiha ildizidagi `./<fayl>.pdf`. Vazifa: 11–20-boblarni qo‘sh — har bob uchun
-> `scripts/extract_chapter.py` bilan matnni ajrat, inventar tuz, `chapter-NN.html` va `.json` ni §3–§8 bo‘yicha yoz,
-> `content/course.json` ni yangila, `npm run build` xatosiz o‘tguncha tuzat, §11 ro‘yxatidan o‘t.
-> `src/`, `scripts/`, `dist/` ga tegma.
+> `BOB_QOSHISH.md` ni o‘qi va kitobdan 11, 12, 13-boblarni qo‘sh.
+
+Claude Code bo‘lmagan muhitda (ChatGPT, Gemini …): shu loyihadagi `RULE.md` va `BOB_QOSHISH.md` ni to‘liq o‘qi,
+`BOB_QOSHISH.md` dagi tartib bilan har bobni alohida yoz; `src/`, `scripts/`, `dist/` ga tegma.

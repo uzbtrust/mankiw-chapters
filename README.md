@@ -1,4 +1,4 @@
-# Iqtisodiyot — Mankiw, 1–10 boblar
+# Iqtisodiyot — Mankiw boblari
 
 N. Gregory Mankiw, *Principles of Economics* (10-nashr) boblarining o‘zbekcha o‘quv sayti:
 izohli darslar, chizmalar, interaktiv modellar va yechimli savollar. Og‘zaki imtihonga tayyorlanish uchun.
@@ -7,7 +7,7 @@ Sayt: <https://mankiw-chapters.vercel.app>
 
 > **Yangi bob qo‘shish yoki bobni tahrirlash — avval [RULE.md](RULE.md) ni o‘qing.** U yerda kitobdan ajratish,
 > tushuntirish uslubi, bob skeleti, komponentlar, LaTeX formulalar, chizma ranglari va tekshiruvlar yozilgan.
-> Mavjud bobni tugatib GitHub’ga yuborish (do‘stlar uchun): **[TUGATISH.md](TUGATISH.md)**.
+> Kitobdan yangi bob qo‘shish (AI uchun to‘liq ish tartibi): **[BOB_QOSHISH.md](BOB_QOSHISH.md)**.
 
 ## Papka tuzilishi
 
@@ -25,6 +25,7 @@ scripts/build.py    saytni yig‘uvchi skript + RULE.md qoidalarini tekshirish
 scripts/tex.cjs     LaTeX → MathML (Temml), build.py chaqiradi
 scripts/extract_chapter.py  kitob PDF dan bob matnini sahifa belgilari bilan ajratish
 RULE.md             bob qo‘shish/tahrirlashning yagona qoidalari (har qanday AI uchun)
+BOB_QOSHISH.md      "kitobdan 11, 12, 13-boblarni qo‘sh" — AI bajaradigan qadam-baqadam ish tartibi
 docs/               DESIGN.md (dizayn va harakat qoidalari), DEPLOYMENT.md
 reference/          kitob PDF va bob matnlari (nashr qilinmaydi, git’ga kirmaydi)
 tools/legacy/       eski bir martalik tuzatish skriptlari (faqat tarix uchun)

@@ -19,5 +19,5 @@ for (const [cmd, pre] of candidates) {
   const r = spawnSync(cmd, [...pre, ...args], { env, stdio: 'inherit' });
   process.exit(r.status ?? 1);
 }
-console.error('Python 3.8+ topilmadi. TUGATISH.md → "Kerakli dasturlar" bo‘limiga qarang.');
+console.error('Python 3.8+ topilmadi. BOB_QOSHISH.md → §0 "Kerakli dasturlar" ga qarang.');
 process.exit(1);

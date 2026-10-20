@@ -549,8 +549,6 @@ def status():
         print(f'  {n:>2}-bob  {"✓ tayyor" if ok else "✗ " + first.split(": ", 1)[-1]}')
     done = sum(ok for _, ok, _ in rows)
     print(f'Tayyor: {done}/{len(rows)}.  Tugallanmagan: {", ".join(str(n) for n, ok, _ in rows if not ok) or "yo‘q"}')
-    left = [n for n, ok, _ in rows if not ok]
-    print(f'Keyingi bob: {left[0]}' if left else 'Keyingi bob: yo‘q — hamma boblar tayyor')
 
 
 def main():
